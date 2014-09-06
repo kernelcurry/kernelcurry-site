@@ -13,4 +13,4 @@ linkedin_username: michaeliancurry
 markdown: kramdown
 
 # plugins
-gems: ['jekyll-less', 'jekyll-sitemap', 'jekyll-redirect-from']
+gems: ['jekyll-less', 'jekyll-sitemap', 'jekyll-redirect-from', 'jekyll-press']
