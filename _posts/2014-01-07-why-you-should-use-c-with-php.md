@@ -3,6 +3,9 @@ layout: post
 title:  "Why You Should Use C with PHP"
 date:   2014-01-07 00:00:00
 categories: blog
+redirect_from:
+  - "/blog/why-you-should-use-c-with-php.html"
+  - "/blog/why-you-should-use-c-with-php/"
 ---
 
 A few months ago, I calculated the top Magic: The Gathering cards in the games modern format [[LINK]](http://leve.rs/?utm_source=kernelcurry&utm_medium=referral&utm_campaign=using+historical+data+to+rank+the+top+magic+the+gathering+cards&utm_term=blog). This was accomplished using pure PHP. In total it took about 30 minutes to calculate. With a 30 minute runtime, I wanted to find a faster way to crunch the numbers. What better way than to use C.

@@ -3,6 +3,9 @@ layout: post
 title:  "Every Company Should Have a #HackNight"
 date:   2014-01-24 00:00:00
 categories: blog
+redirect_from:
+  - "/blog/company-hack-night.html"
+  - "/blog/company-hack-night/"
 ---
 
 For the past year, every Wednesday night at about 6:00 p.m. work stops! Since I have been working for [Levers](http://leve.rs/?utm_source=kernelcurry.com&utm_medium=referral&utm_campaign=blog) there has been a weekly hack night. To put it simply: "Stop your real work and work on something fun!""
