@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# vars
-NOW=$(date +"%Y-%m-%d %T")
-
 # master
 git checkout master
 git add .
