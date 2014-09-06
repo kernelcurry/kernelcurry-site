@@ -14,4 +14,4 @@ markdown: kramdown
 
 
 # plugins
-gems: ['jekyll-less']
+gems: ['jekyll-less', 'jekyll-sitemap']
