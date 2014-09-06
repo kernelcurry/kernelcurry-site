@@ -22,7 +22,7 @@ mv _site/.git .
 rm -rf ./_site
 rm -rf deploy.sh
 git add .
-git commit -a -m 'Deployment $(date +"%Y-%m-%d %T")'
+git commit -a -m "Deployment $(date +"%Y-%m-%d %T")"
 git push
 
 # back to master
