@@ -15,13 +15,13 @@ As I did not want to spend the time rewriting code if it did not make a differen
 ### Results
 To start, let’s look at the big picture. the graph below shows the runtime in micro seconds of executing pure PHP & PHP using C from term 0 to 100,000 tested every 1000 terms.
 
-fibonacci-100000.png
+fibonacci-100000.png [Image Missing]
 
 As can been seen, there is a huge difference in runtime between the 2 applications. With lots of calculations, using pure PHP does not stand a chance against its counterpart of using C to do the heavy lifting.
 
 Although there is a huge difference when calculating a large term, let’s drill down a little deeper. This next graph shows the runtime of the nth term being calculated from 0 to 1000 tested every term.
 
-fibonacci-1000.png
+fibonacci-1000.png  [Image Missing]
 
 It looks like there is a grace period where pure PHP out performs PHP using C. When calculating the terms 0 to 728 using pure PHP is faster. But, you are only saving, at most, 6000 microseconds (0.006 Seconds).
 
