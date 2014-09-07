@@ -39,7 +39,9 @@ that is it, you have a new website up and running.  Now you need to get it runni
 
 This is the part that could take a lot of time.  Every port in WordPress will need to be converted into markdown or HTML.  As I write all of my blog posts in markdown before posting them, it took me almost no time to clean them up and pot them into Jekyll.
 
-Luckily, there is a WordPress plugin that will help you with exporting your posts into markdown.  I have not personally used this, but it can't be too hard to get working. WordPress to Jekyll Exporter](https://github.com/benbalter/wordpress-to-jekyll-exporter)
+Luckily, There are a few options for exporting from Wordpress.
+- [WordPress to Jekyll Exporter Plugin](https://github.com/benbalter/wordpress-to-jekyll-exporter)
+- [Jekyll Import Gem]{http://import.jekyllrb.com/docs/home/)
 
 Now that all of your posts are in markdown, we just need to make sure the Jekyll headers and file names are correct.  Below is a sample header that must start on line 1 of the post file.
 
