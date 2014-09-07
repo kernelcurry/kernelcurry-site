@@ -33,7 +33,7 @@ Every internal array must have the same keys. These keys may be set to null, but
 
 The code (below) takes the array (above) and converts it into a CSV string with the keys being the header row. After the string is generated, it is placed into output buffer then forced to be downloaded by the browser.
 
-{% highlight php %}
+{% highlight php linenos %}
 // Generate Array.
 $array = [ /* Array From Above */ ];
 
