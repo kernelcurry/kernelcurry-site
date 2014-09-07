@@ -11,6 +11,8 @@ linkedin_username: michaeliancurry
 
 # Build settings
 markdown: redcarpet
+redcarpet:
+  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data"]
 
 # plugins
 gems: ['jekyll-less', 'jekyll-sitemap', 'jekyll-redirect-from', 'jekyll-press']
