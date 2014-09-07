@@ -10,7 +10,7 @@ github_username:   michaelcurry
 linkedin_username: michaeliancurry
 
 # Build settings
-markdown: kramdown
+markdown: redcarpet
 
 # plugins
 gems: ['jekyll-less', 'jekyll-sitemap', 'jekyll-redirect-from', 'jekyll-press']

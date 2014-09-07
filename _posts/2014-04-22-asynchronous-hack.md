@@ -10,7 +10,7 @@ redirect_from:
 
 The ability for PHP programs to execute asynchronous functions… Yeah, I said it and now it exists. By coding in Facebook’s new Hack Language, using your CPU’s cycles correctly has never been so easy. Let’s delve into this new language head first!
 
-{% highlight php %}
+<pre><code class="php">
 /**
 * This function calls async functions
 */
@@ -32,11 +32,11 @@ function main() : void
         echo '['.$key.'] => '.$value."\n";
     }
 }
-{% endhighlight %}
+</code></pre>
 
 As can be see, this function is no different than any normal PHP function. The only thing you have to notice is the function ‘join()’ called on line 14. This function calls the data from the asynchronous function initialized on line 7.
 
-{% highlight php %}
+<pre><code class="php">
 /**
 * This async function calls more async functions
 *
@@ -55,13 +55,13 @@ async function getInfo() : Awaitable<Vector<T>>
 
     return await GenVectorWaitHandle::create($info);
 }
-{% endhighlight %}
+</pre></code>
 
 Note the async attribute of the function. This lets the compiler know the function is an asynchronous function. Secondly note the Awaitable return type. This will allow the function to use the ‘await’ reserved word.
 
 The ‘await’ token tells the function that everything preceding runs asynchronously but has to wait for $info to be completed before continuing.
 
-{% highlight php %}
+<pre><code class="php">
 /**
 * This async function generates information
 *
@@ -82,7 +82,7 @@ async function genInfo(int $id): Awaitable<String> {
 
     return json_encode($tmp);
 }
-{% endhighlight %}
+</code></pre>
 
 This function just sets a random time for ‘calculations’ to be completed to simulate work that could be done. The reason this function exists is to save the start and end times of the function.
 
@@ -90,7 +90,7 @@ The last thing that must be noted about these function is the WaitHandle. This a
 
 Below is the final output. The last 5 lines say it all!
 
-{% highlight php %}
+<pre><code class="php">
 [main] Calling Async Function
 [getInfo] Generating 0
 [getInfo] Generating 1
@@ -112,7 +112,7 @@ Below is the final output. The last 5 lines say it all!
 [2] => {"id":2,"start":"22:20:34","end":"22:20:35"}
 [3] => {"id":3,"start":"22:20:34","end":"22:20:39"}
 [4] => {"id":4,"start":"22:20:34","end":"22:20:36"}
-{% endhighlight %}
+</code></pre>
 
 All said and done, this is the feature that made me want to start using Hack as a production language. Even if this language crashes and burns, like too many in the past, this feature alone allows me to be hopeful for the future.
 
