@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "From WordPress To Jekyll"
-date:   2014-09-08 00:00:01
+date:   2014-09-08 01:00:00
 categories: blog
 ---
 
