@@ -48,7 +48,7 @@ Now that all of your posts are in markdown, we just need to make sure the Jekyll
 <pre><code class="ruby">---
 layout: post
 title:  "From WordPress To Jekyll"
-date:   2014-09-08 00:00:00
+date:   2014-09-08
 categories: blog
 ---
 </code></pre>

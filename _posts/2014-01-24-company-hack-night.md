@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Every Company Should Have a #HackNight"
-date:   2014-01-24 00:00:00
+date:   2014-01-24
 categories: blog
 redirect_from:
   - "/blog/company-hack-night.html"

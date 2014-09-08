@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Facebook’s Hack Developer Day 2014"
-date:   2014-04-14 00:00:00
+date:   2014-04-14
 categories: blog
 redirect_from:
   - "/blog/facebooks-hack-developer-day-2014.html"

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Why You Should Use C with PHP"
-date:   2014-01-07 00:00:00
+date:   2014-01-07
 categories: blog
 redirect_from:
   - "/blog/why-you-should-use-c-with-php.html"

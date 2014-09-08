@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Asynchronous Functions In Hack"
-date:   2014-04-22 00:00:00
+date:   2014-04-22
 categories: blog
 redirect_from:
   - "/blog/asynchronous-hack.html"

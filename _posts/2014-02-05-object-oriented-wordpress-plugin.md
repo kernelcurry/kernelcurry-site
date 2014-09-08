@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "How To Make An Object Oriented WordPress Plugin"
-date:   2014-02-05 00:00:00
+date:   2014-02-05
 categories: blog
 redirect_from:
   - "/blog/object-oriented-wordpress-plugin.html"
