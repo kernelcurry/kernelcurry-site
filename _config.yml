@@ -1,8 +1,7 @@
 # Site settings
 title: KernelCurry
-email: your-email@domain.com
-description: > # this means to ignore newlines until "baseurl:"
-  Posts and project updates from Michael Ian Curry (Kernelcurry).
+email: michael.ian.curry@gmail.com
+description: > # Posts and project updates from Michael Ian Curry (Kernelcurry).
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://kernelcurry.com" # the base hostname & protocol for your site
 twitter_username:  kernelcurry
