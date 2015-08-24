@@ -75,7 +75,7 @@ The most important thing to keep in mind is security.  Just as `.env` is ignored
 
 *file: app.yaml*
 
-<pre><code class="json">application: mtgapi-service
+<pre><code class="ruby">application: mtgapi-service
 version: 1
 runtime: php55
 api_version: 1
