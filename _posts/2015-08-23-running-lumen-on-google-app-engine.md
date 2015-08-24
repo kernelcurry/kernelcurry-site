@@ -12,8 +12,7 @@ To get Laravel's Lumen running correctly on Google App Engine, there are a few q
 ## How does the application know it is running on Google App Engine?
 One of the easiest ways to figure out if the application is running on Google App Engine is to check if the `.env` file is present.  This is because the deployment "ignore" RegEx  includes any files that start with a `.` (AKA Unix hidden files).  This function will come in handy when answering the next questions.
 
-<pre><code class="php">
-/**
+<pre><code class="php">/**
  * Check if we are running on Google App Engine
  *
  * NOTE: This is determined based on the .env file.  hidden files
@@ -39,8 +38,7 @@ The first thing we need to do is create the class that will override the logging
 
 *file: app/GoogleApp.php*
 
-<pre><code class="php">
-&lt;?php namespace App;
+<pre><code class="php">&lt;?php namespace App;
 
 /**
  * GoogleApp.php
@@ -77,8 +75,7 @@ The most important thing to keep in mind is security.  Just as `.env` is ignored
 
 *file: app.yaml*
 
-<pre><code class="yaml">
-application: mtgapi-service
+<pre><code class="json">application: mtgapi-service
 version: 1
 runtime: php55
 api_version: 1
@@ -117,8 +114,7 @@ This one is very simple.  We just need to create a file in our application root 
 
 *file: php.ini*
 
-<pre><code class="ini">
-google_app_engine.enable_curl_lite = "1"
+<pre><code class="ini">google_app_engine.enable_curl_lite = "1"
 google_app_engine.enable_functions = "php_sapi_name"
 </code></pre>
 
@@ -132,8 +128,7 @@ To do this, we need to edit the file `bootstrap/app.php`.
 
 *file: bootstrap/app.php*
 
-<pre><code class="php">
-&lt;?php
+<pre><code class="php">&lt;?php
 
 require_once __DIR__.'/../vendor/autoload.php';
 
