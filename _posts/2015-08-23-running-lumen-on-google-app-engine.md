@@ -1,18 +1,16 @@
 ---
 layout: post
-title:  "Running Lumen On Google App Engine"
+title:  "Running Laravel's Lumen On Google App Engine"
 date:   2015-08-23
 categories: blog
 ---
 
-# App Engine && lumen
+When looking for a more stable hosting solution for mtgapi.com, I stumbled across Google's App Engine.  If you have not read up on this solution, I would recommend it.
 
-When looking for a more stable hosting solution for mtgapi.com, I stumbled across Google’s App Engine.  If you have not read up on this solution, I would recommend it.
-
-To get Lumen running correctly on Google App Engine, there are a few questions that we need to answer.  Lets take these one at a time.
+To get Laravel's Lumen running correctly on Google App Engine, there are a few questions that we need to answer.  Lets take these one at a time.
 
 ## How does the application know it is running on Google App Engine?
-One of the easiest ways to figure out if the application is running on Google App Engine is to check if the `.env` file is present.  This is because the deployment “ignore” RegEx  includes any files that start with a `.` (AKA Unix hidden files).  This function will come in handy when answering the next questions.
+One of the easiest ways to figure out if the application is running on Google App Engine is to check if the `.env` file is present.  This is because the deployment "ignore" RegEx  includes any files that start with a `.` (AKA Unix hidden files).  This function will come in handy when answering the next questions.
 
 ```
 /**
@@ -25,12 +23,12 @@ One of the easiest ways to figure out if the application is running on Google Ap
  *
  * Example Deploy Verbose Output:
  * `2015-08-19 15:10:11,380 INFO appcfg.py:2684 Ignoring
- * file ‘.env’: File matches ignore regex.`
+ * file '.env': File matches ignore regex.`
  *
  * @return bool
  */
 function is_gae() {
-    return !file_exists(__DIR__ . ‘/../.env’);
+    return !file_exists(__DIR__ . '/../.env');
 }
 ```
 
@@ -39,7 +37,7 @@ After researching how to get logs working with Google, a lot of people recommend
 
 The first thing we need to do is create the class that will override the logging function.  We can do this by making a new class that extends `Laravel\Lumen\Application`.  Then we can  override the logging function.
 
-file: app/GoogleApp.php
+*file: app/GoogleApp.php*
 
 ```
 <?php namespace App;
@@ -67,7 +65,7 @@ class GoogleApp extends Application
      */
     protected function getMonologHandler()
     {
-        return new SyslogHandler(‘intranet’, ‘user’, Logger::DEBUG, false, LOG_PID);
+        return new SyslogHandler('intranet', 'user', Logger::DEBUG, false, LOG_PID);
     }
 }
 ```
@@ -77,7 +75,7 @@ Just like normal, the `.env` file will be used for local environment variables. 
 
 The most important thing to keep in mind is security.  Just as `.env` is ignored in our git repo, we want to ignore `app.yaml` as well.  With this file being excluded from version control, we want to make sure there is a template that users can follow.  We can make `app.yaml.example` that contains the structure with no credentials.  Then we can make `app.yaml` which is a copy of `app.yaml.example` with the correct credentials.
 
-file: app.yaml
+*file: app.yaml*
 
 ```
 application: mtgapi-service
@@ -117,11 +115,11 @@ This one is very simple.  We just need to create a file in our application root 
 1. `google_app_engine.enable_functions` needs to be set to `php_sapi_name` for Lumen to work properly on Google App Engine.  
 2. `google_app_engine.enable_curl_lite` needs to be set to `1` if you are using curl in any way.
 
-file: php.ini
+*file: php.ini*
 
 ```
-google_app_engine.enable_curl_lite = “1”
-google_app_engine.enable_functions = “php_sapi_name”
+google_app_engine.enable_curl_lite = "1"
+google_app_engine.enable_functions = "php_sapi_name"
 ```
 
 ## How does everything fit together?
@@ -132,12 +130,12 @@ To do this, we need to edit the file `bootstrap/app.php`.
 1. Load the new Google application class if we are running on Google App Engine.
 2. Don't load the default `.env` file if we are running on Google App Engine.
 
-file: bootstrap/app.php
+*file: bootstrap/app.php*
 
 ```
 <?php
 
-require_once __DIR__.’/../vendor/autoload.php’;
+require_once __DIR__.'/../vendor/autoload.php';
 
 /**
  * Check if we are running on Google App Engine
@@ -149,12 +147,12 @@ require_once __DIR__.’/../vendor/autoload.php’;
  *
  * Example Deploy Verbose Output:
  * `2015-08-19 15:10:11,380 INFO appcfg.py:2684 Ignoring
- * file ‘.env’: File matches ignore regex.`
+ * file '.env': File matches ignore regex.`
  *
  * @return bool
  */
 function is_gae() {
-    return !file_exists(__DIR__ . ‘/../.env’);
+    return !file_exists(__DIR__ . '/../.env');
 }
 
 /*
@@ -163,20 +161,20 @@ function is_gae() {
 |—————————————————————————————————————
 |
 | Here we will load the environment and create the application instance
-| that serves as the central piece of this framework. We’ll use this
-| application as an “IoC” container and router for this framework.
+| that serves as the central piece of this framework. We'll use this
+| application as an "IoC" container and router for this framework.
 |
 */
 
 if(is_gae()) {
     $app = new App\GooglweApp(
-        realpath(__DIR__ . ‘/../‘)
+        realpath(__DIR__ . '/../')
     );
 }
 else {
-    Dotenv::load(__DIR__ . ‘/../‘);
+    Dotenv::load(__DIR__ . '/../');
     $app = new Laravel\Lumen\Application(
-        realpath(__DIR__ . ‘/../‘)
+        realpath(__DIR__ . '/../')
     );
 }
 ```
@@ -188,7 +186,7 @@ Awesome! Now that we have everything ready to deploy, lets get this new Lumen pr
 
 1. Download the Google App Engine Launcher [Link to Download Page]
 2. Open `GoogleAppEngineLauncher-*.*.*.dmg` and move `GoogleAppEngineLauncher.app` into your `Applications` folder
-3. Open `GoogleAppEngineLauncher` and accept (click ‘yes’/‘accept’) and pop-ups and enter your system password
+3. Open `GoogleAppEngineLauncher` and accept (click 'yes'/'accept') and pop-ups and enter your system password
 
 From this point, we have to make a decision: do we want to deploy from `GoogleAppEngineLauncher` or the terminal?
 
@@ -203,13 +201,13 @@ From this point, we have to make a decision: do we want to deploy from `GoogleAp
 - Application root folder must have the same name as the Google App Engine project ID
 - Do not have the ability to use the full functionality of `appcfg.py` (the deployment command)
 
-If you’re going this route, please make sure the name of your application root folder is the same name as your Google App Engine project ID.  Now, let’s get started:
+If you're going this route, please make sure the name of your application root folder is the same name as your Google App Engine project ID.  Now, let's get started:
 
 1. Click the `+` button in the bottom left corner of the app
 2. Enter your Application Id
 3. Select the folder where your application root resides
 4. Select Runtime as `PHP`
-5. Click ‘Create’
+5. Click 'Create'
 6. Highlight the newly created application from the list
 7. Click the deploy button in the top right
 8. Auth with Google (a webpage will pop up)
@@ -221,9 +219,9 @@ If you’re going this route, please make sure the name of your application root
 
 **Con(s)**
 
-- You have to remember the command or at least make a bash script to run so you don’t have to remember it
+- You have to remember the command or at least make a bash script to run so you don't have to remember it
 
-Congratulations! It looks like this isn’t your first rodeo.  This is by far the most flexible way to deploy your application.
+Congratulations! It looks like this isn't your first rodeo.  This is by far the most flexible way to deploy your application.
 
 1. Open `terminal`
 2. run `appcfg.py -A <application-id> update <application-root-path>`
