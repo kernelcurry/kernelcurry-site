@@ -40,7 +40,7 @@ The first thing we need to do is create the class that will override the logging
 *file: app/GoogleApp.php*
 
 <pre><code class="php">
-<?php namespace App;
+&lt;?php namespace App;
 
 /**
  * GoogleApp.php
@@ -133,7 +133,7 @@ To do this, we need to edit the file `bootstrap/app.php`.
 *file: bootstrap/app.php*
 
 <pre><code class="php">
-<?php
+&lt;?php
 
 require_once __DIR__.'/../vendor/autoload.php';
 
