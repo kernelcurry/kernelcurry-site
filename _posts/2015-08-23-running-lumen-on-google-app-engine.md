@@ -5,7 +5,7 @@ date:   2015-08-23
 categories: blog
 ---
 
-When looking for a more stable hosting solution for [mtgapi.com](https://mtgapi.com/?utm_source=kernelcurry.com&utm_medium=referral&utm_campaign=running-lumen-on-google-app-engine), I stumbled across Google's App Engine.  If you have not read up on this solution, I would recommend it.
+When looking for a more stable hosting solution for [mtgapi.com](https://mtgapi.com?utm_source=kernelcurry.com&utm_medium=referral&utm_campaign=running-lumen-on-google-app-engine), I stumbled across Google's App Engine.  If you have not read up on this solution, I would recommend it.
 
 To get Laravel's Lumen running correctly on Google App Engine, there are a few questions that we need to answer.  Lets take these one at a time.
 
@@ -184,7 +184,7 @@ else {
 ## How do we deploy?
 Awesome! Now that we have everything ready to deploy, lets get this new Lumen project running on Google App Engine.  Keep in mind the following steps assume you are running Mac OSX.  You may have to do things a little differently if you are running Windows or Linux. 
 
-1. Download the [Google App Engine Launcher](https://cloud.google.com/appengine/downloads)
+1. Download the [Google App Engine Launcher](https://cloud.google.com/appengine/downloads?utm_source=kernelcurry.com&utm_medium=referral&utm_campaign=running-lumen-on-google-app-engine)
 2. Open `GoogleAppEngineLauncher-*.*.*.dmg` and move `GoogleAppEngineLauncher.app` into your `Applications` folder
 3. Open `GoogleAppEngineLauncher` and accept (click 'yes'/'accept') and pop-ups and enter your system password
 
