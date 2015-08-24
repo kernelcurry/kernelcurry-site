@@ -41,7 +41,7 @@ This is the part that could take a lot of time.  Every post in WordPress will ne
 
 Luckily there are a few options for exporting from Wordpress.
 - [WordPress to Jekyll Exporter Plugin](https://github.com/benbalter/wordpress-to-jekyll-exporter)
-- [Jekyll Import Gem]{http://import.jekyllrb.com/docs/home/)
+- [Jekyll Import Gem](http://import.jekyllrb.com/docs/home/)
 
 Now that all of your posts are in markdown, we just need to make sure the Jekyll headers and filenames are correct.  Below is a sample header that must start on line 1 of the post file.
 
