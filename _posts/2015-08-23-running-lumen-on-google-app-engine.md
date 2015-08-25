@@ -36,9 +36,9 @@ After researching how to get logs working with Google, a lot of people recommend
 
 The first thing we need to do is create the class that will override the logging function.  We can do this by making a new class that extends `Laravel\Lumen\Application`.  Then we can  override the logging function.
 
-*file: app/GoogleApp.php*
+*file: app/Bootstrap/GoogleApp.php*
 
-<pre><code class="php">&lt;?php namespace App;
+<pre><code class="php">&lt;?php namespace App\Bootstrap;
 
 /**
  * GoogleApp.php
@@ -162,7 +162,7 @@ function is_gae() {
 */
 
 if(is_gae()) {
-    $app = new App\GooglweApp(
+    $app = new App\Bootstrap\GoogleApp(
         realpath(__DIR__ . '/../')
     );
 }
