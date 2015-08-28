@@ -3,7 +3,7 @@ layout: project
 categories: project
 title: "BNF First and Follow Sets Finder"
 active: 0
-url: https://github.com/michaelcurry/cse340-first-and-follow-sets
+external_url: https://github.com/michaelcurry/cse340-first-and-follow-sets
 description: "Easily find all BNF first and follow sets"
 ---
 

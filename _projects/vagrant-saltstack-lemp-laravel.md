@@ -3,7 +3,7 @@ layout: project
 categories: project
 title: "Vagrant + SaltStack + LEMP + Laravel"
 active: 0
-url: https://github.com/michaelcurry/vss-lemp-laravel
+external_url: https://github.com/michaelcurry/vss-lemp-laravel
 description: "Get your development environment set up!"
 ---
 
