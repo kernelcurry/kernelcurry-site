@@ -3,6 +3,8 @@ layout: project
 categories: project
 title: "Vagrant + HHVM  + Nginx + Optional(Laravel)"
 active: 0
+url: https://github.com/kernelcurry/vhhnl
+description: "Get your development environment set up!"
 ---
 
-Vagrant && HHVM && Hack && Nginx && Optional(Laravel): [https://github.com/kernelcurry/vhhnl](https://github.com/kernelcurry/vhhnl)
+*In the process of writing project pages.  Content soon to come*

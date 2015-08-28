@@ -3,6 +3,8 @@ layout: project
 categories: project
 title: "Magic: The Gathering Api"
 active: 1
+url: http://mtgapi.com
+description: "An easy to use Magic: The Gathering Api"
 ---
 
-Magic: The Gathering API: [http://mtgapi.com](http://mtgapi.com)
+*In the process of writing project pages.  Content soon to come*
