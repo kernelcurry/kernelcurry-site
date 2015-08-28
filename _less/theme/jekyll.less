@@ -276,6 +276,36 @@ pre {
   display: block;
   font-size: 24px; }
 
+.project-list {
+  margin-left: 0;
+  list-style: none; }
+  .project-list > li {
+    margin-bottom: 30px; }
+
+.project-status {
+  float: left;
+    padding: 0px 10px;
+    margin-top: 8px;
+    margin-right: 10px;
+    width: 80px;
+    text-align: center;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+.project-status.active {
+  color: #3c763d;
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+}
+
+.project-status.deprecated {
+  color: #a94442;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+}
+
 /**
  * Posts
  */

@@ -8,6 +8,10 @@ twitter_username:  kernelcurry
 github_username:   michaelcurry
 linkedin_username: michaeliancurry
 
+collections:
+  projects:
+    output: true
+
 # Build settings
 markdown: redcarpet
 redcarpet:
