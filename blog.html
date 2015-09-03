@@ -13,8 +13,10 @@ permalink: /blog/
       <li>
         <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
           <img class="post-image" src="{{ post.image }}" />
-          <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-          <h2 class="post-title">{{ post.title }}</h2>
+          <span class="post-info">
+            <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+            <h2 class="post-title">{{ post.title }}</h2>
+          </span>
         </a>
       </li>
     {% endfor %}
