@@ -3,7 +3,7 @@ layout: post
 categories: blog
 title: "2 Dimensional Array To CSV Download Using PHP"
 date: 2014-01-28
-image: /img/2014-01-28-array-to-csv-download/main.jpg
+image: /img/blog/2014-01-28-array-to-csv-download/main.jpg
 redirect_from:
   - "/blog/array-to-csv-download.html"
   - "/blog/array-to-csv-download/"

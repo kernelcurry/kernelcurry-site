@@ -3,7 +3,7 @@ layout: post
 categories: blog
 title: "From WordPress To Jekyll"
 date: 2014-09-08
-image: /img/2014-09-08-wordpress-to-jekyll/main.jpg
+image: /img/blog/2014-09-08-wordpress-to-jekyll/main.jpg
 ---
 
 ## Pros and Cons

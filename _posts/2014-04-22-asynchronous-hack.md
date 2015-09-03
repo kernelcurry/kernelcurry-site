@@ -3,7 +3,7 @@ layout: post
 categories: blog
 title: "Asynchronous Functions In Hack"
 date: 2014-04-22
-image: /img/2014-04-22-asynchronous-hack/main.jpg
+image: /img/blog/2014-04-22-asynchronous-hack/main.jpg
 redirect_from:
   - "/blog/asynchronous-hack.html"
   - "/blog/asynchronous-hack/"

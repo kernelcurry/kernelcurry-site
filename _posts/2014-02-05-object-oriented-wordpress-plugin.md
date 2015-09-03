@@ -3,7 +3,7 @@ layout: post
 categories: blog
 title: "How To Make An Object Oriented WordPress Plugin"
 date: 2014-02-05
-image: /img/2014-02-05-object-oriented-wordpress-plugin/main.jpg
+image: /img/blog/2014-02-05-object-oriented-wordpress-plugin/main.jpg
 redirect_from:
   - "/blog/object-oriented-wordpress-plugin.html"
   - "/blog/object-oriented-wordpress-plugin/"
