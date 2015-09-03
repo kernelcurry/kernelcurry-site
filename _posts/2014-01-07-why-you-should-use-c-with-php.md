@@ -1,8 +1,9 @@
 ---
 layout: post
-title:  "Why You Should Use C with PHP"
-date:   2014-01-07
 categories: blog
+title: "Why You Should Use C with PHP"
+date: 2014-01-07
+image: /img/2014-01-07-why-you-should-use-c-with-php/main.jpg
 redirect_from:
   - "/blog/why-you-should-use-c-with-php.html"
   - "/blog/why-you-should-use-c-with-php/"

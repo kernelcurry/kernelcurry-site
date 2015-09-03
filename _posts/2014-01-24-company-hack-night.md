@@ -1,8 +1,9 @@
 ---
 layout: post
-title:  "Every Company Should Have a #HackNight"
-date:   2014-01-24
 categories: blog
+title: "Every Company Should Have a #HackNight"
+date: 2014-01-24
+image: /img/2014-01-24-company-hack-night/main.jpg
 redirect_from:
   - "/blog/company-hack-night.html"
   - "/blog/company-hack-night/"

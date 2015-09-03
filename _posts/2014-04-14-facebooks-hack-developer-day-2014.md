@@ -1,8 +1,9 @@
 ---
 layout: post
-title:  "Facebook’s Hack Developer Day 2014"
-date:   2014-04-14
 categories: blog
+title: "Facebook’s Hack Developer Day 2014"
+date: 2014-04-14
+image: /img/2014-04-14-facebooks-hack-developer-day-2014/main.jpg
 redirect_from:
   - "/blog/facebooks-hack-developer-day-2014.html"
   - "/blog/facebooks-hack-developer-day-2014/"
