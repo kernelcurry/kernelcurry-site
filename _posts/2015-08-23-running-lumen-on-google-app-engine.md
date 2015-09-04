@@ -4,7 +4,7 @@ categories: blog
 title: "Running Laravel's Lumen On Google App Engine"
 date: 2015-08-23
 image: /img/blog/2015-08-23-running-lumen-on-google-app-engine/main.jpg
-description: "To get Laravel's Lumen running correctly on Google App Engine, there are a few questions that we need to answer.  Lets take these one at a time.
+description: "To get Laravel's Lumen running correctly on Google App Engine, there are a few questions that we need to answer.  Lets take these one at a time."
 ---
 
 When looking for a more stable hosting solution for my [Magic: The Gathering Api](https://mtgapi.com?utm_source=kernelcurry.com&utm_medium=referral&utm_campaign=running-lumen-on-google-app-engine), I stumbled across Google's App Engine.  If you have not read up on this solution, I would recommend it.
