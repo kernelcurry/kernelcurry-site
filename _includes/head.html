@@ -11,7 +11,7 @@
     <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
     <meta property="article:author" content="https://twitter.com/kernelcurry" />
     <meta property="article:publisher" content="https://www.kernelcurry.com/blog" />
-    <meta property="og:type" content="article" />
+    <meta property="og:type" content="{% if layout == 'post' %}article{% else %}website{% endif %}" />
 
     <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
