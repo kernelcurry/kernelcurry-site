@@ -1,7 +1,7 @@
 # Site settings
 title: KernelCurry
 email: michael.ian.curry@gmail.com
-description: > # Posts and project updates from Michael Ian Curry (Kernelcurry).
+description: "Posts and project updates from Michael Ian Curry (Kernelcurry)"
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://kernelcurry.com" # the base hostname & protocol for your site
 image: \img\global\main.jpg
