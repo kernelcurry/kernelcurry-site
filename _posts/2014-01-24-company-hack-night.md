@@ -4,6 +4,7 @@ categories: blog
 title: "Every Company Should Have a #HackNight"
 date: 2014-01-24
 image: /img/blog/2014-01-24-company-hack-night/main.jpg
+description: "For the past year, every Wednesday night at about 6:00 p.m. work stops!  Stop your real work and work on something fun!"
 redirect_from:
   - "/blog/company-hack-night.html"
   - "/blog/company-hack-night/"

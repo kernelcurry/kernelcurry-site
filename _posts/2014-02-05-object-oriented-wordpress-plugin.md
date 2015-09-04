@@ -4,6 +4,7 @@ categories: blog
 title: "How To Make An Object Oriented WordPress Plugin"
 date: 2014-02-05
 image: /img/blog/2014-02-05-object-oriented-wordpress-plugin/main.jpg
+description: "You just learned how to create a simple WordPress plugin, and now you hear people talking about how WordPress is becoming more object-oriented. What does that mean? Lets take a step back and start with the basics."
 redirect_from:
   - "/blog/object-oriented-wordpress-plugin.html"
   - "/blog/object-oriented-wordpress-plugin/"

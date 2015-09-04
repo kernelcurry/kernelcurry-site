@@ -4,6 +4,7 @@ categories: blog
 title: "2 Dimensional Array To CSV Download Using PHP"
 date: 2014-01-28
 image: /img/blog/2014-01-28-array-to-csv-download/main.jpg
+description: "Have you ever needed to convert a 2 dimensional array into a CSV then force a download?  Well, I have, and here is how I did it..."
 redirect_from:
   - "/blog/array-to-csv-download.html"
   - "/blog/array-to-csv-download/"

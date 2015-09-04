@@ -4,6 +4,7 @@ categories: blog
 title: "Facebook’s Hack Developer Day 2014"
 date: 2014-04-14
 image: /img/blog/2014-04-14-facebooks-hack-developer-day-2014/main.jpg
+description: "This last week I was lucky enough to step onto Facebook's campus for their first ever Hack Developer Day. Throughout the day developers and project managers gave talks about HHVM and Hack. From overviews to the nitty gritty details, each talk brought more insight into why this language was created."
 redirect_from:
   - "/blog/facebooks-hack-developer-day-2014.html"
   - "/blog/facebooks-hack-developer-day-2014/"

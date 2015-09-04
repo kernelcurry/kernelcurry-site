@@ -4,6 +4,7 @@ categories: blog
 title: "Why You Should Use C with PHP"
 date: 2014-01-07
 image: /img/blog/2014-01-07-why-you-should-use-c-with-php/main.jpg
+description: "A few months ago, I calculated the top Magic: The Gathering cards in the games modern format ... It took 30 minutes in PHP.  How long would it take in C?"
 redirect_from:
   - "/blog/why-you-should-use-c-with-php.html"
   - "/blog/why-you-should-use-c-with-php/"
