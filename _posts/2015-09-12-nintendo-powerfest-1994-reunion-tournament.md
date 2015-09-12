@@ -13,7 +13,7 @@ The main draw for the Game On Retro Expo was the 1994 PowerFest Reunion Tourname
 
 ![Qualification Scores](/img/blog/2015-09-12-nintendo-powerfest-1994-reunion-tournament/scores.jpg "1994 Nintendo Powerfest Reunion Tournament Qualification Scores")
 
-The first day, I was able to pull a score of 1.13 million, locking in my spot for the tournament on Sunday.  More about the tournament later. For now, let’s talk about the [1994 Reunion Panel](http://azgameonexpo.com/panels?utm_source=kernelcurry.com&utm_medium=referral&utm_campaign=nintendo-powerfest-1994-reunion-tournament#powerfest94]).  
+The first day, I was able to pull a score of 1.13 million, locking in my spot for the tournament on Sunday.  More about the tournament later.  For now, let’s talk about the [1994 Reunion Panel](http://azgameonexpo.com/panels?utm_source=kernelcurry.com&utm_medium=referral&utm_campaign=nintendo-powerfest-1994-reunion-tournament#powerfest94).
 
 The panel consisted of Dorion, Mike, and Patric Wyrick.  Patric was also a finalist in the Nintendo 1994 PowerFest.  Stories of traveling around the U.S., qualifying friends and sabotaging a seven-year-old kid were all told.  But most importantly was the theme of how games used to be filled with a sense of wonder, frustration, and learning.  This being solidified by Mike Iarossi when he said, “… you only have one chance to learn something by yourself, why would you ruin that?”  I would recommend watching the full video for yourself.
 
@@ -27,6 +27,6 @@ All said and done, this past weekend was an amazing one.  Bringing it back to th
 
 ![1994 Nintendo Powerfest Trophy](/img/blog/2015-09-12-nintendo-powerfest-1994-reunion-tournament/end.jpg "Holding 1994 Nintendo Powerfest Trophy")
 
-Mike Iarossi is still going strong in his quest to play games and show others the advantages of playing them.  Take a look at his website [http://qik1.com](http://qik1.com/?utm_source=kernelcurry.com&utm_medium=referral&utm_campaign=nintendo-powerfest-1994-reunion-tournament) or checkout his stream at [http://www.twitch.tv/qik1](http://www.twitch.tv/qik1?utm_source=kernelcurry.com&utm_medium=referral&utm_campaign=nintendo-powerfest-1994-reunion-tournament).  And make sure to give him a hard time for me.  But be prepared, if you egg him on, expect to take a few shots yourself.  
+Mike Iarossi is still going strong in his quest to play games and show others the advantages of playing them.  Take a look at his website [http://qik1.com](http://qik1.com/?utm_source=kernelcurry.com&utm_medium=referral&utm_campaign=nintendo-powerfest-1994-reunion-tournament) or checkout his stream at [http://www.twitch.tv/qik1](http://www.twitch.tv/qik1?utm_source=kernelcurry.com&utm_medium=referral&utm_campaign=nintendo-powerfest-1994-reunion-tournament).  And make sure to give him a hard time for me.  But be prepared, if you egg him on, expect to take a few shots yourself.
 
 Happy Gaming! 
