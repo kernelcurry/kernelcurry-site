@@ -17,7 +17,7 @@ The first day, I was able to pull a score of 1.13 million, locking in my spot fo
 
 The panel consisted of Dorion, Mike, and Patric Wyrick.  Patric was also a finalist in the Nintendo 1994 PowerFest.  Stories of traveling around the U.S., qualifying friends and sabotaging a seven-year-old kid were all told.  But most importantly was the theme of how games used to be filled with a sense of wonder, frustration, and learning.  This being solidified by Mike Iarossi when he said, “… you only have one chance to learn something by yourself, why would you ruin that?”  I would recommend watching the full video for yourself.
 
-{% youtube http://youtu.be/TGBHQYOvOgY %}
+{% youtube TGBHQYOvOgY %}
 
 Finally it was Sunday: tournament day.  I placed 6th in the overall standings, and it was now time for the big boys to play.  The first few scores didn’t scare me, and I was pumped when my turn came around.  Making almost a perfect run on Mario, on the last mushroom, I jumped but apparently the controller did not agree with me, and ‘smack!’ I died!. Being about 15 seconds behind where I needed to be I hit the quick-start on Mario Kart, boosting my spirits of making up some time.  Four laps in, I hit a pipe and ‘crash!’, there goes my game.  Finally getting to Ken Griffey Jr. Home Run, I had two pop fly pitches and only hit out XX home runs.  Locking me into 9th place.  I choked! It happens, but it was a blast.  
 

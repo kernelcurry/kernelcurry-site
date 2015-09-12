@@ -30,7 +30,7 @@ module Jekyll
         intrinsic = ((@height.to_f / @width.to_f) * 100)
         padding_bottom = ("%.2f" % intrinsic).to_s  + "%"
         # remove/comment the next line and adjust the class name on the following line if you already have CSS for responsive video
-        video = %Q{<div class="embed-responsive embed-responsive-16by9" ><iframe width="#{@width}" height="#{@height}" src="http://www.youtube.com/embed/#{@videoid}?rel=0" frameborder="0" allowfullscreen></iframe></div>}
+        video = %Q{<div class="embed-responsive embed-responsive-16by9" ><iframe width="#{@width}" height="#{@height}" src="https://www.youtube.com/embed/#{@videoid}?rel=0" frameborder="0" allowfullscreen></iframe></div>}
       else
         "Error processing input, expected syntax: {% youtube video_id [widt height] %}"
       end
