@@ -27,6 +27,6 @@ All said and done, this past weekend was an amazing one.  Bringing it back to th
 
 ![1994 Nintendo Powerfest Trophy](/img/blog/2015-09-12-nintendo-powerfest-1994-reunion-tournament/end.jpg "Holding 1994 Nintendo Powerfest Trophy")
 
-Mike Iarossi is still going strong in his quest to play games and show others the advantages of playing them.  Take a look at his website <a href="http://qik1.com/?utm_source=kernelcurry.com&utm_medium=referral&utm_campaign=nintendo-powerfest-1994-reunion-tournament" target="_blank">http://qik1.com</a> or checkout his stream at <a href="http://www.twitch.tv/qik1?utm_source=kernelcurry.com&utm_medium=referral&utm_campaign=nintendo-powerfest-1994-reunion-tournament" target="_blank">http://www.twitch.tv/qik1</a>.  And make sure to give him a hard time for me.  But be prepared, if you egg him on, expect to take a few shots yourself.
+Mike Iarossi is still going strong in his quest to play games and show others the advantages of playing them.  Take a look at his <a href="http://qik1.com/?utm_source=kernelcurry.com&utm_medium=referral&utm_campaign=nintendo-powerfest-1994-reunion-tournament" target="_blank">website</a> or checkout his stream at <a href="http://www.twitch.tv/qik1?utm_source=kernelcurry.com&utm_medium=referral&utm_campaign=nintendo-powerfest-1994-reunion-tournament" target="_blank">twitchTv/qik1</a>.  And make sure to give him a hard time for me.  But be prepared, if you egg him on, expect to take a few shots yourself.
 
 Happy Gaming! 
