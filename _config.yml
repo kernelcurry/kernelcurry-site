@@ -1,6 +1,6 @@
 # Site settings
 title: KernelCurry
-email: michael.ian.curry@gmail.com
+email: info@kernelcurry.com
 description: "Posts and project updates from Michael Ian Curry (Kernelcurry)"
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://kernelcurry.com" # the base hostname & protocol for your site
@@ -8,6 +8,7 @@ image: \img\global\main.jpg
 twitter_username:  kernelcurry
 github_username:   michaelcurry
 linkedin_username: michaeliancurry
+youtube_channel: "https://www.youtube.com/channel/UCb4ZxGv2-a3BP88hui0Udlw"
 
 collections:
   projects:
@@ -24,6 +25,6 @@ gems: ['jekyll-less', 'jekyll-sitemap', 'jekyll-redirect-from', 'jekyll-press']
 # jekyll press to compress all of the things
 jekyll-press:
   exclude: 'sitemap.xml' # Exclude files from processing - file name, glob pattern or array of file names and glob patterns
-  js_options: {}      # js minifier options
-  css_options: {}     # css minifier options
-  html_options: {}    # html minifier options
+  js_options: {}         # js minifier options
+  css_options: {}        # css minifier options
+  html_options: {}       # html minifier options

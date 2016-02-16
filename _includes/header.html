@@ -29,6 +29,13 @@
               <i class="fa fa-rss"></i><span class="visible-xs">RSS Feed</span>
             </a>
           </li>
+          {% if site.youtube_channel %}
+            <li>
+              <a class="social" href="{{ site.youtube_channel }}" rel="nofollow">
+                <i class="fa fa-youtube-play"></i><span class="visible-xs">KernelCurry</span>
+              </a>
+            </li>
+          {% endif %}
           {% if site.twitter_username %}
             <li>
               <a class="social" href="https://twitter.com/{{ site.twitter_username }}" rel="nofollow">
