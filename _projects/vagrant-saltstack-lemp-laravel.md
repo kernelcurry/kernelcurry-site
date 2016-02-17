@@ -1,5 +1,4 @@
 ---
-layout: project
 categories: project
 title: "Vagrant + SaltStack + LEMP + Laravel"
 active: 0

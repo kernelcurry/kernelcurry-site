@@ -1,0 +1,37 @@
+
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0">
+    <channel>
+        <title>SF Repo</title>
+        <link>https://www.kernelcurry.com</link>
+        <language>en-us</language>
+        <copyright>&#x2117; 2016 Kernel Curry</copyright>
+        <itunes:subtitle>A Bay Area Podcast</itunes:subtitle>
+        <itunes:author>Kernel Curry</itunes:author>
+        <itunes:summary>A podcast where my friends and I talk about something intresting we have learned in the past week.</itunes:summary>
+        <description>SF Repo is a Bay Area podcast where mu friends and I talk about something intresting we have learned in the past week.</description>
+        <itunes:owner>
+            <itunes:name>Kernel Curry</itunes:name>
+            <itunes:email>info@kenrelcurry.com</itunes:email>
+        </itunes:owner>
+        <itunes:image href="http://example.com/podcasts/everything/AllAboutEverything.jpg" />
+        <itunes:category text="Games &amp; Hobbies">
+            <itunes:category text="Hobbies" />
+            <itunes:category text="Video Games" />
+        </itunes:category>
+        <itunes:category text="Technology">
+            <itunes:category text="Gadgets" />
+        </itunes:category>
+        <item>
+            <title>Hackers Win Clan Wars - Let&#39;s Write About It [001]</title>
+            <itunes:author>Kernel Curry</itunes:author>
+            <itunes:subtitle>Clash Of Clans Hack &amp; Quiver: The Programmer's Notebook</itunes:subtitle>
+            <itunes:summary>Today, my friend Ben and I talk about a Clash Of Clans Hack &amp; Quiver: The Programmer's Notebook</itunes:summary>
+            <itunes:image href="http://example.com/podcasts/everything/AllAboutEverything/Episode1.jpg" />
+            <enclosure url="http://example.com/podcasts/everything/AllAboutEverythingEpisode3.m4a" length="8727310" type="audio/x-m4a" />
+            <guid>http://example.com/podcasts/archive/aae20140615.m4a</guid>
+            <pubDate>Wed, 15 Jun 2014 19:00:00 GMT</pubDate>
+            <itunes:duration>7:04</itunes:duration>
+        </item>
+    </channel>
+</rss>

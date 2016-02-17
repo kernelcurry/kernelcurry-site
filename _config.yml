@@ -11,8 +11,37 @@ linkedin_username: michaeliancurry
 youtube_channel: "https://www.youtube.com/channel/UCb4ZxGv2-a3BP88hui0Udlw"
 
 collections:
+  posts:
+    output: true
   projects:
     output: true
+  podcasts:
+    output: true
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: page
+  -
+    scope:
+      path: blog
+      type: posts
+    values:
+      layout: post
+  -
+    scope:
+      path: projects
+      type: projects
+    values:
+      layout: project
+  -
+    scope:
+      path: podcasts
+      type: podcasts
+    values:
+      layout: podcast
 
 # Build settings
 markdown: redcarpet

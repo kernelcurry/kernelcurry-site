@@ -1,5 +1,4 @@
 ---
-layout: post
 categories: blog
 title: "Why You Should Use C with PHP"
 date: 2014-01-07

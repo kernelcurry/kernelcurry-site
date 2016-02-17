@@ -1,5 +1,4 @@
 ---
-layout: post
 categories: blog
 title: "Running Laravel's Lumen On Google App Engine"
 date: 2015-08-23
@@ -179,7 +178,7 @@ else {
 **Note:** This is the top of the file `bootstrap/app.php`.  The lines that state `$app->withFacades();` and `$app->withEloquent();` should immediately follow.
 
 ## How do we deploy?
-Awesome! Now that we have everything ready to deploy, lets get this new Lumen project running on Google App Engine.  Keep in mind the following steps assume you are running Mac OSX.  You may have to do things a little differently if you are running Windows or Linux. 
+Awesome! Now that we have everything ready to deploy, lets get this new Lumen project running on Google App Engine.  Keep in mind the following steps assume you are running Mac OSX.  You may have to do things a little differently if you are running Windows or Linux.
 
 1. Download the [Google App Engine Launcher](https://cloud.google.com/appengine/downloads?utm_source=kernelcurry.com&utm_medium=referral&utm_campaign=running-lumen-on-google-app-engine)
 2. Open `GoogleAppEngineLauncher-*.*.*.dmg` and move `GoogleAppEngineLauncher.app` into your `Applications` folder

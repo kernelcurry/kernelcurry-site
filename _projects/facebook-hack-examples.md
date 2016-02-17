@@ -1,5 +1,4 @@
 ---
-layout: project
 categories: project
 title: "Facebook’s Hack Language Examples"
 active: 0

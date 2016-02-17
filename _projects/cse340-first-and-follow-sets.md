@@ -1,5 +1,4 @@
 ---
-layout: project
 categories: project
 title: "BNF First and Follow Sets Finder"
 active: 0

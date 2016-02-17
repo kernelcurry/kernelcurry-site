@@ -1,5 +1,4 @@
 ---
-layout: post
 categories: blog
 title: "2 Dimensional Array To CSV Download Using PHP"
 date: 2014-01-28

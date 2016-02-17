@@ -1,5 +1,4 @@
 ---
-layout: project
 categories: project
 title: "Vagrant + HHVM  + Nginx + Optional(Laravel)"
 active: 0

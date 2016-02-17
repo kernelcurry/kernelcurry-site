@@ -1,5 +1,4 @@
 ---
-layout: post
 categories: blog
 title: "How To Make An Object Oriented WordPress Plugin"
 date: 2014-02-05

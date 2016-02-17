@@ -1,5 +1,5 @@
 ---
-layout: post
+type: posts
 categories: blog
 title: "Nintendo PowerFest (1994) Reunion Tournament"
 date: 2015-09-12
@@ -29,4 +29,4 @@ All said and done, the weekend was amazing.  Bringing it back to the old times; 
 
 Mike Iarossi is still going strong in his quest to play games and show others the advantages of playing them.  Take a look at his <a href="http://qik1.com/?utm_source=kernelcurry.com&utm_medium=referral&utm_campaign=nintendo-powerfest-1994-reunion-tournament" target="_blank">website</a> or checkout his stream at <a href="http://www.twitch.tv/qik1?utm_source=kernelcurry.com&utm_medium=referral&utm_campaign=nintendo-powerfest-1994-reunion-tournament" target="_blank">twitchTv/qik1</a>.  And make sure to give him a hard time for me.  But be prepared, if you egg him on, expect to take a few shots yourself.
 
-Happy Gaming! 
+Happy Gaming!

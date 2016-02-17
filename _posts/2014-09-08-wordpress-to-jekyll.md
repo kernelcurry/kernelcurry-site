@@ -1,5 +1,4 @@
 ---
-layout: post
 categories: blog
 title: "From WordPress To Jekyll"
 date: 2014-09-08

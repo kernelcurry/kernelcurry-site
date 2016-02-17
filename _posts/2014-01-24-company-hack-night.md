@@ -1,5 +1,4 @@
 ---
-layout: post
 categories: blog
 title: "Every Company Should Have a #HackNight"
 date: 2014-01-24

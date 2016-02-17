@@ -1,5 +1,4 @@
 ---
-layout: post
 categories: blog
 title: "Facebook’s Hack Developer Day 2014"
 date: 2014-04-14

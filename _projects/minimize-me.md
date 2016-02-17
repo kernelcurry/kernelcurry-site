@@ -1,5 +1,4 @@
 ---
-layout: project
 categories: project
 title: "minimizeMe"
 active: 1
