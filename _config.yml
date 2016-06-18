@@ -36,12 +36,6 @@ defaults:
       type: projects
     values:
       layout: project
-  -
-    scope:
-      path: podcasts
-      type: podcasts
-    values:
-      layout: podcast
 
 # Build settings
 markdown: redcarpet
