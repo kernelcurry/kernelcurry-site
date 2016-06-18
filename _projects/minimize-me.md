@@ -9,7 +9,6 @@ description: "How fast can you tap?  A simple game that will challenge you and y
 
 ![minimizeMe](/img/projects/minimize-me/main.jpg "a simple game to play with your friends")
 
-
 Challenge your friends and see who has the fastest fingers!  Check your rank worldwide with the Top Taps leaderboard.  You have 5 seconds; make them count.
 
 - A simple game anyone can play
