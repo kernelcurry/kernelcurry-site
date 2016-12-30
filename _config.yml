@@ -41,3 +41,10 @@ defaults:
 markdown: redcarpet
 redcarpet:
   extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data"]
+
+# jekyll press to compress all of the things
+jekyll-press:
+  exclude: 'sitemap.xml' # Exclude files from processing - file name, glob pattern or array of file names and glob patterns
+  js_options: {}         # js minifier options
+  css_options: {}        # css minifier options
+  html_options: {}       # html minifier options
