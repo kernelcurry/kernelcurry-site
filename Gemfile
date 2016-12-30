@@ -5,4 +5,6 @@ source 'https://rubygems.org'
    gem "jekyll-sitemap"
    gem "jekyll-redirect-from"
    gem "jekyll-minifier"
+   gem "therubyracer"
+   gem "redcarpet"
  end
