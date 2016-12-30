@@ -18,6 +18,8 @@ mv _site/* .
 mv _site/.git .
 rm -rf ./_site
 rm -rf deploy.sh
+rm -rf Gemfile
+rm -rf Gemfile.lock
 git add .
 git commit -a -m "Deployment $(date +"%Y-%m-%d %T")"
 git push
