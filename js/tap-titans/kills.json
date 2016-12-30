@@ -1,66 +1,165 @@
-[
-  {
-    "damage": {
-      "Akhadash": 243360,
-      "AngryLeftist": 48560,
-      "Astros": 154300,
-      "Chris": 115450,
-      "CloudM": 115480,
-      "Clypsy": 456486,
-      "Dark Master": 42790,
-      "Fayt": 476114,
-      "J393": 659976,
-      "KernelCurry": 961451,
-      "Lex": 41570,
-      "Litlepig": 168756,
-      "MIR": 232670,
-      "Panda Samurai": 209220,
-      "Pollux": 43710,
-      "Roy": 37510,
-      "Sterban": 343946,
-      "Sword Master": 177485,
-      "The shadow": 36680,
-      "Wholph": 92570,
-      "ZAKI": 32800,
-      "Zero": 375125,
-      "ahardergame": 53580,
-      "bro": 72680,
-      "gloriousdead": 33830,
-      "killer": 71860,
-      "shablo": 39450
-    },
-    "date": "2016-12-28",
-    "level": 6
-  },
-  {
-    "damage": {
-      "Akhadash": 462650,
-      "Apriyan": 32970,
-      "Astros": 307536,
-      "Chris": 306990,
-      "CloudM": 117460,
-      "Dark Master": 43990,
-      "Fayt": 490302,
-      "J393": 810150,
-      "KernelCurry": 548501,
-      "Lex": 93660,
-      "MIR": 135000,
-      "Panda Samurai": 406210,
-      "Pollux": 48880,
-      "Roy": 42430,
-      "Sherlock": 79850,
-      "Sterban": 406514,
-      "Sword Master": 175520,
-      "The shadow": 42150,
-      "Wholph": 54440,
-      "ZAKI": 70800,
-      "Zero": 520934,
-      "ahardergame": 168980,
-      "bro": 92400,
-      "gloriousdead": 79290,
-      "killer": 37660
-    },
-    "date": "2016-12-29",
-    "level": 7
-  }
-]
+[{
+  "damage": [{
+    "username": "Akhadash",
+    "value": 243360
+  }, {
+    "username": "AngryLeftist",
+    "value": 48560
+  }, {
+    "username": "Astros",
+    "value": 154300
+  }, {
+    "username": "Chris",
+    "value": 115450
+  }, {
+    "username": "CloudM",
+    "value": 115480
+  }, {
+    "username": "Clypsy",
+    "value": 456486
+  }, {
+    "username": "Dark Master",
+    "value": 42790
+  }, {
+    "username": "Fayt",
+    "value": 476114
+  }, {
+    "username": "J393",
+    "value": 659976
+  }, {
+    "username": "KernelCurry",
+    "value": 961451
+  }, {
+    "username": "Lex",
+    "value": 41570
+  }, {
+    "username": "Litlepig",
+    "value": 168756
+  }, {
+    "username": "MIR",
+    "value": 232670
+  }, {
+    "username": "Panda Samurai",
+    "value": 209220
+  }, {
+    "username": "Pollux",
+    "value": 43710
+  }, {
+    "username": "Roy",
+    "value": 37510
+  }, {
+    "username": "Sterban",
+    "value": 343946
+  }, {
+    "username": "Sword Master",
+    "value": 177485
+  }, {
+    "username": "The shadow",
+    "value": 36680
+  }, {
+    "username": "Wholph",
+    "value": 92570
+  }, {
+    "username": "ZAKI",
+    "value": 32800
+  }, {
+    "username": "Zero",
+    "value": 375125
+  }, {
+    "username": "ahardergame",
+    "value": 53580
+  }, {
+    "username": "bro",
+    "value": 72680
+  }, {
+    "username": "gloriousdead",
+    "value": 33830
+  }, {
+    "username": "killer",
+    "value": 71860
+  }, {
+    "username": "shablo",
+    "value": 39450
+  }],
+  "date": "2016-12-28",
+  "level": 6
+}, {
+  "damage": [{
+    "username": "Akhadash",
+    "value": 462650
+  }, {
+    "username": "Apriyan",
+    "value": 32970
+  }, {
+    "username": "Astros",
+    "value": 307536
+  }, {
+    "username": "Chris",
+    "value": 306990
+  }, {
+    "username": "CloudM",
+    "value": 117460
+  }, {
+    "username": "Dark Master",
+    "value": 43990
+  }, {
+    "username": "Fayt",
+    "value": 490302
+  }, {
+    "username": "J393",
+    "value": 810150
+  }, {
+    "username": "KernelCurry",
+    "value": 548501
+  }, {
+    "username": "Lex",
+    "value": 93660
+  }, {
+    "username": "MIR",
+    "value": 135000
+  }, {
+    "username": "Panda Samurai",
+    "value": 406210
+  }, {
+    "username": "Pollux",
+    "value": 48880
+  }, {
+    "username": "Roy",
+    "value": 42430
+  }, {
+    "username": "Sherlock",
+    "value": 79850
+  }, {
+    "username": "Sterban",
+    "value": 406514
+  }, {
+    "username": "Sword Master",
+    "value": 175520
+  }, {
+    "username": "The shadow",
+    "value": 42150
+  }, {
+    "username": "Wholph",
+    "value": 54440
+  }, {
+    "username": "ZAKI",
+    "value": 70800
+  }, {
+    "username": "Zero",
+    "value": 520934
+  }, {
+    "username": "ahardergame",
+    "value": 168980
+  }, {
+    "username": "bro",
+    "value": 92400
+  }, {
+    "username": "gloriousdead",
+    "value": 79290
+  }, {
+    "username": "killer",
+    "value": 37660
+  }],
+  "date": "2016-12-29",
+  "level": 7
+}]
