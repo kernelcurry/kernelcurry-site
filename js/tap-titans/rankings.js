@@ -27,6 +27,10 @@ function init() {
     });
 }
 
+function addRow(rank, username, dkp) {
+  $("div.tap-titans table.rankings tr:last").after("<tr><td>" + rank + "</td><td>" + username + "</td><td>" + dkp + "</td></tr>");
+}
+
 function calculate_rankings(members, kills) {
   console.log(members, kills);
 
@@ -42,17 +46,50 @@ function calculate_rankings(members, kills) {
       if (join_date > kill_date) {
         return;
       }
-      
+
+      var score = 0;
+
       kill.damage.forEach(function(damage, d_index) {
-        if (damage.username.match(/kernelcurry/i)) {
-          console.log(damage);
+        var username_regex = new RegExp(member.username, 'i')
+        if (damage.username.match(username_regex)) {
+          var now = new Date();
+          var day_diff = Math.round((now - kill_date) / (1000 * 60 * 60 * 24));
+
+          var rolling_avg_day = 15;
+          if (day_diff > rolling_avg_day) {
+            return;
+          }
+
+          score = damage.value / 10000 * (1 - (day_diff / (rolling_avg_day + 1)));
         }
       });
+
+      if (score === 0) {
+        score = -1;
+      }
+
+      member.dkp = member.dkp + score;
     });
+
+    member.dkp = parseFloat(member.dkp.toFixed(4))
 
     console.log(member.username + " : " + member.dkp);
   });
 
+  console.log('Results');
+
+  // sort members by dkp
+  members.sort(function(a, b) {
+    return b.dkp - a.dkp;
+  });
+
+  // add members to table
+  members.forEach(function(member, m_index) {
+    console.log(member.username + " : " + member.dkp);
+    addRow(m_index, member.username, member.dkp);
+  });
 }
 
-init();
+jQuery(document).ready(function($) {
+  init();
+});
