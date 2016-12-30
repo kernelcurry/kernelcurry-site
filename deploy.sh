@@ -6,6 +6,9 @@ git add .
 git commit -a -m 'Commit before deployment (must have forgot something)...'
 git push
 
+# Install Gems
+bundle install
+
 # Build Jekyll
 jekyll build
 
