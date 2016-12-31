@@ -69,7 +69,7 @@ function calculate_rankings(members, kills) {
       });
 
       if (score === 0) {
-        score = -1;
+        score = -10;
       }
 
       member.dkp = member.dkp + score;
