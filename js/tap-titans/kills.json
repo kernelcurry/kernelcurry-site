@@ -328,5 +328,115 @@
     ],
     "date": "2016-12-30",
     "level": 8
+  },
+  {
+    "damage": [
+      {
+        "username": "Akhadash",
+        "value": 769092
+      },
+      {
+        "username": "Apriyan",
+        "value": 47050
+      },
+      {
+        "username": "Astros",
+        "value": 453445
+      },
+      {
+        "username": "Chris",
+        "value": 113550
+      },
+      {
+        "username": "CloudM",
+        "value": 347170
+      },
+      {
+        "username": "J393",
+        "value": 596403
+      },
+      {
+        "username": "KernelCurry",
+        "value": 1022832
+      },
+      {
+        "username": "Lex",
+        "value": 160080
+      },
+      {
+        "username": "MIR",
+        "value": 394292
+      },
+      {
+        "username": "Panda Samurai",
+        "value": 422440
+      },
+      {
+        "username": "Sterban",
+        "value": 274645
+      },
+      {
+        "username": "Sword Master",
+        "value": 86355
+      },
+      {
+        "username": "ZAKI",
+        "value": 84590
+      },
+      {
+        "username": "Zero",
+        "value": 711051
+      },
+      {
+        "username": "GarlicMaster",
+        "value": 258263
+      },
+      {
+        "username": "RynoRanger",
+        "value": 120060
+      },
+      {
+        "username": "bro",
+        "value": 279780
+      },
+      {
+        "username": "ahardergame",
+        "value": 380322
+      },
+      {
+        "username": "c.t.lok",
+        "value": 35752
+      },
+      {
+        "username": "Litlepig",
+        "value": 126336
+      },
+      {
+        "username": "Wholph",
+        "value": 63020
+      },
+      {
+        "username": "eq",
+        "value": 297900
+      },
+      {
+        "username": "Otomaars",
+        "value": 120330
+      },
+      {
+        "username": "Pollux",
+        "value": 114030
+      },
+      {
+        "username": "Sword Master(2)",
+        "value": 53370
+      },
+      {
+        "username": "JustSmileMore",
+        "value": 31230
+      }
+    ],
+    "date": "2017-01-01",
+    "level": 9
   }
 ]
