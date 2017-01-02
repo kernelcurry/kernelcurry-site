@@ -438,5 +438,143 @@
     ],
     "date": "2017-01-01",
     "level": 9
+  },
+  {
+    "damage": [
+      {
+        "username": "Akhadash",
+        "value": 670002
+      },
+      {
+        "username": "Astros",
+        "value": 468252
+      },
+      {
+        "username": "Chris",
+        "value": 244750
+      },
+      {
+        "username": "J393",
+        "value": 1091510
+      },
+      {
+        "username": "KernelCurry",
+        "value": 962988
+      },
+      {
+        "username": "MIR",
+        "value": 72600
+      },
+      {
+        "username": "Panda Samurai",
+        "value": 439070
+      },
+      {
+        "username": "Sterban",
+        "value": 284656
+      },
+      {
+        "username": "Sword Master",
+        "value": 103893
+      },
+      {
+        "username": "ZAKI",
+        "value": 109698
+      },
+      {
+        "username": "Zero",
+        "value": 741680
+      },
+      {
+        "username": "RynoRanger",
+        "value": 698188
+      },
+      {
+        "username": "bro",
+        "value": 181140
+      },
+      {
+        "username": "ahardergame",
+        "value": 320912
+      },
+      {
+        "username": "Litlepig",
+        "value": 66802
+      },
+      {
+        "username": "eq",
+        "value": 210750
+      },
+      {
+        "username": "Otomaars",
+        "value": 114408
+      },
+      {
+        "username": "Pollux",
+        "value": 224076
+      },
+      {
+        "username": "Arkik",
+        "value": 210150
+      },
+      {
+        "username": "SALIBA",
+        "value": 146994
+      },
+      {
+        "username": "Francisco",
+        "value": 83459
+      },
+      {
+        "username": "diomans",
+        "value": 67700
+      },
+      {
+        "username": "??K2",
+        "value": 67120
+      },
+      {
+        "username": "Schwertmeister",
+        "value": 65880
+      },
+      {
+        "username": "killer",
+        "value": 64580
+      },
+      {
+        "username": "gloriousdead",
+        "value": 60180
+      },
+      {
+        "username": "The shadow",
+        "value": 58730
+      },
+      {
+        "username": "KszP",
+        "value": 56690
+      },
+      {
+        "username": "??????",
+        "value": 56690
+      },
+      {
+        "username": "Halo is me",
+        "value": 56160
+      },
+      {
+        "username": "Sherlock",
+        "value": 51780
+      },
+      {
+        "username": "killer(2)",
+        "value": 43890
+      },
+      {
+        "username": "FrankTheSomebody",
+        "value": 38700
+      }
+    ],
+    "date": "2017-01-02",
+    "level": 10
   }
 ]
