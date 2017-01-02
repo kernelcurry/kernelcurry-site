@@ -90,7 +90,7 @@ function calculate_rankings(members, kills) {
   // add members to table
   members.forEach(function(member, m_index) {
     console.log(member.username + " : " + member.dkp);
-    addRow(m_index, member.username, member.dkp);
+    addRow(m_index + 1, member.username, member.dkp);
   });
 }
 
