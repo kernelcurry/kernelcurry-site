@@ -3,6 +3,10 @@ title = "2 Dimensional Array To CSV Download Using PHP"
 description = "Have you ever needed to convert a 2 dimensional array into a CSV then force a download?  Well, I have, and here is how I did it..."
 date = 2014-01-28
 draft = false
+aliases = [
+    "/blog/array-to-csv-download.html",
+    "/blog/2014/01/28/array-to-csv-download.html"
+]
 +++
 
 Have you ever needed to convert a 2 dimensional array into a CSV then force a download? Well, I have, and here is how I did it:

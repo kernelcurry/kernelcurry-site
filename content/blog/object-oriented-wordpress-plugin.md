@@ -3,6 +3,10 @@ title = "How To Make An Object Oriented WordPress Plugin"
 description = "You just learned how to create a simple WordPress plugin, and now you hear people talking about how WordPress is becoming more object-oriented. What does that mean? Lets take a step back and start with the basics."
 date = 2014-02-05
 draft = false
+aliases = [
+    "/blog/object-oriented-wordpress-plugin.html",
+    "/blog/2014/02/05/object-oriented-wordpress-plugin.html"
+]
 +++
 
 You just learned how to create a simple WordPress plugin, and now you hear people talking about how WordPress is becoming more object-oriented. What does that mean? Lets take a step back and start with the basics.

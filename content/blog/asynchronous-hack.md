@@ -3,6 +3,10 @@ title = "Asynchronous Functions In Hack"
 description = "The ability for PHP programs to execute asynchronous functions… Yeah, I said it and now it exists. By coding in Facebook’s new Hack Language, using your CPU’s cycles correctly has never been so easy. Let’s delve into this new language head first!"
 date = 2014-04-22
 draft = false
+aliases = [
+    "/blog/asynchronous-hack.html",
+    "/blog/2014/04/22/asynchronous-hack.html"
+]
 +++
 
 The ability for PHP programs to execute asynchronous functions… Yeah, I said it and now it exists. By coding in Facebook’s new Hack Language, using your CPU’s cycles correctly has never been so easy. Let’s delve into this new language head first!

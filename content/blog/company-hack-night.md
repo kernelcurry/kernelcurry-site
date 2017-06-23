@@ -3,6 +3,10 @@ title = "Every Company Should Have a #HackNight"
 description = "For the past year, every Wednesday night at about 6:00 p.m. work stops!  Stop your real work and work on something fun!"
 date = 2014-01-24
 draft = false
+aliases = [
+    "/blog/company-hack-night.html",
+    "/blog/2014/01/24/company-hack-night.html"
+]
 +++
 
 For the past year, every Wednesday night at about 6:00 p.m. work stops! Since I have been working for [Levers](http://leve.rs/?utm_source=kernelcurry.com&utm_medium=referral&utm_campaign=blog) there has been a weekly hack night. To put it simply: "Stop your real work and work on something fun!""
