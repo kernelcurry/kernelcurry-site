@@ -19,9 +19,11 @@
     </nav>
     <nav id="top-nav-extra">
       <ul>
+        {{ if .RSSLink }}
         <li>
           <a href="{{ .RSSLink }}"><i class="fa fa-rss"></i></a>
         </li>
+        {{ end }}
         <li>
           <a class="social" href="https://www.youtube.com/channel/{{ .Site.Social.youtube }}" rel="nofollow"><i class="fa fa-youtube-play"></i></a>
         </li>

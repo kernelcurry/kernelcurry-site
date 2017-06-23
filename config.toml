@@ -3,11 +3,11 @@ languageCode = "en-us"
 title = "KernelCurry"
 description = "Thoughts of KernelCurry"
 googleAnalytics = "UA-43653721-2"
+enableRobotsTXT = true
 
 Paginate = 4
 
 [Params]
-  RSSLink = "/index.xml"
   author = "KernelCurry"
   github = "michaelcurry" # add your github profile name
   twitter = "kernelcurry" # add your twitter profile
