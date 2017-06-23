@@ -1,0 +1,33 @@
+baseURL = "/"
+languageCode = "en-us"
+title = "KernelCurry"
+description = "Thoughts of KernelCurry"
+googleAnalytics = "UA-43653721-2"
+
+Paginate = 4
+
+[Params]
+  RSSLink = "/index.xml"
+  author = "KernelCurry"
+  github = "michaelcurry" # add your github profile name
+  twitter = "kernelcurry" # add your twitter profile
+  email = "info@kernelcurry.com"
+  images = []
+
+# Social Media Info
+[Social]
+  twitter = "kernelcurry"
+  github = "michaelcurry"
+  linkedin = "michaeliancurry"
+  youtube = "UCb4ZxGv2-a3BP88hui0Udlw"
+
+# Top Menu
+[[menu.main]]
+    name = "Blog"
+    url = "/blog/"
+[[menu.main]]
+    name = "Super Nintendo"
+    url = "/snes/"
+[[menu.main]]
+    name = "Portfolio"
+    url = "/portfolio/"
