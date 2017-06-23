@@ -3,3 +3,4 @@ _site
 ._*
 .idea
 Gemfile.lock
+public
