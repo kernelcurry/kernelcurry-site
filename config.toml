@@ -9,8 +9,6 @@ Paginate = 4
 
 [Params]
   author = "KernelCurry"
-  github = "michaelcurry" # add your github profile name
-  twitter = "kernelcurry" # add your twitter profile
   email = "info@kernelcurry.com"
   images = []
 
