@@ -1,5 +1,5 @@
 +++
 title = "KernelCurry"
-description = "KernelCurry's Thoughts Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ex nisl, commodo varius vestibulum id, euismod sed erat. Pellentesque nec urna fringilla, consequat eros pharetra, sodales justo. Nullam eu auctor tortor. Donec volutpat rhoncus tortor ut accumsan. Pellentesque maximus rhoncus nisi, vel convallis leo feugiat a."
+description = "My name is Michael Ian Curry and this is my simple site. Take a look at the blog and projects I am working on. If you want to contact me, Twitter is the preferred method."
 draft = false
 +++

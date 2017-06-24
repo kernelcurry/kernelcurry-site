@@ -5,7 +5,7 @@ description = "Thoughts of KernelCurry"
 googleAnalytics = "UA-43653721-2"
 enableRobotsTXT = true
 
-Paginate = 4
+Paginate = 6
 
 [Params]
   author = "KernelCurry"
