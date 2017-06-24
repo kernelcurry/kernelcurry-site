@@ -15,7 +15,7 @@ rm -rf .git/worktrees/public/
 
 echo "---------------------------------------------------------------"
 echo "Checking out gh-pages branch into public"
-git worktree add -B gh-pages public upstream/gh-pages
+git worktree add -B gh-pages public
 
 echo "---------------------------------------------------------------"
 echo "Removing existing files"
