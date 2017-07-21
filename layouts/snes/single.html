@@ -3,55 +3,32 @@
 
 {{ define "main"}}
 <div class="push-center" itemscope itemtype="http://schema.org/BlogPosting">
+
     {{ template "_internal/schema.html" . }}
-<div id="hero">
-    <h1 itemprop="headline">{{.Title}}</h1>
-<blockquote itemprop="description">Developed By: 
-    {{range $index, $element := .Params.developers}}
-        {{ if ne $index 0}}
-            &amp;
-        {{ end }}
-        {{ $element }}
-    {{ end }}
-    &ensp;&emsp;&ensp;&emsp;&ensp;&emsp;&ensp;&emsp;&ensp;&emsp;
-    Published By: 
-    {{range $index, $element := .Params.publishers}}
-        {{ if ne $index 0}}
-            &amp;
-        {{ end }}
-        {{ $element }}
-    {{ end }}
-</blockquote>
-<div>
-    {{ .Params.players_min }}
-    {{ if ne .Params.players_min .Params.players_max }}
-        - {{ .Params.players_max }}
-    {{ end }}
 
-    Player{{ if ne .Params.players_min .Params.players_max }}s{{ end }}</br>
-    {{ partial "snes/release-dates" . }}
-</div>
-<time class="post-time">{{ partial "post/meta" . }}</time>
-</div>
-<div id="post-box">
-<div id="post" itemprop="articleBody">
-    
-    {{.Content | safeHTML}}
+    <div id="hero">
+        <h1 itemprop="headline">{{.Title}}</h1>
 
-</div>
+        {{ partial "snes/info" . }}
 
-    <div class="">
-        {{ partial "post/byauthor" . }}
-        {{ partial "post/related-content" . }}
+        <time class="post-time">{{ partial "post/meta" . }}</time>
     </div>
-    
-    {{ if .Site.DisqusShortname }}
-    <article>
-        {{ template "_internal/disqus.html" . }}
-    </article>
-    {{ end }}
-    
-</div>
+
+    <div id="post-box">
+        <div id="post" itemprop="articleBody">{{.Content | safeHTML}}</div>
+
+        <div class="">
+            {{ partial "post/byauthor" . }}
+            {{ partial "post/related-content" . }}
+        </div>
+        
+        {{ if .Site.DisqusShortname }}
+        <article>
+            {{ template "_internal/disqus.html" . }}
+        </article>
+        {{ end }}
+    </div>
 </div>
 {{ end }}
+
 {{ define "footer"}} {{ partial "footer.html" .}} {{ end }}

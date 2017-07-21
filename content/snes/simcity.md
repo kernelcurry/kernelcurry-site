@@ -11,14 +11,6 @@ category = "simulation"
 players_min = 1
 players_max = 1
 
-cart_front = "front.jpb"
-cart_back = "back.jpb"
-cart_top = "top.jpb"
-cart_bottom = "bottom.jpb"
-
-board_front = "front.jpg"
-board_back = "back.jpg"
-
 [release_dates]
 	jp = 1991-04-26
 	na = 1991-08-13

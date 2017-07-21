@@ -794,6 +794,11 @@ body.page-account #hero {
   max-width: 740px;
   margin: auto; }
 
+#post-info {
+  max-width: 740px;
+  margin: auto;
+  padding-bottom: 56px; }
+
 #post {
   font-size: 18px;
   line-height: 32px;
