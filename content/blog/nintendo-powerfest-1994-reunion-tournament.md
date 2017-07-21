@@ -23,7 +23,7 @@ The panel consisted of Dorion, Mike, and Patric Wyrick.  Patric was also a final
 
 <figure>
   <div class=“video-container”>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/TGBHQYOvOgY" frameborder="0" allowfullscreen></iframe>
+    {{< youtube TGBHQYOvOgY >}} 
   </div>
   <figcaption>Nintendo Powerfest 94 Panel from GameOn Expo 2015</figcaption>
 </figure>
