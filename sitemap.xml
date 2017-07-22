@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>/snes/simcity/</loc>
+    <lastmod>2017-07-21T00:00:00-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/nintendo-powerfest-1994-reunion-tournament/</loc>
+    <lastmod>2015-09-12T00:00:00-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/running-lumen-on-google-app-engine/</loc>
+    <lastmod>2015-08-23T00:00:00-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/wordpress-to-jekyll/</loc>
+    <lastmod>2014-09-08T00:00:00-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/asynchronous-hack/</loc>
+    <lastmod>2014-04-22T00:00:00-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/facebooks-hack-developer-day-2014/</loc>
+    <lastmod>2014-04-14T00:00:00-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/object-oriented-wordpress-plugin/</loc>
+    <lastmod>2014-02-05T00:00:00-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/array-to-csv-download/</loc>
+    <lastmod>2014-01-28T00:00:00-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/company-hack-night/</loc>
+    <lastmod>2014-01-24T00:00:00-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/why-you-should-use-c-with-php/</loc>
+    <lastmod>2014-01-07T00:00:00-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/introduction/</loc>
+    <lastmod>2013-10-30T00:00:00-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/</loc>
+    <lastmod>2015-09-12T00:00:00-07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2017-07-21T00:00:00-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/portfolio/</loc>
+  </url>
+  
+  <url>
+    <loc>/snes/</loc>
+    <lastmod>2017-07-21T00:00:00-07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+</urlset>
