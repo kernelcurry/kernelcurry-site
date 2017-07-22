@@ -2,13 +2,16 @@
 	<div id="post-head">
         <div class="row gutters">
             <div class="col col-6">
-                Hours Played: XX
+                Hours Played: ~{{ .Params.hours_played }}
             </div>
             <div class="col col-6">
-                Score: 3/5
+                Bucket: {{ .Params.bucket_number }}
             </div>
         </div>
     </div>
+
+    </br>
+
 	<div class="row gutters">
 		<div class="col col-6">
 			<table class="striped">

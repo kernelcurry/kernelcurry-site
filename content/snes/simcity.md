@@ -11,7 +11,7 @@ players_min = 1
 players_max = 1
 
 hours_played = 20
-score = 5
+bucket_number = 5
 
 [release_dates]
 	jp = 1991-04-26
