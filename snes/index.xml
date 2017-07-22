@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Snes on KernelCurry</title>
+    <link>/snes/</link>
+    <description>Recent content in Snes on KernelCurry</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 18 Jul 2017 00:00:00 -0700</lastBuildDate>
+    
+	<atom:link href="/snes/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>SimCity</title>
+      <link>/snes/simcity/</link>
+      <pubDate>Tue, 18 Jul 2017 00:00:00 -0700</pubDate>
+      
+      <guid>/snes/simcity/</guid>
+      <description>How does a city work? Why does building a Police Station not reduce crime some times? Will you get elected as Mayor of your own town next year? Find out in this addicting game as you build for hours.
+First Impressions The push of a power switch and the sweet sweet sound of 16-bit music fills the air. As the music plays, I am starting to get excited about what is about to come&amp;hellip; Wait What?</description>
+    </item>
+    
+  </channel>
+</rss>
