@@ -1,5 +1,5 @@
 +++
-date = 2017-07-18
+date = 2017-07-21
 title = "SimCity"
 description = "How does a city work?  Why does building a Police Station not reduce crime some times?  Will you get elected as Mayor of your own town next year?  Find out in this addicting game as you build for hours."
 
