@@ -1,6 +1,6 @@
 +++
 date = 2017-11-18
-title = "Wild Snake"
+title = "WildSnake"
 description = "If you thought Tetris was fun, get ready Tetris with snakes! Yeah, actual Snakes; Wild Snakes.  Alexey Pajitnov, the creator of Tetris, thought it would be a good idea to add snakes to the classic game."
 
 publishers = ["Spectrum HoloByte"]
