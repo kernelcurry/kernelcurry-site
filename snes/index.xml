@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Snes on KernelCurry</title>
+    <link>/snes/</link>
+    <description>Recent content in Snes on KernelCurry</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 18 Nov 2017 00:00:00 -0800</lastBuildDate>
+    
+	<atom:link href="/snes/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>WildSnake</title>
+      <link>/snes/wildsnake/</link>
+      <pubDate>Sat, 18 Nov 2017 00:00:00 -0800</pubDate>
+      
+      <guid>/snes/wildsnake/</guid>
+      <description>If you thought Tetris was fun, get ready Tetris with snakes! Yeah, actual Snakes; Wild Snakes. Alexey Pajitnov, the creator of Tetris, thought it would be a good idea to add snakes to the classic game. To be honest, when I started playing this game I thought it was just a crappy rip off of Tetris, but NOPE the creator of Tetris himself thought this was a good idea&amp;hellip; sigh.</description>
+    </item>
+    
+    <item>
+      <title>SimCity</title>
+      <link>/snes/simcity/</link>
+      <pubDate>Fri, 21 Jul 2017 00:00:00 -0700</pubDate>
+      
+      <guid>/snes/simcity/</guid>
+      <description>How does a city work? Why does building a Police Station not reduce crime some times? Will you get elected as Mayor of your own town next year? Find out in this addicting game as you build for hours.
+First Impressions The push of a power switch and the sweet sweet sound of 16-bit music fills the air. As the music plays, I am starting to get excited about what is about to come&amp;hellip; Wait What?</description>
+    </item>
+    
+  </channel>
+</rss>

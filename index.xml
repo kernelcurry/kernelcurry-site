@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>KernelCurry</title>
+    <link>/</link>
+    <description>Recent content on KernelCurry</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 18 Nov 2017 00:00:00 -0800</lastBuildDate>
+    
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>WildSnake</title>
+      <link>/snes/wildsnake/</link>
+      <pubDate>Sat, 18 Nov 2017 00:00:00 -0800</pubDate>
+      
+      <guid>/snes/wildsnake/</guid>
+      <description>If you thought Tetris was fun, get ready Tetris with snakes! Yeah, actual Snakes; Wild Snakes. Alexey Pajitnov, the creator of Tetris, thought it would be a good idea to add snakes to the classic game. To be honest, when I started playing this game I thought it was just a crappy rip off of Tetris, but NOPE the creator of Tetris himself thought this was a good idea&amp;hellip; sigh.</description>
+    </item>
+    
+    <item>
+      <title>SimCity</title>
+      <link>/snes/simcity/</link>
+      <pubDate>Fri, 21 Jul 2017 00:00:00 -0700</pubDate>
+      
+      <guid>/snes/simcity/</guid>
+      <description>How does a city work? Why does building a Police Station not reduce crime some times? Will you get elected as Mayor of your own town next year? Find out in this addicting game as you build for hours.
+First Impressions The push of a power switch and the sweet sweet sound of 16-bit music fills the air. As the music plays, I am starting to get excited about what is about to come&amp;hellip; Wait What?</description>
+    </item>
+    
+    <item>
+      <title>Nintendo PowerFest (1994) Reunion Tournament</title>
+      <link>/blog/nintendo-powerfest-1994-reunion-tournament/</link>
+      <pubDate>Sat, 12 Sep 2015 00:00:00 -0700</pubDate>
+      
+      <guid>/blog/nintendo-powerfest-1994-reunion-tournament/</guid>
+      <description>A few weekends ago, I flew into Arizona to attend the Game On Retro Expo with some old friends. Among this group was Dorion Whitlock (1994 Nintendo PowerFest finalist and old roommate) and Mike Iarossi (1994 Nintendo PowerFest first place winner). To say the least, I forgot how much fun it is playing video games with your friends.
+The main draw for the Game On Retro Expo was the 1994 PowerFest Reunion Tournament.</description>
+    </item>
+    
+    <item>
+      <title>Running Laravel&#39;s Lumen On Google App Engine</title>
+      <link>/blog/running-lumen-on-google-app-engine/</link>
+      <pubDate>Sun, 23 Aug 2015 00:00:00 -0700</pubDate>
+      
+      <guid>/blog/running-lumen-on-google-app-engine/</guid>
+      <description>When looking for a more stable hosting solution for my Magic: The Gathering Api, I stumbled across Google&amp;rsquo;s App Engine. If you have not read up on this solution, I would recommend it.
+To get Laravel&amp;rsquo;s Lumen running correctly on Google App Engine, there are a few questions that we need to answer. Lets take these one at a time.
+How does the application know it is running on Google App Engine?</description>
+    </item>
+    
+    <item>
+      <title>From WordPress To Jekyll</title>
+      <link>/blog/wordpress-to-jekyll/</link>
+      <pubDate>Mon, 08 Sep 2014 00:00:00 -0700</pubDate>
+      
+      <guid>/blog/wordpress-to-jekyll/</guid>
+      <description>Pros and Cons There are lots of pros and cons when it comes to WordPress vs Jekyll. After looking through this list you might decide that Jekyll is not for you, and that is fine. Just remember that every tool is used for different tasks and neither WordPress nor Jekyll can be declared &amp;ldquo;better&amp;rdquo; as they are both good in different situations.
+Jekyll Pros  Speed : No PHP is called or needs to be executed.</description>
+    </item>
+    
+    <item>
+      <title>Asynchronous Functions In Hack</title>
+      <link>/blog/asynchronous-hack/</link>
+      <pubDate>Tue, 22 Apr 2014 00:00:00 -0700</pubDate>
+      
+      <guid>/blog/asynchronous-hack/</guid>
+      <description>The ability for PHP programs to execute asynchronous functions… Yeah, I said it and now it exists. By coding in Facebook’s new Hack Language, using your CPU’s cycles correctly has never been so easy. Let’s delve into this new language head first!
+/** * This function calls async functions */ function main() : void { echo &#39;[main] Calling Async Function&#39;.&#34;\n&#34;; $asyncCall = getInfo(); echo &#39;[main] Triangulating Atlantis&#39;.&#34;\n&#34;; echo &#39;[main] Calculating the Meaning Of Life&#39;.</description>
+    </item>
+    
+    <item>
+      <title>Facebook’s Hack Developer Day 2014</title>
+      <link>/blog/facebooks-hack-developer-day-2014/</link>
+      <pubDate>Mon, 14 Apr 2014 00:00:00 -0700</pubDate>
+      
+      <guid>/blog/facebooks-hack-developer-day-2014/</guid>
+      <description>Overview This last week I was lucky enough to step onto Facebook&amp;rsquo;s campus for their first ever Hack Developer Day. Throughout the day developers and project managers gave talks about HHVM and Hack. From overviews to the nitty gritty details, each talk brought more insight into why this language was created. Below are a few of the talks that I thought were the best of the bunch.
+Hack Language and Library Features     A Tour of New Language and Library Features - Hack Dev Day  This talk walks through most of the new features of the Hack language.</description>
+    </item>
+    
+    <item>
+      <title>How To Make An Object Oriented WordPress Plugin</title>
+      <link>/blog/object-oriented-wordpress-plugin/</link>
+      <pubDate>Wed, 05 Feb 2014 00:00:00 -0800</pubDate>
+      
+      <guid>/blog/object-oriented-wordpress-plugin/</guid>
+      <description>You just learned how to create a simple WordPress plugin, and now you hear people talking about how WordPress is becoming more object-oriented. What does that mean? Lets take a step back and start with the basics.
+Most simple WordPress plugins are written using procedural programming. This means that your code excited from top to bottom; calling functions and setting variables along the way. A prime example of this is the default WordPress plugin: Hello Dolly.</description>
+    </item>
+    
+    <item>
+      <title>2 Dimensional Array To CSV Download Using PHP</title>
+      <link>/blog/array-to-csv-download/</link>
+      <pubDate>Tue, 28 Jan 2014 00:00:00 -0800</pubDate>
+      
+      <guid>/blog/array-to-csv-download/</guid>
+      <description>Have you ever needed to convert a 2 dimensional array into a CSV then force a download? Well, I have, and here is how I did it:
+Array Every internal array must have the same keys. These keys may be set to null, but the key must exist. Below is a sample array that we can work with through this example.
+[ [ &#39;title&#39;=&#39;How to be Good at Life&#39;, &#39;author&#39;=&#39;@GRTaylor2&#39;, &#39;url&#39;=&#39;https://medium.</description>
+    </item>
+    
+    <item>
+      <title>Every Company Should Have a #HackNight</title>
+      <link>/blog/company-hack-night/</link>
+      <pubDate>Fri, 24 Jan 2014 00:00:00 -0800</pubDate>
+      
+      <guid>/blog/company-hack-night/</guid>
+      <description>For the past year, every Wednesday night at about 6:00 p.m. work stops! Since I have been working for Levers there has been a weekly hack night. To put it simply: &amp;ldquo;Stop your real work and work on something fun!&amp;rdquo;&amp;rdquo;
+There have been some winning hack night projects and some losing ones. Let&amp;rsquo;s take a look:
+Magic: The Gathering API : (winning)  Author: Michael Curry Link: http://mtgapi.com Description: There was no card API for Magic the Gathering?</description>
+    </item>
+    
+    <item>
+      <title>Why You Should Use C With Php</title>
+      <link>/blog/why-you-should-use-c-with-php/</link>
+      <pubDate>Tue, 07 Jan 2014 00:00:00 -0800</pubDate>
+      
+      <guid>/blog/why-you-should-use-c-with-php/</guid>
+      <description>A few months ago, I calculated the top Magic: The Gathering cards in the games modern format [LINK_BROKEN]. This was accomplished using pure PHP. In total it took about 30 minutes to calculate. With a 30 minute runtime, I wanted to find a faster way to crunch the numbers. What better way than to use C.
+As I did not want to spend the time rewriting code if it did not make a difference, I thought I would use a simple application for this experiment: Calculating the nth term of the fibonacci sequence.</description>
+    </item>
+    
+    <item>
+      <title>Introduction</title>
+      <link>/blog/introduction/</link>
+      <pubDate>Wed, 30 Oct 2013 00:00:00 -0700</pubDate>
+      
+      <guid>/blog/introduction/</guid>
+      <description>&amp;ldquo;The plumber always has plumbing problems at home.&amp;rdquo; &amp;hellip; &amp;ldquo;Carpenters buy their furniture at IKEA.&amp;rdquo; &amp;hellip; &amp;ldquo;The developers never has a good website&amp;rdquo;&amp;hellip;
+For years I did not only &amp;ldquo;not have a good website&amp;rdquo;, but I didn&amp;rsquo;t have a website at all. finally, I decided to make something. It may not be the prettiest thing in the world, but hey&amp;hellip; at least it is a website.
+This site will be used as a gateway to all of my projects and discoveries over the years.</description>
+    </item>
+    
+    <item>
+      <title>Portfolio</title>
+      <link>/portfolio/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/portfolio/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
