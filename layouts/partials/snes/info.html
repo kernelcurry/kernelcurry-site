@@ -1,3 +1,4 @@
+{{ $url_title := printf "%s" (.Params.title | urlize | lower) }}
 <div id="post-info">
 	<div id="post-head">
         <div class="row gutters">
@@ -82,26 +83,26 @@
 
 		</div>
 		<div class="col col-6">
-			{{ if (fileExists "static/img/snes/(urlize .Params.title)/cart-front") }}
-			<img src="/img/snes/{{urlize .Params.title}}/cart-front.png" title="{{urlize .Params.title}} cartridge front"/>
+			{{ if (fileExists (printf "static/img/snes/%s/cart-front.png" $url_title)) }}
+			<img src="/img/snes/{{$url_title}}/cart-front.png" title="{{urlize .Params.title}} cartridge front"/>
 			{{ else }}
 			<img src="/img/snes/default/cart-front.png" title="default cartridge front"/>
 			{{ end }}
 
-			{{ if (fileExists "static/img/snes/(urlize .Params.title)/cart-front") }}
-			<img src="/img/snes/{{urlize .Params.title}}/cart-top.png" title="{{urlize .Params.title}} cartridge top"/>
+			{{ if (fileExists (printf "static/img/snes/%s/cart-top.png" $url_title)) }}
+			<img src="/img/snes/{{$url_title}}/cart-top.png" title="{{urlize .Params.title}} cartridge top"/>
 			{{ else }}
 			<img src="/img/snes/default/cart-top.png" title="default cartridge top"/>
 			{{ end }}
 
-			{{ if (fileExists "static/img/snes/(urlize .Params.title)/cart-front") }}
-			<img src="/img/snes/{{urlize .Params.title}}/cart-back.png" title="{{urlize .Params.title}} cartridge back"/>
+			{{ if (fileExists (printf "static/img/snes/%s/cart-back.png" $url_title)) }}
+			<img src="/img/snes/{{$url_title}}/cart-back.png" title="{{urlize .Params.title}} cartridge back"/>
 			{{ else }}
 			<img src="/img/snes/default/cart-back.png" title="default cartridge back"/>
 			{{ end }}
 
-			{{ if (fileExists "static/img/snes/(urlize .Params.title)/cart-front") }}
-			<img src="/img/snes/{{urlize .Params.title}}/cart-bottom.png" title="{{urlize .Params.title}} cartridge bottom"/>
+			{{ if (fileExists (printf "static/img/snes/%s/cart-bottom.png" $url_title)) }}
+			<img src="/img/snes/{{$url_title}}/cart-bottom.png" title="{{urlize .Params.title}} cartridge bottom"/>
 			{{ else }}
 			<img src="/img/snes/default/cart-bottom.png" title="default cartridge bottom"/>
 			{{ end }}
@@ -109,15 +110,15 @@
 	</div>
 	<div class="row gutters">
 		<div class="col col-6">
-			{{ if (fileExists "static/img/snes/(urlize .Params.title)/cart-front") }}
-			<img src="/img/snes/{{urlize .Params.title}}/pcb-front.png" title="{{urlize .Params.title}} pcb front"/>
+			{{ if (fileExists (printf "static/img/snes/%s/pcb-front.png" $url_title)) }}
+			<img src="/img/snes/{{$url_title}}/pcb-front.png" title="{{urlize .Params.title}} pcb front"/>
 			{{ else }}
 			<img src="/img/snes/default/pcb-front.png" title="default pcb front"/>
 			{{ end }}
 		</div>
 		<div class="col col-6">
-			{{ if (fileExists "static/img/snes/(urlize .Params.title)/cart-front") }}
-			<img src="/img/snes/{{urlize .Params.title}}/pcb-back.png" title="{{urlize .Params.title}} pcb back"/>
+			{{ if (fileExists (printf "static/img/snes/%s/pcb-back.png" $url_title)) }}
+			<img src="/img/snes/{{$url_title}}/pcb-back.png" title="{{urlize .Params.title}} pcb back"/>
 			{{ else }}
 			<img src="/img/snes/default/pcb-back.png" title="default pcb back"/>
 			{{ end }}
