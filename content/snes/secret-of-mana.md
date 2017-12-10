@@ -1,5 +1,7 @@
 +++
-date = 2017-07-21
+draft=true
+
+date = 2017-11-12
 title = "Secret Of Mana"
 description = ""
 
