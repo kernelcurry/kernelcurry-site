@@ -1,4 +1,0 @@
-User-agent: *
-Disallow:
-
-Sitemap: http://kernelcurry.com/sitemap.xml
