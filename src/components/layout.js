@@ -12,17 +12,6 @@ import PropTypes from "prop-types";
 import Header from "./header";
 import Footer from "./footer";
 
-/**
- * CSS Files
- */
-import "../static/css/font.css";
-import "../static/css/kube.min.css";
-import "../static/css/kube.legenda.css";
-import "../static/css/highlight.css";
-import "../static/css/master.css";
-import "../static/css/font-awesome.css";
-import "../static/css/custom.css";
-
 const Layout = ({ children }) => {
 
   return (

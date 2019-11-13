@@ -3,14 +3,14 @@ import PropTypes from "prop-types";
 import { Link } from "gatsby";
 
 const Post = ({ node }) => (
-  <div itemscope itemtype="http://schema.org/CreativeWork">
-    <h2 class="title">
-      <Link to={node.fields.slug} itemprop="headline">
+  <div itemScope itemType="http://schema.org/CreativeWork">
+    <h2 className="title">
+      <Link to={node.fields.slug} itemProp="headline">
         {node.frontmatter.title}
       </Link>
     </h2>
     <hr />
-    <p itemprop="about">{node.frontmatter.description}</p>
+    <p itemProp="about">{node.frontmatter.description}</p>
   </div>
 );
 

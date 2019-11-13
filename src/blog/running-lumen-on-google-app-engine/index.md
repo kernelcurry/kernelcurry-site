@@ -1,6 +1,6 @@
 ---
 title: 'Running Laravel's Lumen On Google App Engine'
-description: 'To get Laravel\'s Lumen running correctly on Google App Engine, there are a few questions that we need to answer.  Lets take these one at a time.'
+description: "To get Laravel's Lumen running correctly on Google App Engine, there are a few questions that we need to answer.  Lets take these one at a time."
 date: '2015-08-23T00:00:00.000Z'
 draft: false
 ---

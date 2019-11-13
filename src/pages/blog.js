@@ -24,7 +24,7 @@ class BlogIndex extends Component {
     const posts = data.allMarkdownRemark.edges;
     return (
       <Layout>
-        <div id="hero" class="wrap">
+        <div id="hero" className="wrap">
           <h1>{data.site.siteMetadata.title}&#39;s Thoughts</h1>
           <p>
             This is the personal blog. If you wish to read Super Nintendo
