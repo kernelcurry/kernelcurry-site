@@ -30,7 +30,7 @@ const Header = () => {
       <div className="show-sm">
         <div id="nav-toggle-box">
           <div id="nav-toggle-brand">
-            <a href="/">KernelCurry</a>
+            <Link to="/">KernelCurry</Link>
           </div>
           <a
             data-component="toggleme"
