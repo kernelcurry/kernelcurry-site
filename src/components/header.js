@@ -5,15 +5,25 @@ import { useStaticQuery, graphql } from "gatsby";
 const Header = () => {
   const data = useStaticQuery(graphql`
     query SiteHeaderQuery {
-      allSitePage {
-        edges {
-          node {
-            path
+      site {
+        siteMetadata {
+          navigation {
+            main {
+              text
+              path
+            }
+          }
+          social {
+            twitter
+            github
+            linkedin
           }
         }
       }
     }
   `);
+  const nav = data.site.siteMetadata.navigation;
+  const social = data.site.siteMetadata.social;
 
   return (
     <header>
@@ -40,11 +50,10 @@ const Header = () => {
         </div>
         <nav id="top-nav-main">
           <ul>
-            {data.allSitePage.edges.map(({ node }) => {
-              const { path } = node;
+            {nav.main.map(({ text, path }) => {
               return (
                 <li key={path}>
-                  <Link to={path}>{path}</Link>
+                  <Link to={path}>{text}</Link>
                 </li>
               );
             })}
@@ -61,7 +70,7 @@ const Header = () => {
             <li>
               <a
                 className="social"
-                href="https://twitter.com/"
+                href={"https://twitter.com/" + social.twitter}
                 rel="nofollow noopener noreferrer"
                 target="_blank"
               >
@@ -71,7 +80,7 @@ const Header = () => {
             </li>
             <li>
               <a
-                href="https://github.com/"
+                href={"https://github.com/" + social.github}
                 rel="nofollow noopener noreferrer"
                 target="_blank"
               >
@@ -81,7 +90,7 @@ const Header = () => {
             </li>
             <li>
               <a
-                href="https://www.linkedin.com/in/"
+                href={"https://www.linkedin.com/in/" + social.linkedin}
                 rel="nofollow noopener noreferrer"
                 target="_blank"
               >
@@ -97,7 +106,6 @@ const Header = () => {
 };
 
 export default Header;
-
 
 // {{ $currentPage := . }}
 // {{ range .Site.Menus.main }}

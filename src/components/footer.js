@@ -5,10 +5,13 @@ import { useStaticQuery, graphql } from "gatsby";
 const Footer = () => {
   const data = useStaticQuery(graphql`
     query SiteFooterQuery {
-      allSitePage {
-        edges {
-          node {
-            path
+      site {
+        siteMetadata {
+          navigation {
+            main {
+              text
+              path
+            }
           }
         }
       }
@@ -22,12 +25,10 @@ const Footer = () => {
           <li>
             <span>KernelCurry</span>
           </li>
-          {data.allSitePage.edges.map(({ node }) => {
-            const { path } = node;
-            const title = path;
+          {data.site.siteMetadata.navigation.main.map(({ text, path }) => {
             return (
               <li key={path}>
-                <Link to={path}>{title}</Link>
+                <Link to={path}>{text}</Link>
               </li>
             );
           })}

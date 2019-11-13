@@ -3,6 +3,27 @@ module.exports = {
     title: `KernelCurry`,
     description: `Thoughts of KernelCurry`,
     author: `KernelCurry`,
+    social: {
+      twitter: `kernelcurry`,
+      github: `michaelcurry`,
+      linkedin: `michaeliancurry`
+    },
+    navigation: {
+      main: [
+        {
+          text: `Blog`,
+          path: `/blog`
+        },
+        {
+          text: `Portfolio`,
+          path: `/portfolio`
+        },
+        {
+          text: `Super Nintendo`,
+          path: `/snes`
+        }
+      ]
+    }
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -10,8 +31,8 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/static/img`,
-      },
+        path: `${__dirname}/src/static/img`
+      }
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -24,11 +45,11 @@ module.exports = {
         background_color: `#fff`,
         theme_color: `#fff`,
         display: `minimal-ui`,
-        icon: `src/static/img/general/star-icon.png`, // This path is relative to the root of the site.
-      },
-    },
+        icon: `src/static/img/general/star-icon.png` // This path is relative to the root of the site.
+      }
+    }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
-  ],
-}
+  ]
+};
