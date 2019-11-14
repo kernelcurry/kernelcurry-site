@@ -40,6 +40,10 @@ const Hero = ({ title, text }) => {
         background: #ff3366;
       }
     }
+
+    a {
+      color: #000;
+    }
   `;
 
   /**
@@ -56,7 +60,11 @@ const Hero = ({ title, text }) => {
 
 Hero.propTypes = {
   title: PropTypes.string.isRequired,
-  text: PropTypes.string.isRequired
+  text: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.func,
+    PropTypes.object
+  ]).isRequired
 };
 
 export default Hero;
