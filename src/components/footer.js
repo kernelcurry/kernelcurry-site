@@ -1,8 +1,11 @@
 import React from "react";
-import { Link } from "gatsby";
-import { useStaticQuery, graphql } from "gatsby";
+import { Link, useStaticQuery, graphql } from "gatsby";
+import styled from "styled-components";
 
-const Footer = () => {
+const SiteFooter = () => {
+  /**
+   * Component GraphQL Query
+   */
   const data = useStaticQuery(graphql`
     query SiteFooterQuery {
       site {
@@ -18,9 +21,44 @@ const Footer = () => {
     }
   `);
 
+  /**
+   * Component CSS
+   */
+
+  const Footer = styled.footer`
+    display: flex;
+    border-top: 1px solid #eee;
+    margin: 104px 0;
+    padding: 0 28px;
+    padding-top: 24px;
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.5);
+  `;
+
+  const FooterNav = styled.nav`
+    order: 2;
+    margin-left: auto;
+
+    ul {
+      display: flex;
+      margin: 0;
+      text-decoration: none;
+    }
+
+    li {
+      margin-left: 20px;
+      list-style: none;
+    }
+
+    a {
+      color: rgba(0, 0, 0, 0.65);
+      text-decoration: none;
+    }
+  `;
+
   return (
-    <footer id="footer">
-      <nav>
+    <Footer>
+      <FooterNav>
         <ul>
           <li>
             <span>KernelCurry</span>
@@ -33,7 +71,7 @@ const Footer = () => {
             );
           })}
         </ul>
-      </nav>
+      </FooterNav>
       <p>
         KernelCurry &copy;{" "}
         <a
@@ -45,11 +83,11 @@ const Footer = () => {
         </a>{" "}
         {new Date().getFullYear()}
       </p>
-    </footer>
+    </Footer>
   );
 };
 
-export default Footer;
+export default SiteFooter;
 
 // {{ $currentPage := . }} {{ range .Site.Menus.main }}
 // <li><a href="{{ .URL }}" {{if  $currentPage.IsMenuCurrent "main" . }} class="active"{{end}}>{{ .Name }}</a></li>
