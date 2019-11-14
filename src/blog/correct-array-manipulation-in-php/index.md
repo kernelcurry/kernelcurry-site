@@ -19,7 +19,7 @@ The seemingly simple merging of arrays is something that comes up all the time. 
 
 ##### The Wrong Way
 
-```
+``` php{numberLines: false}
 // Init Arrays
 $arrayMerged = [];
 $arrayOne = [1, 2, 3];
@@ -43,7 +43,7 @@ var_dump($arrayMerged);
 
 ##### The Correct Way
 
-```
+``` php{numberLines: false}
 // Init Arrays
 $arrayOne = [1, 2, 3];
 $arrayTwo = [4, 5, 6];
@@ -63,7 +63,7 @@ No mater how many times you look at code, you will always find foreach statement
 
 ##### The Wrong Way
 
-```
+``` php{numberLines: false}
 // Init Arrays
 $arrayAfter = [];
 $arrayBefore = ['John Doe', 'Michael Smith', 'Alice Staples'];
@@ -82,7 +82,7 @@ var_dump($arrayAfter);
 
 ##### The Correct Way
 
-```
+``` php{numberLines: false}
 // Init Arrays
 $arraySlugs = ['John Doe', 'Michael Smith', 'Alice Staples'];
 
@@ -104,7 +104,7 @@ Although the previous examples are very common and good to know, this example is
 
 #####  Know the Difference
 
-```
+``` php{numberLines: false}
 // Init Arrays
 $arrayOne = ['one' => 1, 'two' => 2, 'three' => 3];
 $arrayTwo = ['one' => 9, 'two' => 9, 'four' => 4];
@@ -119,7 +119,7 @@ The array_merge function merges arrayTwo into arrayOne. In other words, all elem
 
 ##### Output
 
-```
+``` php{numberLines: false}
 // ($arrayOne + $arrayTwo)
 array(4) {
         ["one"]   => int(1)

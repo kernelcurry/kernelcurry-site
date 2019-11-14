@@ -25,7 +25,7 @@ I decided to take 5 different methods and use [xhprof](http://pecl.php.net/packa
 
 Each method used simple arithmetic functions to change each element in the array.
 
-```
+``` php{numberLines: false}
 $element += 1000;
 $element *= 2;
 $element /= 10;
@@ -35,17 +35,11 @@ $element -= 200;
 ## Results
 Each array size tested was calculated four separate times to eliminate outliers in the dataset. A trend line was then calculated for each method.
 
-<figure>
-    <img src="/img/blog/benchmark-analysis-of-php-array-loops/10000.png">
-    <figcaption>Runtime Analysis 10,000</figcaption>
-</figure>
+![Runtime Analysis 10,000](./10000.png)
 
 By analyzing the above graph, you will see there are 2 distinct groups: [For Inline, Array_Walk Reference, Array_Walk Closure] and [Foreach, For Outside]. Although visually there is a large difference between the two groups, there is actually only a millisecond difference in runtime. At this small of an array size, all tested methods are perfectly valid. This brings up a new question: What if the array was bigger?
 
-<figure>
-    <img src="/img/blog/benchmark-analysis-of-php-array-loops/1000000.png">
-    <figcaption>Runtime Analysis 1,000,000</figcaption>
-</figure>
+![Runtime Analysis 1,000,000<](./1000000.png)
 
 Go figure; the graph looks the same! With this larger dataset, we can determine that all methods are acting in a linear fashion. Another proposition presents itself, making us ask, at what array size is using the faster group worth it?
 
@@ -61,10 +55,7 @@ Go figure; the graph looks the same! With this larger dataset, we can determine 
 
 Just for fun, let’s take a look at a larger dataset.
 
-<figure>
-    <img src="/img/blog/benchmark-analysis-of-php-array-loops/10000000.png">
-    <figcaption>Runtime Analysis 10,000,000</figcaption>
-</figure>
+![Runtime Analysis 10,000,000<](./10000000.png)
 
 Again, the graph looks similar. Now we’ll take a look at the time differences!
 
@@ -85,7 +76,7 @@ After analyzing the different methods, it is time for me to get into the Levers 
 ## Code
 #### Array Walk Reference
 
-```
+``` php{numberLines: false}
 function calculate(&$element)
 {
         $element += 1000;
@@ -99,7 +90,7 @@ array_walk($subject, 'calculate');
 
 #### Array Walk Closure
 
-```
+``` php{numberLines: false}
 array_walk($subject, function(&$element){
         $element += 1000;
         $element *= 2;
@@ -110,7 +101,7 @@ array_walk($subject, function(&$element){
 
 #### For Outside
 
-```
+``` php{numberLines: false}
 $len = count($subject);
 for($i = 0; $i < $len; $i++)
 {
@@ -123,7 +114,7 @@ for($i = 0; $i < $len; $i++)
 
 #### For Inline
 
-```
+``` php{numberLines: false}
 for($i = 0; $i < count($subject); $i++)
 {
         $subject[$i] += 1000;
@@ -135,7 +126,7 @@ for($i = 0; $i < count($subject); $i++)
 
 #### Foreach
 
-```
+``` php{numberLines: false}
 foreach($subject as &$element)
 {
         $element += 1000;

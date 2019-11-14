@@ -12,7 +12,7 @@ As I did not want to spend the time rewriting code if it did not make a differen
 ### Results
 To start, let’s look at the big picture. the graph below shows the runtime in micro seconds of executing pure PHP & PHP using C from term 0 to 100,000 tested every 1000 terms.
 
-```
+``` text{numberLines: false}
 fibonacci-100000.png [Image Missing]
 ```
 
@@ -20,7 +20,7 @@ As can been seen, there is a huge difference in runtime between the 2 applicatio
 
 Although there is a huge difference when calculating a large term, let’s drill down a little deeper. This next graph shows the runtime of the nth term being calculated from 0 to 1000 tested every term.
 
-```
+``` text{numberLines: false}
 fibonacci-1000.png  [Image Missing]
 ```
 

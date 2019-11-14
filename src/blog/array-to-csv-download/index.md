@@ -11,7 +11,8 @@ Have you ever needed to convert a 2 dimensional array into a CSV then force a do
 
 Every internal array must have the same keys. These keys may be set to null, but the key must exist. Below is a sample array that we can work with through this example.
 
-<pre><code class="php">[
+``` php{numberLines: false}
+[
     [
         'title'=>'How to be Good at Life',
         'author'=>'@GRTaylor2',
@@ -23,13 +24,14 @@ Every internal array must have the same keys. These keys may be set to null, but
         'url'=>'http://rynoweb.com/clean-urls-good-seo/'
     ]
 ]
-</code></pre>
+```
 
 ### Code
 
 The code (below) takes the array (above) and converts it into a CSV string with the keys being the header row. After the string is generated, it is placed into output buffer then forced to be downloaded by the browser.
 
-<pre><code class="php">// Generate Array.
+``` php{numberLines: false}
+// Generate Array.
 $array = [ /* Array From Above */ ];
 
 // Clear Output Buffer
@@ -58,15 +60,16 @@ fclose($file);
 // Echo CSV
 echo $output;
 die();
-</code></pre>
+```
 
 ### Output
 
 Once the CSV is generated, it will be downloaded. This is what the CSV file will look like:
 
-<pre><code class="php">title,author,url
-"How to be Good at Life",@GRTaylor2,http://rynoweb.com/clean-urls-good-seo/
+``` text{numberLines: false}
+title,author,url
+"How to be Good at Life",@GRTaylor2,https://medium.com/better-humans/56302026d56e
 "Clean URLs for Good SEO",@ChuckReynolds,http://rynoweb.com/clean-urls-good-seo/
-</code></pre>
+```
 
 CSV output is an annoying part of reporting in PHP. Hopefully this simple solution makes it easier in the future.

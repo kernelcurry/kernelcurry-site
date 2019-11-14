@@ -5,7 +5,7 @@ date: '2014-01-24T00:00:00.000Z'
 draft: false
 ---
 
-For the past year, every Wednesday night at about 6:00 p.m. work stops! Since I have been working for [Levers](http://leve.rs/?utm_source=kernelcurry.com&utm_medium=referral&utm_campaign=blog) there has been a weekly hack night. To put it simply: "Stop your real work and work on something fun!""
+For the past year, every Wednesday night at about 6:00 p.m. work stops! Since I have been working for [Levers](https://leve.rs/?utm_source=kernelcurry.com&utm_medium=referral&utm_campaign=blog) there has been a weekly hack night. To put it simply: "Stop your real work and work on something fun!""
 
 There have been some winning hack night projects and some losing ones. Let's take a look:
 
@@ -13,7 +13,7 @@ There have been some winning hack night projects and some losing ones. Let's tak
 ### Magic: The Gathering API : (winning)
 
 - Author: Michael Curry
-- Link: [http://mtgapi.com](http://mtgapi.com/?utm_source=kernelcurry.com&utm_medium=referral&utm_campaign=blog)
+- Link: [https://mtgapi.com](https://mtgapi.com/?utm_source=kernelcurry.com&utm_medium=referral&utm_campaign=blog)
 - Description: There was no card API for Magic the Gathering?! I could not stand for that. Over the prod of 3 weeks – only working on hack nights – this service was created and tested, and MTG API was born. This service is available for free to everyone that wants to use it. This was defiantly a hack night project that took on a life of its own.
 
 ### Travel Blog : (winning)

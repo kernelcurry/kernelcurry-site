@@ -91,7 +91,7 @@ class BlogPostTemplate extends React.Component {
 
       h3 {
         margin-top: 24px;
-        font-size: 28px;
+        font-size: 24px;
         line-height: 32px;
         margin-bottom: 16px;
       }
@@ -118,7 +118,7 @@ class BlogPostTemplate extends React.Component {
         margin-block-end: 1em;
         margin-inline-start: 0px;
         margin-inline-end: 0px;
-        padding-inline-start: 20px;
+        padding-inline-start: 26px;
       }
 
       ul {
@@ -128,7 +128,7 @@ class BlogPostTemplate extends React.Component {
         margin-block-end: 1em;
         margin-inline-start: 0px;
         margin-inline-end: 0px;
-        padding-inline-start: 20px;
+        padding-inline-start: 26px;
       }
 
       ol ul {
