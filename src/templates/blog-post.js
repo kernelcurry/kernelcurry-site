@@ -78,6 +78,58 @@ class BlogPostTemplate extends React.Component {
         opacity: 0.6;
         text-align: center;
       }
+
+      h2 {
+        margin-top: 24px;
+        color: #222;
+        font-size: 36px;
+        line-height: 40px;
+        font-weight: 700;
+        text-rendering: optimizeLegibility;
+        margin-bottom: 16px;
+      }
+
+      h3 {
+        margin-top: 24px;
+        font-size: 28px;
+        line-height: 32px;
+        margin-bottom: 16px;
+      }
+
+      h4 {
+        margin-top: 24px;
+        font-size: 21px;
+        line-height: 32px;
+        margin-bottom: 16px;
+      }
+
+      /**
+       * Add back the container background-color, border-radius, padding, margin
+       * and overflow that we removed from <pre>.
+       */
+      .gatsby-highlight {
+        font-size: 87.5%;
+      }
+
+      ol {
+        display: block;
+        list-style-type: decimal;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        padding-inline-start: 20px;
+      }
+
+      ul {
+        display: block;
+        list-style-type: disc;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        padding-inline-start: 20px;
+      }
     `;
 
     const post = this.props.data.markdownRemark;
@@ -94,16 +146,16 @@ class BlogPostTemplate extends React.Component {
               {post.frontmatter.description}
             </blockquote>
             <BlogMeta>
-              <span class="icon">
-                <i class="fa fa-clock-o" aria-hidden="true"></i>
+              <span>
+                <i className="fa fa-clock-o" aria-hidden="true"></i>
               </span>
               <span>{post.fields.readingTime.text}</span>
             </BlogMeta>
             <BlogMeta>
-              <span class="icon">
-                <i class="fa fa-pencil" aria-hidden="true"></i>
+              <span>
+                <i className="fa fa-pencil" aria-hidden="true"></i>
               </span>
-              <time datetime="{post.frontmatter.date}">
+              <time dateTime="{post.frontmatter.date}">
                 Published: {post.frontmatter.date}
               </time>
             </BlogMeta>

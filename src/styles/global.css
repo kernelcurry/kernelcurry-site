@@ -10,3 +10,7 @@ body {
   outline: 0;
   -webkit-overflow-scrolling: touch;
 }
+
+a {
+  color: #3794de;
+}
