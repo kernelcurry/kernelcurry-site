@@ -130,6 +130,38 @@ class BlogPostTemplate extends React.Component {
         margin-inline-end: 0px;
         padding-inline-start: 20px;
       }
+
+      ol ul {
+        list-style-type: circle;
+      }
+
+      address,
+      blockquote,
+      dl,
+      fieldset,
+      figure,
+      form,
+      hr,
+      ol,
+      p,
+      pre,
+      table,
+      ul {
+        margin-bottom: 16px;
+      }
+
+      ol ol,
+      ol ul,
+      ul ol,
+      ul ul {
+        margin: 0 0 0 24px;
+      }
+
+      ol p,
+      ul p,
+      li p {
+        margin: 0;
+      }
     `;
 
     const post = this.props.data.markdownRemark;

@@ -28,7 +28,7 @@ Setting up a website has never been so simple.  Let's break this process down in
 1. Go to [jekyllrb.com](http://jekyllrb.com/) and follow the quick start guide (it is only 4 commands).
 2. Create a new GitHub Repository.  Make sure this is a public repo.
 3. Create a new branch in your repository named 'gh-pages' (make sure to push master and gh-pages to GitHub).
-4. Go to: http://{username}.github.io/{repository-name}/ to make sure it is up and running.
+4. Go to: `http://{username}.github.io/{repository-name}/` to make sure it is up and running.
 	- It could take up to 10 minutes to deploy after pushing to the branch 'gh-pages'.
 	- You can check to make sure the site is being deployed by going into your repository settings and looking under the 'GitHub Pages' section.
 
@@ -39,23 +39,24 @@ That is it! Your new website is up and running.  Now you need to get it running 
 
 This is the part that could take a lot of time.  Every post in WordPress will need to be converted into markdown or HTML.  As I write all of my blog posts in markdown before posting them, it took me almost no time to clean them up and pot them into Jekyll.
 
-Luckily there are a few options for exporting from Wordpress.
+Luckily there are a few options for exporting from Wordpress:
 - [WordPress to Jekyll Exporter Plugin](https://github.com/benbalter/wordpress-to-jekyll-exporter)
 - [Jekyll Import Gem](http://import.jekyllrb.com/docs/home/)
 
 Now that all of your posts are in markdown, we just need to make sure the Jekyll headers and filenames are correct.  Below is a sample header that must start on line 1 of the post file.
 
-<pre><code class="ruby">---
+``` ruby{numberLines: false}
+---
 layout: post
 title:  "From WordPress To Jekyll"
 date:   2014-09-08
 categories: blog
 ---
-</code></pre>
+```
 
-As you can see, I have this post in category 'blog'.  This will make the URL to this post start with '/blog/'. If you put nothing in the category, it will not have a prefix to the URL.
+As you can see, I have this post in category `blog`.  This will make the URL to this post start with `/blog/`. If you put nothing in the category, it will not have a prefix to the URL.
 
-Now it is time to save the post. Each post must be saved with a specific file name.  The format looks like this: '{YEAR}-{MONTH}-{DAY}-title.md' (Example: '2014-09-08-wordpress-to-jekyll.md').  This is important because the filename is what determines the URL of the post.  Make sure to save all posts in the '_posts' directory.
+Now it is time to save the post. Each post must be saved with a specific file name.  The format looks like this: `{YEAR}-{MONTH}-{DAY}-title.md` (Example: `2014-09-08-wordpress-to-jekyll.md`).  This is important because the filename is what determines the URL of the post.  Make sure to save all posts in the `_posts` directory.
 
 ##  Working Locally
 
