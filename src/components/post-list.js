@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 import PostPreview from "./post-preview";
 
-const PostList = ({ posts}) => {
+const PostList = ({ posts, type}) => {
   const ListContainer = styled.ul`
     list-style: none;
     margin: auto;
@@ -21,14 +21,15 @@ const PostList = ({ posts}) => {
   return (
     <ListContainer>
       {posts.map(({ node }) => {
-        return <PostPreview key={node.id} node={node} />;
+        return <PostPreview key={node.id} node={node} type={type}/>;
       })}
     </ListContainer>
   );
 };
 
 PostList.propTypes = {
-  posts: PropTypes.arrayOf(PropTypes.object).isRequired
+  posts: PropTypes.arrayOf(PropTypes.object).isRequired,
+  type: PropTypes.string.isRequired
 };
 
 export default PostList;

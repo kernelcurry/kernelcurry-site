@@ -1,20 +1,107 @@
-import React from 'react';
-import { Link, graphql } from 'gatsby';
+import React from "react";
+import { graphql } from "gatsby";
+import styled from "styled-components";
 
-import Layout from '../components/layout';
-import SEO from '../components/seo';
+import Layout from "../components/layout";
 
 class BlogPostTemplate extends React.Component {
   render() {
+    const BlogContainer = styled.div`
+      margin-left: auto;
+      margin-right: auto;
+    `;
+
+    const BlogHero = styled.div`
+      padding-top: 48px;
+      padding-bottom: 56px;
+      text-align: center;
+
+      h1 {
+        max-width: 880px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 12px;
+        font-size: 64px;
+        line-height: 72px;
+        font-weight: 900;
+      }
+      blockquote {
+        padding-left: 1rem;
+        font-style: italic;
+        color: rgba(49, 52, 57, 0.65);
+        margin-bottom: 16px;
+      }
+    `;
+
+    const BlogMeta = styled.span`
+      font-size: 87.5%;
+
+      i {
+        margin-left: 15px;
+        margin-right: 5px;
+      }
+    `;
+
+    const BlogContentContainer = styled.div`
+      max-width: 740px;
+      margin: auto;
+      font-size: 18px;
+      line-height: 32px;
+      margin-bottom: 40px;
+
+      p {
+        margin-bottom: 16px;
+      }
+
+      figure {
+        margin-bottom: 16px;
+        img {
+          height: auto;
+          max-width: 100%;
+        }
+        figcaption {
+          position: relative;
+          font-size: 87.5%;
+          opacity: 0.6;
+          text-align: center;
+        }
+      }
+    `;
+
     const post = this.props.data.markdownRemark;
     const siteTitle = this.props.data.site.siteMetadata.title;
-    const author = this.props.data.site.siteMetadata.author;
-    const { previous, next } = this.props.pageContext;
+    // const author = this.props.data.site.siteMetadata.author;
+    // const { previous, next } = this.props.pageContext;
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
-        <SEO title={post.frontmatter.title} description={post.excerpt} />
-        <container>
+        <BlogContainer itemScope itemType="http://schema.org/BlogPosting">
+          <BlogHero>
+            <h1 itemProp="headline">{post.frontmatter.title}</h1>
+            <blockquote itemProp="description">
+              {post.frontmatter.description}
+            </blockquote>
+            <BlogMeta>
+              <span class="icon">
+                <i class="fa fa-clock-o" aria-hidden="true"></i>
+              </span>
+              <span>{post.fields.readingTime.text}</span>
+            </BlogMeta>
+            <BlogMeta>
+              <span class="icon">
+                <i class="fa fa-pencil" aria-hidden="true"></i>
+              </span>
+              <time datetime="{post.frontmatter.date}">
+                Published: {post.frontmatter.date}
+              </time>
+            </BlogMeta>
+          </BlogHero>
+          <BlogContentContainer
+            dangerouslySetInnerHTML={{ __html: post.html }}
+          ></BlogContentContainer>
+        </BlogContainer>
+
+        {/* <container>
           <header>
             <h1>{post.frontmatter.title}</h1>
             <sub
@@ -49,7 +136,7 @@ class BlogPostTemplate extends React.Component {
               )}
             </li>
           </ll>
-        </container>
+        </container> */}
       </Layout>
     );
   }
@@ -77,6 +164,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
+        description
       }
     }
   }

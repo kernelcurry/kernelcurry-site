@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { Link } from "gatsby";
 import styled from "styled-components";
 
-const PostPreview = ({ node }) => {
+const PostPreview = ({ type, node }) => {
   const PostPreview = styled.div`
     h2 {
       font-size: 22px;
@@ -31,7 +31,7 @@ const PostPreview = ({ node }) => {
   return (
     <PostPreview itemScope itemType="http://schema.org/CreativeWork">
       <h2 className="title">
-        <Link to={node.fields.slug} itemProp="headline">
+        <Link to={'/' + type + node.fields.slug} itemProp="headline">
           {node.frontmatter.title}
         </Link>
       </h2>
@@ -53,7 +53,8 @@ PostPreview.propTypes = {
       slug: PropTypes.string.isRequired
     }),
     excerpt: PropTypes.string.isRequired
-  })
+  }),
+  type: PropTypes.string.isRequired
 };
 
 export default PostPreview;

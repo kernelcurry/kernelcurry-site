@@ -74,7 +74,24 @@ module.exports = {
         // GitHub Flavored Markdown mode (default: true)
         gfm: true,
         // Plugins configs
-        plugins: [`gatsby-remark-reading-time`]
+        plugins: [
+          `gatsby-remark-reading-time`,
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              showCaptions: true,
+              quality: 100,
+              maxWidth: 4096
+            }
+          },
+          {
+            resolve: "gatsby-remark-external-links",
+            options: {
+              target: "_blank", // Specifies where to display the linked URL. The value should be on of : _self, _blank, _parent, _top
+              rel: "nofollow noopener noreferrer" // Specifies the relationship of the target object to the link object. The value is a space-separated list of link types.
+            }
+          }
+        ]
       }
     },
     `gatsby-plugin-slug`,

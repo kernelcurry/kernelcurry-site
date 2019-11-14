@@ -23,7 +23,7 @@ class BlogIndex extends Component {
     return (
       <Layout>
         <Hero title={heroTitle} text={heroText()} />
-        <PostList posts={posts} />
+        <PostList posts={posts} type="blog" />
       </Layout>
     );
   }
@@ -38,7 +38,10 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(
+      filter: { frontmatter: { draft: { eq: false } } }
+      sort: { fields: [frontmatter___date], order: DESC }
+    ) {
       edges {
         node {
           id
