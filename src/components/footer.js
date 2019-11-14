@@ -56,6 +56,10 @@ const SiteFooter = () => {
     }
   `;
 
+  /**
+   * Render
+   */
+
   return (
     <Footer>
       <FooterNav>
@@ -88,7 +92,3 @@ const SiteFooter = () => {
 };
 
 export default SiteFooter;
-
-// {{ $currentPage := . }} {{ range .Site.Menus.main }}
-// <li><a href="{{ .URL }}" {{if  $currentPage.IsMenuCurrent "main" . }} class="active"{{end}}>{{ .Name }}</a></li>
-// {{end}}
