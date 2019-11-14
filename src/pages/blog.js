@@ -1,10 +1,9 @@
 import React, { Component } from "react";
 import { Link, graphql } from "gatsby";
-import styled from "styled-components";
 
 import Layout from "../components/layout";
 import Hero from "../components/hero";
-import Post from "../components/post";
+import PostList from "../components/post-list";
 
 class BlogIndex extends Component {
   render() {
@@ -24,11 +23,7 @@ class BlogIndex extends Component {
     return (
       <Layout>
         <Hero title={heroTitle} text={heroText()} />
-        <ul id="posts">
-          {posts.map(({ node }) => {
-            return <Post key={node.id} node={node} />;
-          })}
-        </ul>
+        <PostList posts={posts} />
       </Layout>
     );
   }
