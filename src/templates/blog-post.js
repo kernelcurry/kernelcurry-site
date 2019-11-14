@@ -59,12 +59,24 @@ class BlogPostTemplate extends React.Component {
           height: auto;
           max-width: 100%;
         }
+
         figcaption {
           position: relative;
           font-size: 87.5%;
           opacity: 0.6;
           text-align: center;
         }
+      }
+
+      .embedVideo-container {
+        line-height: 0;
+      }
+
+      figcaption {
+        position: relative;
+        font-size: 87.5%;
+        opacity: 0.6;
+        text-align: center;
       }
     `;
 
