@@ -11,8 +11,9 @@ import styled from "styled-components";
 
 import Header from "./header";
 import Footer from "./footer";
+import SEO from "./seo";
 
-const Layout = ({ children }) => {
+const Layout = ({ children, title, description }) => {
   /**
    * Component CSS
    */
@@ -22,12 +23,15 @@ const Layout = ({ children }) => {
     max-width: 1128px;
   `;
 
+  console.log(children);
+
   /**
    * Render
    */
   return (
     <>
       <Header />
+      <SEO title={title} description={description} />
       <MainContainer>{children}</MainContainer>
       <Footer />
     </>
@@ -35,7 +39,9 @@ const Layout = ({ children }) => {
 };
 
 Layout.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string
 };
 
 export default Layout;

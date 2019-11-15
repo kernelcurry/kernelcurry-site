@@ -5,7 +5,7 @@ import Hero from "../components/hero";
 
 const PortfolioPage = () => {
   return (
-    <Layout>
+    <Layout title="Portfolio" description="Under Construction">
       <Hero title="Portfolio" text="Under Construction"></Hero>
     </Layout>
   );

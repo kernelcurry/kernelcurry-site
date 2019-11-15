@@ -26,7 +26,7 @@ exports.createPages = ({ graphql, actions }) => {
                     slug
                   }
                   frontmatter {
-					title
+                    title
                   }
                   parent {
                     ... on File {

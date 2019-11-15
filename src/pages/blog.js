@@ -21,7 +21,7 @@ class BlogIndex extends Component {
     };
 
     return (
-      <Layout>
+      <Layout title="Blogs">
         <Hero title={heroTitle} text={heroText()} />
         <PostList posts={posts} type="blog" />
       </Layout>

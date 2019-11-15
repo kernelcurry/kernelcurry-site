@@ -170,7 +170,7 @@ class BlogPostTemplate extends React.Component {
     // const { previous, next } = this.props.pageContext;
 
     return (
-      <Layout location={this.props.location} title={siteTitle}>
+      <Layout title={post.frontmatter.title}>
         <BlogContainer itemScope itemType="http://schema.org/BlogPosting">
           <BlogHero>
             <h1 itemProp="headline">{post.frontmatter.title}</h1>

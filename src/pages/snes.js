@@ -15,7 +15,7 @@ class SnesIndex extends Component {
       "I am about to embark on an adventure of reviewing every Super Nintendo game released in North America. Over the next 15-ish years, I will be playing each game on the original hardware, writing a review for my website, and making a video review for YouTube. Wish me luck!";
 
     return (
-      <Layout>
+      <Layout title="Super Nintendo">
         <Hero title={heroTitle} text={heroText} />
         <PostList posts={posts} type="snes" />
       </Layout>
