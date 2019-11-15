@@ -39,7 +39,10 @@ export const pageQuery = graphql`
       }
     }
     allMarkdownRemark(
-      filter: { frontmatter: { draft: { eq: false } } }
+      filter: {
+        fileAbsolutePath: { regex: "/blog/" }
+        frontmatter: { draft: { eq: false } }
+      }
       sort: { fields: [frontmatter___date], order: DESC }
     ) {
       edges {
