@@ -54,6 +54,13 @@ exports.createPages = ({ graphql, actions }) => {
             index === posts.length - 1 ? null : posts[index + 1].node;
           const next = index === 0 ? null : posts[index - 1].node;
 
+
+          console.log('source:');
+          console.log(post.node.parent.sourceInstanceName);
+          console.log('slug:');
+          console.log(post.node.fields.slug);
+
+
           createPage({
             path:
               "/" + post.node.parent.sourceInstanceName + post.node.fields.slug,
