@@ -21,6 +21,8 @@ release_dates: {
 draft: false
 ---
 
+![Wildsnake Cartridge](./cart-front.png)
+
 If you thought Tetris was fun, get ready for Tetris with snakes! Yeah, actual Snakes; Wild Snakes. Alexey Pajitnov, the creator of Tetris, thought it would be a good idea to add snakes to the classic game. To be honest, when I started playing this game I thought it was just a crappy rip off of Tetris, but NOPE the creator of Tetris himself thought this was a good idea... sigh.
 
 The game starts, and I am greeted with a familiar board layout: a gridded game board on the right; the next snake in the top left; and score information on the mid to bottom left. "this can't be too hard" I thought to myself... and boy was I right! After understanding how to manipulate the snakes, I continued to play and found "levels" in this game just add more snake types to the board. This difficulty scaling mechanic was an interesting way to make the game harder... but how far would it go. At the max, I believe there were 12 different types of snakes on the screen, and the game started to become very challenging.
@@ -40,6 +42,8 @@ Working my way through the challenges, I found the terrible storyline of me, a m
 Rushing as fast as I could, I blew through the eggs and half of the snakes of each color and I then I realized, I only had 120 seconds left to eliminate the rest of the snakes and pile snakes onto the screen! The faster I went, the more mistakes I made reassuring myself "we need snakes on the screen anyway so don't fret."... boy oh boy was I kidding myself. I ended up running out of time with more snakes than needed on the screen and only a few snake types to eliminate, but those types were on the bottom of the stack, and unless I were to get the same snake type in a row there was no way I was going to succeed. It was apparent to me eliminating the types of snakes first was imperative and getting snakes on the screen should be the focused of the types of snakes where you have already eliminated 3.
 
 For the next weeks, I attempted to make it back to level 9, but never could. After a while, I convinced myself I was cursed and put the game away to attempt this feat at a later date.
+
+![Wildsnake PCB](./pcb-front.png)
 
 ## Final Thoughts
 
