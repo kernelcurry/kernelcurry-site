@@ -128,7 +128,7 @@ const SiteHeader = () => {
       </PageNavContainer>
       <SocialNavContainer>
         <ul>
-          <li>
+          {/* <li>
             <a
               href="https://google.com"
               rel="noopener noreferrer"
@@ -136,7 +136,7 @@ const SiteHeader = () => {
             >
               <i className="fa fa-rss"></i>
             </a>
-          </li>
+          </li> */}
           <li>
             <a
               href={"https://twitter.com/" + social.twitter}
