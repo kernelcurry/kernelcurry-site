@@ -1,7 +1,7 @@
 ---
-title: 'How To Make An Object Oriented WordPress Plugin'
-description: 'You just learned how to create a simple WordPress plugin, and now you hear people talking about how WordPress is becoming more object-oriented. What does that mean? Lets take a step back and start with the basics.'
-date: '2014-02-05T00:00:00.000Z'
+title: "How To Make An Object Oriented WordPress Plugin"
+description: "You just learned how to create a simple WordPress plugin, and now you hear people talking about how WordPress is becoming more object-oriented. What does that mean? Lets take a step back and start with the basics."
+date: "2014-02-05T00:00:00.000Z"
 draft: false
 ---
 
@@ -13,7 +13,7 @@ Most simple WordPress plugins are written using procedural programming. This mea
 
 There are a few parts of an object in object-oriented programming that you will need to know. The first of being the “Class”. A Class is the object wrapper. For example we are going to make a Class with the name HelloDolly. We can call this Class by setting a variable equal to a new instance of the class. This is done by using the reserved word ‘new’ before the Class name.
 
-``` php{numberLines: false}
+```php{numberLines: false}
 Class HelloDolly
 {
 	...
@@ -26,7 +26,7 @@ $hello_dolly_oop = new HelloDolly;
 
 Once the class is created we need to put in the classes constructor. The constructor will be called when the Class is instantiated. In other words, this is the ‘main’ function of the Class.
 
-``` php{numberLines: false}
+```php{numberLines: false}
 Class HelloDolly
 {
 	public function __construct()
@@ -43,7 +43,7 @@ $hello_dolly_oop = new HelloDolly;
 
 Next lets simply add in the functions of the plugin. There will be some changes to these functions in step 4, but for now just copy and paste them into the Class.
 
-``` php{numberLines: false}
+```php{numberLines: false}
 Class HelloDolly
 {
 	public function __construct()
@@ -71,11 +71,11 @@ Class HelloDolly
 $hello_dolly_oop = new HelloDolly;
 ```
 
-### Step 4: Using $this
+### Step 4: Using \$this
 
-This leads us to the last step: calling the functions within the Class. There are two lines that start with ‘add_action(‘. These lines are going to be placed into the constructor of the Class, but need to changed slightly. The function name that is being called needs to be instructed to call the function within the Class. To do this wrap the function name in an array with the first element in the array being the variable $this. The variable $this is a variable that is automatically set when the Class is instantiated. It reverences the current Class. This trick also needs to be done in one other place, but in a slightly different way. when calling the ‘hello_dolly_get_lyric’ function, call it using $this->hello_dolly_get_lyric();
+This leads us to the last step: calling the functions within the Class. There are two lines that start with `add_action(`. These lines are going to be placed into the constructor of the Class, but need to changed slightly. The function name that is being called needs to be instructed to call the function within the Class. To do this wrap the function name in an array with the first element in the array being the variable $this. The variable $this is a variable that is automatically set when the Class is instantiated. It reverences the current Class. This trick also needs to be done in one other place, but in a slightly different way. when calling the `hello_dolly_get_lyric` function, call it using `\$this->hello_dolly_get_lyric();`
 
-``` php{numberLines: false}
+```php{numberLines: false}
 Class HelloDolly
 {
 	public function __construct()
