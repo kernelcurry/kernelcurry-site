@@ -23,8 +23,6 @@ const Layout = ({ children, title, description }) => {
     max-width: 1128px;
   `;
 
-  console.log(children);
-
   /**
    * Render
    */
