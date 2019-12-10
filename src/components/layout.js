@@ -13,33 +13,33 @@ import Header from "./header";
 import Footer from "./footer";
 import SEO from "./seo";
 
-const Layout = ({ children, title, description }) => {
-  /**
-   * Component CSS
-   */
+const Layout = ({children, title, description}) => {
+    /**
+     * Component CSS
+     */
 
-  const MainContainer = styled.main`
-    margin: auto;
-    max-width: 1128px;
-  `;
+    const MainContainer = styled.main`
+        margin: auto;
+        max-width: 1128px;
+    `;
 
-  /**
-   * Render
-   */
-  return (
-    <>
-      <Header />
-      <SEO title={title} description={description} />
-      <MainContainer>{children}</MainContainer>
-      <Footer />
-    </>
-  );
+    /**
+     * Render
+     */
+    return (
+        <>
+            <Header/>
+            <SEO title={title} description={description}/>
+            <MainContainer>{children}</MainContainer>
+            <Footer/>
+        </>
+    );
 };
 
 Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-  title: PropTypes.string.isRequired,
-  description: PropTypes.string
+    children: PropTypes.node.isRequired,
+    title: PropTypes.string.isRequired,
+    description: PropTypes.string
 };
 
 export default Layout;

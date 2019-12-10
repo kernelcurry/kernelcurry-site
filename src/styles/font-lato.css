@@ -11,6 +11,7 @@
     font-weight: 300;
     font-style: italic;
 }
+
 @font-face {
     font-family: 'Lato';
     src: url('../fonts/lato/Lato-Black.woff') format('woff');
