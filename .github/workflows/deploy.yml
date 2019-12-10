@@ -21,13 +21,19 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: '12.x'
-      - name: List Repo Directories
+      - name: Build Static Site
         run: |
-          ls -al ./master
-          ls -al ./gh-pages
-      - name: tmp
+          cd ./master || exit 1
+          gatsby clean
+          gatsby build
+          cp CNAME ./public/CNAME
+      - name: Clean & Update gh-pages
         run: |
-          cd ./gh-pages || exit 1
-          pwd
-          git pull
-          ls -al
+          rm -rf ./gh-pages/*
+          cp -R ./master/* ./gh-pages/
+      - name: Deploy gh-pages
+          run: |
+            cd ./gh-pages || exit 1
+            git add --all
+            git commit -m ":rocket: GH Actions - $(date -u)"
+            ls -al
