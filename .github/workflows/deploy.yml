@@ -35,5 +35,5 @@ jobs:
           run: |
             cd ./gh-pages || exit 1
             git add --all
-            git commit -m ":rocket: GH Actions - $(date -u)"
+            'git commit -m ":rocket: GH Actions - $(date -u)"'
             ls -al
