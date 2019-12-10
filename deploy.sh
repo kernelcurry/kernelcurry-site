@@ -73,5 +73,5 @@ git add --all && git commit -m ":rocket: Publishing to gh-pages (deploy.sh)" && 
 
 echo "---------------------------------------------------------------"
 echo "Cleaning up..."
-cd .. &
+cd ..
 gatsby clean
