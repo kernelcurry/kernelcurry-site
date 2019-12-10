@@ -14,11 +14,18 @@ jobs:
     # Job Steps
     steps:
       - uses: actions/checkout@v1
+      - uses: actions/checkout@v2-beta
+        with:
+          # The branch, tag or SHA to checkout.  When checking out the repository that
+          # triggered a workflow, this defaults to the reference or SHA for that event.
+          # Otherwise, defaults to `master`.
+          ref: 'gh-pages'
+
+          # Relative path under $GITHUB_WORKSPACE to place the repository
+          path: '../build'
       - uses: actions/setup-node@v1
         with:
           node-version: '12.x'
-      - name: Clone gh-pages to ../build
-        run: git clone -b gh-pages git@github.com:kernelcurry/kernelcurry-site.git ../build
       - name: Nivigate to Build Directory
         run: cd ../build || exit 1
       - name: Git Pull
