@@ -50,7 +50,7 @@ jobs:
       - name: Pull gh-pages changes
         run: git pull
       - name: Commiting gh-pages branch
-        run: git add --all && git commit -m ":rocket: Publishing to gh-pages (deploy.sh)"
+        run: 'git add --all && git commit -m ":rocket: Publishing to gh-pages (deploy.sh)"'
       - name: Pushing gh-pages Branch
         run: git push
       - name: gatsby clean
