@@ -33,7 +33,7 @@ jobs:
       - name: Clean & Update gh-pages
         run: |
           rm -rf ./gh-pages/*
-          cp -R ./master/* ./gh-pages/
+          cp -R ./master/public/* ./gh-pages/
       - name: Deploy gh-pages
         run: |
           cd ./gh-pages || exit 1
