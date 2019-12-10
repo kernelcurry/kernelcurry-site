@@ -1,4 +1,4 @@
-name: Master Actions
+name: Build
 # This workflow is triggered on pushes to the repository.
 on:
   push:
@@ -15,7 +15,9 @@ jobs:
     # Job Steps
     steps:
       - uses: actions/checkout@v1
-      - name: Install gatsby-cli
-        run: npm install -g gatsby-cli
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
+      - run: npm install -g gatsby-cli
       - run: pwd
       - run: ls -al
