@@ -13,7 +13,6 @@ jobs:
     runs-on: ubuntu-latest
     # Job Steps
     steps:
-      - run: exit 1
       - uses: actions/checkout@v1
       - uses: actions/setup-node@v1
         with:
