@@ -18,6 +18,11 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: '12.x'
-      - run: npm install -g gatsby-cli
-      - run: pwd
-      - run: ls -al
+      - name: Install batsgy-cli
+        run: npm install -g gatsby-cli
+      - name: npm Install
+        run: npm install
+      - name: gatsby clean
+        run: gatsby clean
+      - name: gatsby build
+        run: gatsby build
