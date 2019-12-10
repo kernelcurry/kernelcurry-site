@@ -27,7 +27,9 @@ jobs:
         run: ls -al ./gh-pages
       - name: Nivigate to gh-pages Directory
         run: cd ./gh-pages || exit 1
+      - name: pwd
+        run: pwd
       - name: Git Pull
-        run: /usr/bin/git pull
+        run: cd ./gh-pages & /usr/bin/git pull
       - name: list
         run: ls -al
