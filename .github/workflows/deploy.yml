@@ -28,6 +28,6 @@ jobs:
       - name: Nivigate to gh-pages Directory
         run: cd ./gh-pages || exit 1
       - name: Git Pull
-        run: git pull
+        run: /usr/bin/git pull
       - name: list
         run: ls -al
