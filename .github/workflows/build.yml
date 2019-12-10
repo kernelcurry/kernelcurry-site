@@ -1,0 +1,27 @@
+name: Build
+# This workflow is triggered on pushes to the repository.
+on:
+  push:
+    branches-ignore:
+      - gh-pages
+
+jobs:
+  build:
+    # Job name is Greeting
+    name: Build
+    # This job runs on Linux
+    runs-on: ubuntu-latest
+    # Job Steps
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
+      - name: Install gatsby-cli
+        run: npm install -g gatsby-cli
+      - name: npm Install
+        run: npm install
+      - name: gatsby clean
+        run: gatsby clean
+      - name: gatsby build
+        run: gatsby build

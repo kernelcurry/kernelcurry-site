@@ -1,8 +1,8 @@
 #!/bin/sh
 
 if [[ $(git status -s) ]]; then
-    echo "***The working directory is dirty. Please commit any pending changes.***"
-    exit 1
+  echo "***The working directory is dirty. Please commit any pending changes.***"
+  exit 1
 fi
 
 echo "---------------------------------------------------------------"
@@ -18,15 +18,15 @@ git worktree add -B gh-pages public
 
 echo "---------------------------------------------------------------"
 echo "Navigate to gh-pages branch"
-cd public
+cd public || exit
 
 echo "---------------------------------------------------------------"
 echo "Verify on gh-pages branch"
 BRANCH=$(git rev-parse --abbrev-ref HEAD)
 if [[ "$BRANCH" != "gh-pages" ]]; then
-    echo '***The public directory is not on gp-pages. Aborting (2)***'
-    cd ..
-    exit 1
+  echo '***The public directory is not on gp-pages. Aborting (2)***'
+  cd ..
+  exit 1
 fi
 
 echo "---------------------------------------------------------------"
@@ -52,15 +52,15 @@ cp CNAME public/CNAME
 
 echo "---------------------------------------------------------------"
 echo "Navigate to gh-pages branch"
-cd public
+cd public || exit
 
 echo "---------------------------------------------------------------"
 echo "Verify on gh-pages branch"
 BRANCH=$(git rev-parse --abbrev-ref HEAD)
 if [[ "$BRANCH" != "gh-pages" ]]; then
-    echo '***The public directory is not on gp-pages. Aborting (2)***'
-    cd ..
-    exit 1
+  echo '***The public directory is not on gp-pages. Aborting (2)***'
+  cd ..
+  exit 1
 fi
 
 echo "---------------------------------------------------------------"

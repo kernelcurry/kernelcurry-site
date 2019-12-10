@@ -1,0 +1,57 @@
+name: Deploy
+# This workflow is triggered on pushes to the repository.
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    # Job name is Greeting
+    name: Deploy
+    # This job runs on Linux
+    runs-on: ubuntu-latest
+    # Job Steps
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
+      - name: Install gatsby-cli
+        run: npm install -g gatsby-cli
+      - name: npm Install
+        run: npm install
+      - name: gatsby clean
+        run: gatsby clean
+      - name: Make public Directory
+        run: mkdir public
+      - name: Checking out gh-pages branch into public
+        run: git worktree add -B gh-pages public
+      - name: Navigate to gh-pages branch
+        run: cd public
+      - name: Verify on gh-pages branch
+        run: if [[ "$(git rev-parse --abbrev-ref HEAD)" != "gh-pages" ]]; then exit 1; fi
+      - name: Set Branch Upstream
+        run: git branch --set-upstream-to=origin/gh-pages gh-pages
+      - name: Pull gh-pages changes
+        run: git pull
+      - name: Navigate to root branch
+        run: cd ..
+      - name: Removing existing ./public/* files
+        run: rm -rf public/*
+      - name: Generating site
+        run: gatsby build
+      - name: Generating CNAME file
+        run: cp CNAME public/CNAME
+      - name: Navigate to gh-pages branch
+        run: cd public
+      - name: Verify on gh-pages branch
+        run: if [[ "$(git rev-parse --abbrev-ref HEAD)" != "gh-pages" ]]; then exit 1; fi
+      - name: Pull gh-pages changes
+        run: git pull
+      - name: Commiting gh-pages branch
+        run: 'git add --all && git commit -m ":rocket: Publishing to gh-pages (deploy.sh)"'
+      - name: Pushing gh-pages Branch
+        run: git push
+      - name: gatsby clean
+        run: gatsby clean
