@@ -34,9 +34,9 @@ jobs:
       - name: Navigate to gh-pages branch
         run: cd public
       - name: echo branch name
-        run: git rev-parse --abbrev-ref HEAD
+        run: git branch | grep \* | cut -d ' ' -f2-
       - name: Verify on gh-pages branch
-        run: if [[ "$(git rev-parse --abbrev-ref HEAD)" != "gh-pages" ]]; then exit 1; fi
+        run: if [[ "$(git branch | grep \* | cut -d ' ' -f2-)" != "gh-pages" ]]; then exit 1; fi
       - name: Set Branch Upstream
         run: git branch --set-upstream-to=origin/gh-pages gh-pages
       - name: Pull gh-pages changes
@@ -51,8 +51,10 @@ jobs:
         run: cp CNAME public/CNAME
       - name: Navigate to gh-pages branch
         run: cd public
+      - name: echo branch name
+        run: git branch | grep \* | cut -d ' ' -f2-
       - name: Verify on gh-pages branch
-        run: if [[ "$(git rev-parse --abbrev-ref HEAD)" != "gh-pages" ]]; then exit 1; fi
+        run: if [[ "$(git branch | grep \* | cut -d ' ' -f2-)" != "gh-pages" ]]; then exit 1; fi
       - name: Pull gh-pages changes
         run: git pull
       - name: Commiting gh-pages branch
