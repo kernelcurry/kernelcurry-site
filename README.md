@@ -1,4 +1,5 @@
 ![](https://github.com/kernelcurry/kernelcurry-site/workflows/Build/badge.svg)
+![](https://github.com/kernelcurry/kernelcurry-site/workflows/Deploy/badge.svg)
 ---
 
 ## Overview 
