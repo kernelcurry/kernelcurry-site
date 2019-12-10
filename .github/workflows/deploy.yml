@@ -53,5 +53,3 @@ jobs:
         run: 'git add --all && git commit -m ":rocket: Publishing to gh-pages (deploy.sh)"'
       - name: Pushing gh-pages Branch
         run: git push
-      - name: gatsby clean
-        run: gatsby clean
