@@ -25,10 +25,16 @@ jobs:
         run: gatsby clean
       - name: Make public Directory
         run: mkdir public
+      - name: Prune git Worktree
+        run: git worktree prune
+      - name: Remove .git/worktrees/public/
+        run: rm -rf .git/worktrees/public/
       - name: Checking out gh-pages branch into public
         run: git worktree add -B gh-pages public
       - name: Navigate to gh-pages branch
         run: cd public
+      - name: echo branch name
+        run: git rev-parse --abbrev-ref HEAD
       - name: Verify on gh-pages branch
         run: if [[ "$(git rev-parse --abbrev-ref HEAD)" != "gh-pages" ]]; then exit 1; fi
       - name: Set Branch Upstream
@@ -53,5 +59,3 @@ jobs:
         run: 'git add --all && git commit -m ":rocket: Publishing to gh-pages (deploy.sh)"'
       - name: Pushing gh-pages Branch
         run: git push
-      - name: gatsby clean
-        run: gatsby clean
