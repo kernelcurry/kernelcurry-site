@@ -2,9 +2,8 @@ name: Build
 # This workflow is triggered on pushes to the repository.
 on:
   push:
-    branches:
-      - master
-      - develop
+    branches-ignore:
+      - gh-pages
 
 jobs:
   build:
@@ -18,7 +17,7 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: '12.x'
-      - name: Install batsgy-cli
+      - name: Install gatsby-cli
         run: npm install -g gatsby-cli
       - name: npm Install
         run: npm install
