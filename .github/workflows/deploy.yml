@@ -17,39 +17,11 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: '12.x'
-      - name: Install gatsby-cli
-        run: npm install -g gatsby-cli
-      - name: npm Install
-        run: npm install
-      - name: gatsby clean
-        run: gatsby clean
-      - name: Make public Directory
-        run: mkdir public
-      - name: Prune git Worktree
-        run: git worktree prune
-      - name: Remove .git/worktrees/public/
-        run: rm -rf .git/worktrees/public/
-      - name: Checking out gh-pages branch into public
-        run: git worktree add -B gh-pages public
-      - name: Navigate to gh-pages branch
-        run: cd public || exit 1
-      - name: Set Branch Upstream
-        run: git branch --set-upstream-to=origin/gh-pages gh-pages
-      - name: Pull gh-pages changes
+      - name: Clone gh-pages to ../build
+        run: git clone -b gh-pages git@github.com:kernelcurry/kernelcurry-site.git ../build
+      - name: Nivigate to Build Directory
+        run: cd ../build || exit 1
+      - name: Git Pull
         run: git pull
-      - name: Navigate to root branch
-        run: cd ..
-      - name: Removing existing ./public/* files
-        run: rm -rf public/*
-      - name: Generating site
-        run: gatsby build
-      - name: Generating CNAME file
-        run: cp CNAME public/CNAME
-      - name: Navigate to gh-pages branch
-        run: cd public || exit 1
-      - name: Pull gh-pages changes
-        run: git pull
-      - name: Commiting gh-pages branch
-        run: 'git add --all && git commit -m ":rocket: Publishing to gh-pages (deploy.sh)"'
-      - name: Pushing gh-pages Branch
-        run: git push
+      - name: list
+        run: ls -al
