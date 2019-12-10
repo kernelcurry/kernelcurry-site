@@ -21,15 +21,13 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: '12.x'
-      - name: list Master
-        run: ls -al ./master
-      - name: list gh-pages
-        run: ls -al ./gh-pages
-      - name: Nivigate to gh-pages Directory
-        run: cd ./gh-pages || exit 1
-      - name: pwd
-        run: pwd
-      - name: Git Pull
-        run: cd ./gh-pages & /usr/bin/git pull
-      - name: list
-        run: ls -al
+      - name: List Repo Directories
+        run: |
+          ls -al ./master
+          ls -al ./gh-pages
+      - name: tmp
+        run: |
+          cd ./gh-pages || exit 1
+          pwd
+          git pull
+          ls -al
