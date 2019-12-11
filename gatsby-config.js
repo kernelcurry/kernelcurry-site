@@ -16,8 +16,8 @@ module.exports = {
                     path: `/blog`
                 },
                 {
-                    text: `Portfolio`,
-                    path: `/portfolio`
+                    text: `Career`,
+                    path: `/career`
                 },
                 {
                     text: `Super Nintendo`,
