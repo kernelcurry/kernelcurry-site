@@ -52,6 +52,14 @@ const CareerPage = () => {
                 </p>
             </div>
             <div>
+                <h3>Project: TagVault</h3>
+                <dates>Aug 19, 2013</dates>
+                <p>
+                    https://github.com/michaelcurry/tagvault
+                    https://twitter.com/ChuckReynolds/status/380450695964409856
+                </p>
+            </div>
+            <div>
                 <h3>Project: Levers Hollywood</h3>
                 <dates>July 13-14, 2013</dates>
                 <p>
