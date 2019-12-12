@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[5],{E6xs:function(t,e,n){"use strict";n.r(e);var o=n("q1tI"),r=n.n(o),i=n("Bl7J"),a=n("So3+");e.default=function(){return r.a.createElement(i.a,{title:"Portfolio",description:"Under Construction"},r.a.createElement(a.a,{title:"Portfolio",text:"Under Construction"}))}}}]);
-//# sourceMappingURL=component---src-pages-portfolio-js-c3c0fa5ef85f6a9521fe.js.map

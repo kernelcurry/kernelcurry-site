@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[5],{RXBc:function(t,e,a){"use strict";a.r(e);var n=a("TonM"),r=a("q1tI"),i=a.n(r),o=a("Bl7J"),c=a("So3+");e.default=function(){var t=n.data;return i.a.createElement(o.a,{title:"Home"},i.a.createElement(c.a,{title:t.site.siteMetadata.title,text:"Seattle, WA - info@kernelcurry.com"}))}},TonM:function(t){t.exports=JSON.parse('{"data":{"site":{"siteMetadata":{"title":"KernelCurry"}}}}')}}]);
+//# sourceMappingURL=component---src-pages-index-js-cbee4f81ee3bd43c804e.js.map
