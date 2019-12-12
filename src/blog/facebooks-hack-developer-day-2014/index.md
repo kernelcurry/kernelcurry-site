@@ -3,6 +3,7 @@ title: "Facebook’s Hack Developer Day 2014"
 description: "This last week I was lucky enough to step onto Facebook's campus for their first ever Hack Developer Day. Throughout the day developers and project managers gave talks about HHVM and Hack. From overviews to the nitty gritty details, each talk brought more insight into why this language was created."
 date: "2014-04-14T00:00:00.000Z"
 draft: false
+image: "main.jpg"
 ---
 
 ## Overview

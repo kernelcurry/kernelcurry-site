@@ -3,6 +3,7 @@ title: "How To Make An Object Oriented WordPress Plugin"
 description: "You just learned how to create a simple WordPress plugin, and now you hear people talking about how WordPress is becoming more object-oriented. What does that mean? Lets take a step back and start with the basics."
 date: "2014-02-05T00:00:00.000Z"
 draft: false
+image: "main.jpg"
 ---
 
 You just learned how to create a simple WordPress plugin, and now you hear people talking about how WordPress is becoming more object-oriented. What does that mean? Lets take a step back and start with the basics.

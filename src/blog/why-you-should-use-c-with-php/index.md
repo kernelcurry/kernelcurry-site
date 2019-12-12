@@ -3,6 +3,7 @@ title: 'Why You Should Use C With Php'
 description: 'A few months ago, I calculated the top Magic: The Gathering cards in the games modern format ... It took 30 minutes in PHP.  How long would it take in C?'
 date: '2014-01-07T00:00:00.000Z'
 draft: false
+image: "main.jpg"
 ---
 
 A few months ago, I calculated the top Magic: The Gathering cards in the games modern format [LINK_BROKEN]. This was accomplished using pure PHP. In total it took about 30 minutes to calculate. With a 30 minute runtime, I wanted to find a faster way to crunch the numbers. What better way than to use C.

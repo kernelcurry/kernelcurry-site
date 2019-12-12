@@ -16,12 +16,12 @@ module.exports = {
                     path: `/blog`
                 },
                 {
-                    text: `Portfolio`,
-                    path: `/portfolio`
+                    text: `Career`,
+                    path: `/career`
                 },
                 {
-                    text: `Super Nintendo`,
-                    path: `/snes`
+                    text: `Projects`,
+                    path: `/project`
                 }
             ]
         }
@@ -45,8 +45,15 @@ module.exports = {
         {
             resolve: `gatsby-source-filesystem`,
             options: {
-                name: `snes`,
-                path: `${__dirname}/src/snes`
+                name: `career`,
+                path: `${__dirname}/src/career`
+            }
+        },
+        {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+                name: `project`,
+                path: `${__dirname}/src/project`
             }
         },
         `gatsby-transformer-sharp`,

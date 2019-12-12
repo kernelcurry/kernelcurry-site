@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import {Link, graphql} from "gatsby";
+import {graphql} from "gatsby";
 
 import Layout from "../components/layout";
 import Hero from "../components/hero";
@@ -14,8 +14,7 @@ class BlogIndex extends Component {
         const heroText = () => {
             return (
                 <>
-                    This is the personal blog. If you wish to read Super Nintendo content
-                    and game reviews, please <Link to="/snes">click here</Link>
+                    Views and opinions expressed here are mine and do not reflect official policies or positions of any associated entities.
                 </>
             );
         };
@@ -59,6 +58,13 @@ export const pageQuery = graphql`
                         date(formatString: "MMMM DD, YYYY")
                         title
                         description
+                        image {
+                            childImageSharp {
+                                fixed(width: 800, height: 420, cropFocus: CENTER) {
+                                    src
+                                }
+                            }
+                        }
                     }
                 }
             }
