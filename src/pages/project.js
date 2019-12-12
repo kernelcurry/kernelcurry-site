@@ -5,25 +5,24 @@ import Layout from "../components/layout";
 import Hero from "../components/hero";
 import PostList from "../components/post-list";
 
-class SnesIndex extends Component {
+class CareerIndex extends Component {
     render() {
         const {data} = this.props;
         const posts = data.allMarkdownRemark.edges;
 
-        const heroTitle = "Super Nintendo";
-        const heroText =
-            "I am about to embark on an adventure of reviewing every Super Nintendo game released in North America. Over the next 15-ish years, I will be playing each game on the original hardware, writing a review for my website, and making a video review for YouTube. Wish me luck!";
+        const heroTitle = "Projects";
+        const heroText = "In process as of 2019-12-11";
 
         return (
-            <Layout title="Super Nintendo">
+            <Layout title="Projects">
                 <Hero title={heroTitle} text={heroText}/>
-                <PostList posts={posts} type="snes"/>
+                <PostList posts={posts} type="project"/>
             </Layout>
         );
     }
 }
 
-export default SnesIndex;
+export default CareerIndex;
 
 export const pageQuery = graphql`
     query {
@@ -34,7 +33,7 @@ export const pageQuery = graphql`
         }
         allMarkdownRemark(
             filter: {
-                fileAbsolutePath: { regex: "/snes/" }
+                fileAbsolutePath: { regex: "/project/" }
                 frontmatter: { draft: { eq: false } }
             }
             sort: { fields: [frontmatter___date], order: DESC }

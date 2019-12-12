@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import {Link, graphql} from "gatsby";
+import {graphql} from "gatsby";
 
 import Layout from "../components/layout";
 import Hero from "../components/hero";
@@ -14,8 +14,7 @@ class BlogIndex extends Component {
         const heroText = () => {
             return (
                 <>
-                    This is the personal blog. If you wish to read Super Nintendo content
-                    and game reviews, please <Link to="/snes">click here</Link>
+                    This is the personal blog.
                 </>
             );
         };

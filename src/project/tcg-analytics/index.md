@@ -8,8 +8,8 @@ date_stop:  "2014-12-01T00:00:00.000Z"
 
 links: {
 	"Homepage": "http://tcganalytics.com/",
-	"Hacker News": "https://news.ycombinator.com/item?id=6452056"
-	"Hacker News": "https://news.ycombinator.com/item?id=7768619"
+	"Hacker News": "https://news.ycombinator.com/item?id=6452056",
+	"Hacker News 2": "https://news.ycombinator.com/item?id=7768619"
 }
 ---
 
