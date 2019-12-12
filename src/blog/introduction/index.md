@@ -3,6 +3,7 @@ title: 'Introduction'
 description: 'The blog starts here!  It is going to be a long journey ahead....'
 date: '2013-10-30T00:00:00.000Z'
 draft: false
+image: "main.jpg"
 ---
 
 "The plumber always has plumbing problems at home." ... "Carpenters buy their furniture at IKEA." ... "The developers never has a good website"...

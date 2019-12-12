@@ -3,6 +3,7 @@ title: 'Nintendo PowerFest (1994) Reunion Tournament'
 description: 'A few weekends ago, I flew to Arizona to attend the Game On Retro Expo.  I was in the Nintendo PowerFest 1994 Reunion Tournament finals...'
 date: '2015-09-12T00:00:00.000Z'
 draft: false
+image: "main.jpg"
 ---
 
 A few weekends ago, I flew into Arizona to attend the [Game On Retro Expo](https://gameonexpoaz.com/?utm_source=kernelcurry.com&utm_medium=referral&utm_campaign=nintendo-powerfest-1994-reunion-tournament "Game On Retro Expo]") with some old friends.  Among this group was Dorion Whitlock (1994 Nintendo PowerFest finalist and old roommate) and Mike Iarossi (1994 Nintendo PowerFest first place winner).  To say the least, I forgot how much fun it is playing video games with your friends.

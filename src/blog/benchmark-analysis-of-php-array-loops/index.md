@@ -3,6 +3,7 @@ title: 'Benchmark Analysis Of PHP Array Loops'
 description: 'I decided to take 5 different methods and use xhprof to collect runtime data. Then, I analyzed these results to determine the best method(s).'
 date: '2013-12-05T00:00:00.000Z'
 draft: false
+image: "main.jpg"
 ---
 
 *UPDATE:* Migrated from a [post](https://web.archive.org/web/20140730180731/http://leve.rs:80/blog/benchmark-analysis-of-php-array-loops) I wrote when working on leve.rs

@@ -14,7 +14,7 @@ class BlogIndex extends Component {
         const heroText = () => {
             return (
                 <>
-                    This is the personal blog.
+                    Views and opinions expressed here are mine and do not reflect official policies or positions of any associated entities.
                 </>
             );
         };
@@ -58,6 +58,13 @@ export const pageQuery = graphql`
                         date(formatString: "MMMM DD, YYYY")
                         title
                         description
+                        image {
+                            childImageSharp {
+                                fixed(width: 800, height: 420, cropFocus: CENTER) {
+                                    src
+                                }
+                            }
+                        }
                     }
                 }
             }
