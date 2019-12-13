@@ -74,3 +74,31 @@ exports.createPages = ({graphql, actions}) => {
         );
     });
 };
+
+// exports.createSchemaCustomization = ({ actions }) => {
+//     const { createTypes } = actions
+//     const typeDefs = `
+//     """
+//     Markdown Node
+//     """
+//     type MarkdownRemark implements Node @infer {
+//       frontmatter: Frontmatter!
+//     }
+//
+//     """
+//     Markdown Frontmatter
+//     """
+//     type Frontmatter @infer {
+//       author: AuthorJson! @link
+//     }
+//
+//     """
+//     Link information
+//     """
+//     type AuthorJson implements Node @dontInfer {
+//       title: String!
+//       url: String!
+//     }
+//   `
+//     createTypes(typeDefs)
+// }

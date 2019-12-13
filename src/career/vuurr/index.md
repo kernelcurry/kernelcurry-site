@@ -9,10 +9,16 @@ date_stop: "2014-11-01T00:00:00.000Z"
 image: "vuurr.png"
 location: "San Francisco, CA / Chandler, AZ"
 
-links: {
-	"Homepage": "https://vuurr.com/",
-	"LinkedIn": "https://www.linkedin.com/company/vuurr/"
-}
+links:  [
+            {
+                "title": "Homepage",
+                "url": "https://vuurr.com/"
+            },
+            {
+                "title": "LinkedIn",
+                "url": "https://www.linkedin.com/company/vuurr/"
+            }
+        ]
 ---
 
 Vuurr specializes in digital marketing campaigns and custom application development for clients ranging from startups & small businesses to $10+ billion enterprises.

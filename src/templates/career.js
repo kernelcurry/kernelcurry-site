@@ -1,5 +1,5 @@
 import React from "react";
-import {graphql} from "gatsby";
+import {graphql, Link} from "gatsby";
 import styled from "styled-components";
 
 import Layout from "../components/layout";
@@ -164,6 +164,128 @@ class CareerTemplate extends React.Component {
           }
         `;
 
+        const FooterContainer = styled.div`
+          max-width: 740px;
+          margin: auto;
+          font-size: 18px;
+          line-height: 32px;
+          margin-bottom: 40px;
+    
+          p {
+            margin-bottom: 16px;
+          }
+    
+          figure {
+            margin-bottom: 16px;
+            img {
+              height: auto;
+              max-width: 100%;
+            }
+    
+            figcaption {
+              position: relative;
+              font-size: 87.5%;
+              opacity: 0.6;
+              text-align: center;
+            }
+          }
+    
+          .embedVideo-container {
+            line-height: 0;
+          }
+    
+          figcaption {
+            position: relative;
+            font-size: 87.5%;
+            opacity: 0.6;
+            text-align: center;
+          }
+    
+          h2 {
+            margin-top: 24px;
+            color: #222;
+            font-size: 36px;
+            line-height: 40px;
+            font-weight: 700;
+            text-rendering: optimizeLegibility;
+            margin-bottom: 16px;
+          }
+    
+          h3 {
+            margin-top: 24px;
+            font-size: 24px;
+            line-height: 32px;
+            margin-bottom: 16px;
+          }
+    
+          h4 {
+            margin-top: 24px;
+            font-size: 18px;
+            line-height: 32px;
+            margin-bottom: 16px;
+          }
+    
+          /**
+           * Add back the container background-color, border-radius, padding, margin
+           * and overflow that we removed from <pre>.
+           */
+          .gatsby-highlight {
+            font-size: 87.5%;
+          }
+    
+          ol {
+            display: block;
+            list-style-type: decimal;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            padding-inline-start: 26px;
+          }
+    
+          ul {
+            display: block;
+            list-style-type: disc;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            padding-inline-start: 26px;
+          }
+    
+          ol ul {
+            list-style-type: circle;
+          }
+    
+          address,
+          blockquote,
+          dl,
+          fieldset,
+          figure,
+          form,
+          hr,
+          ol,
+          p,
+          pre,
+          table,
+          ul {
+            margin-bottom: 16px;
+          }
+    
+          ol ol,
+          ol ul,
+          ul ol,
+          ul ul {
+            margin: 0 0 0 24px;
+          }
+    
+          ol p,
+          ul p,
+          li p {
+            margin: 0;
+          }
+        `;
+
         const post = this.props.data.markdownRemark;
         // const siteTitle = this.props.data.site.siteMetadata.title;
         // const author = this.props.data.site.siteMetadata.author;
@@ -194,6 +316,14 @@ class CareerTemplate extends React.Component {
                         </Meta>
                     </Hero>
                     <ContentContainer dangerouslySetInnerHTML={{__html: post.html}}/>
+                    <FooterContainer>
+                        <h3>Resources</h3>
+                        <ul>
+                            {post.frontmatter.links.map(({url, title}) => {
+                                return <li>{title}: <Link to={url} itemProp="headline">{url}</Link></li>;
+                            })}
+                        </ul>
+                    </FooterContainer>
                 </Container>
             </Layout>
         );
@@ -224,6 +354,10 @@ export const pageQuery = graphql`
                 location
                 date_start(formatString: "MMM Do, YYYY")
                 date_stop(formatString: "MMM Do, YYYY")
+                links {
+                    title
+                    url
+                }
             }
         }
     }
