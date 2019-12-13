@@ -4,14 +4,14 @@ import styled from "styled-components";
 
 import Layout from "../components/layout";
 
-class BlogPostTemplate extends React.Component {
+class CareerTemplate extends React.Component {
     render() {
-        const BlogContainer = styled.div`
+        const Container = styled.div`
           margin-left: auto;
           margin-right: auto;
         `;
 
-        const BlogHero = styled.div`
+        const Hero = styled.div`
           padding-top: 48px;
           padding-bottom: 56px;
           text-align: center;
@@ -33,7 +33,7 @@ class BlogPostTemplate extends React.Component {
           }
         `;
 
-        const BlogMeta = styled.span`
+        const Meta = styled.span`
           font-size: 87.5%;
     
           i {
@@ -42,7 +42,7 @@ class BlogPostTemplate extends React.Component {
           }
         `;
 
-        const BlogContentContainer = styled.div`
+        const ContentContainer = styled.div`
           max-width: 740px;
           margin: auto;
           font-size: 18px;
@@ -98,7 +98,7 @@ class BlogPostTemplate extends React.Component {
     
           h4 {
             margin-top: 24px;
-            font-size: 21px;
+            font-size: 18px;
             line-height: 32px;
             margin-bottom: 16px;
           }
@@ -171,38 +171,39 @@ class BlogPostTemplate extends React.Component {
 
         return (
             <Layout title={post.frontmatter.title}>
-                <BlogContainer itemScope itemType="http://schema.org/BlogPosting">
-                    <BlogHero>
+                <Container itemScope itemType="http://schema.org/BlogPosting">
+                    <Hero>
                         <h1 itemProp="headline">{post.frontmatter.title}</h1>
-                        <blockquote itemProp="description">
-                            {post.frontmatter.description}
-                        </blockquote>
-                        <BlogMeta>
+                        <Meta>
                             <span>
-                            <i className="fa fa-clock-o" aria-hidden="true"/>
+                            <i className="fa fa-location-arrow" aria-hidden="true"/>
                             </span>
-                            <span>{post.fields.readingTime.text}</span>
-                        </BlogMeta>
-                        <BlogMeta>
+                            <span>{post.frontmatter.location}</span>
+                        </Meta>
+                        <Meta>
                             <span>
-                            <i className="fa fa-pencil" aria-hidden="true"/>
+                            <i className="fa fa-calendar" aria-hidden="true"/>
                             </span>
                             <time dateTime="{post.frontmatter.date}">
-                                Published: {post.frontmatter.date}
+                                {post.frontmatter.date_start}
                             </time>
-                        </BlogMeta>
-                    </BlogHero>
-                    <BlogContentContainer dangerouslySetInnerHTML={{__html: post.html}}/>
-                </BlogContainer>
+                            &nbsp;-&nbsp;
+                            <time dateTime="{post.frontmatter.date}">
+                                {post.frontmatter.date_stop}
+                            </time>
+                        </Meta>
+                    </Hero>
+                    <ContentContainer dangerouslySetInnerHTML={{__html: post.html}}/>
+                </Container>
             </Layout>
         );
     }
 }
 
-export default BlogPostTemplate;
+export default CareerTemplate;
 
 export const pageQuery = graphql`
-    query BlogPostBySlug($slug: String!) {
+    query CareerBySlug($slug: String!) {
         site {
             siteMetadata {
                 title
@@ -220,8 +221,9 @@ export const pageQuery = graphql`
             }
             frontmatter {
                 title
-                date(formatString: "MMMM DD, YYYY")
-                description
+                location
+                date_start(formatString: "MMM Do, YYYY")
+                date_stop(formatString: "MMM Do, YYYY")
             }
         }
     }
