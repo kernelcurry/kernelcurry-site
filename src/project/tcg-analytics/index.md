@@ -22,4 +22,5 @@ links:  [
         ]
 ---
 
+https://web.archive.org/web/20140214132415/http://leve.rs/blog/using-historical-data-to-rank-the-top-magic-the-gathering-cards/
 TODO
