@@ -3,7 +3,7 @@ import {graphql} from "gatsby";
 
 import Layout from "../components/layout";
 import Hero from "../components/hero";
-import PostList from "../components/post-list";
+import CareerList from "../components/career-list";
 
 class CareerIndex extends Component {
     render() {
@@ -16,7 +16,7 @@ class CareerIndex extends Component {
         return (
             <Layout title="Career">
                 <Hero title={heroTitle} text={heroText}/>
-                <PostList posts={posts} type="career"/>
+                <CareerList posts={posts} type="career"/>
             </Layout>
         );
     }
@@ -49,12 +49,14 @@ export const pageQuery = graphql`
                         }
                     }
                     frontmatter {
-                        date(formatString: "MMMM DD, YYYY")
                         title
                         description
+                        location
+                        date_start(formatString: "MMM Do, YYYY")
+                        date_stop(formatString: "MMM Do, YYYY")
                         image {
                             childImageSharp {
-                                fixed(width: 800, height: 420, cropFocus: CENTER) {
+                                fluid(maxWidth: 700) {
                                     src
                                 }
                             }

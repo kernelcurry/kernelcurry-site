@@ -2,9 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
-import PostPreview from "./post-preview";
+import CareerPreview from "./career-preview";
 
-const PostList = ({posts, type}) => {
+const CareerList = ({posts, type}) => {
     const ListContainer = styled.ul`
       list-style: none;
       margin: auto;
@@ -21,15 +21,15 @@ const PostList = ({posts, type}) => {
     return (
         <ListContainer>
             {posts.map(({node}) => {
-                return <PostPreview key={node.id} node={node} type={type}/>;
+                return <CareerPreview key={node.id} node={node} type={type}/>;
             })}
         </ListContainer>
     );
 };
 
-PostList.propTypes = {
+CareerList.propTypes = {
     posts: PropTypes.arrayOf(PropTypes.object).isRequired,
     type: PropTypes.string.isRequired
 };
 
-export default PostList;
+export default CareerList;

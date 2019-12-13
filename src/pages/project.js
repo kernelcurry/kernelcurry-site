@@ -3,7 +3,7 @@ import {graphql} from "gatsby";
 
 import Layout from "../components/layout";
 import Hero from "../components/hero";
-import PostList from "../components/post-list";
+import BlogList from "../components/blog-list";
 
 class CareerIndex extends Component {
     render() {
@@ -16,7 +16,7 @@ class CareerIndex extends Component {
         return (
             <Layout title="Projects">
                 <Hero title={heroTitle} text={heroText}/>
-                <PostList posts={posts} type="project"/>
+                <BlogList posts={posts} type="project"/>
             </Layout>
         );
     }

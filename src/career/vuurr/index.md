@@ -2,6 +2,7 @@
 draft: false
 
 title: "VUURR - Engineer"
+description: "Digital marketing & custom development agency with clients ranging from startups to $10+ billion enterprises."
 
 date_start: "2012-10-01T00:00:00.000Z"
 date_stop: "2014-11-01T00:00:00.000Z"
