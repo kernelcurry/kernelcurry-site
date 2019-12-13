@@ -7,7 +7,7 @@ const CareerPreview = ({type, node}) => {
 
     const PostPreview = styled.div`
       width: 100%;
-      margin-bottom: 20px;
+      margin-bottom: 60px;
       text-align: left;
       
       div.container {
@@ -17,11 +17,12 @@ const CareerPreview = ({type, node}) => {
       a {
         text-decoration: none;
         font-size: 87.5%;
-        float:right;
+        margin-top: 10px;
+        float: right;
       }
       
       img.logo {
-      float: right;
+        float: right;
       }
       
       h2 {

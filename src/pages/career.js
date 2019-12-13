@@ -36,7 +36,7 @@ export const pageQuery = graphql`
                 fileAbsolutePath: { regex: "/career/" }
                 frontmatter: { draft: { eq: false } }
             }
-            sort: { fields: [frontmatter___date], order: DESC }
+            sort: { fields: [frontmatter___date_start], order: DESC }
         ) {
             edges {
                 node {
