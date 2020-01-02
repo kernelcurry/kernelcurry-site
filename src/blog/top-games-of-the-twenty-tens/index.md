@@ -4,7 +4,7 @@ draft: false
 date: "2020-01-02T00:00:00.000Z"
 title: "Top Games of the Decade (2010 - 2019)"
 description: "Nintendo PowerFest 1994 Champion, Mike Iarossi gives his list of the top games of the past decade."
-image: "mike-iarossi.jpg"
+image: "main.jpg"
 ---
 
 Lists of `Top X` or `Best Y` can very widely from person to person, but being the winner of the 1994 Nintendo Championship (PowerFest 94) in the 18+ category should give some klout right?! Below, Mike Iarossi outlines his top games from the past decade.  
