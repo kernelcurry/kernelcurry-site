@@ -26,4 +26,11 @@ links:  [
         ]
 ---
 
-TODO
+* Build an engineering team (mostly remote)
+* Ran Product
+* FAA B4UFLY
+* LAANC
+* Multi-playform releases (ios, android, web)
+* Payment/Plan overhaul
+* Career development, mentoring, tough conversations (running a team)
+* Velocity IT UP AND UP AND UP
