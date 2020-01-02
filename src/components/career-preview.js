@@ -23,6 +23,7 @@ const CareerPreview = ({type, node}) => {
       
       img.logo {
         float: right;
+        height: 22px;
       }
       
       h2 {

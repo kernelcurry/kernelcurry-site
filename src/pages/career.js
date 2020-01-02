@@ -52,8 +52,8 @@ export const pageQuery = graphql`
                         title
                         description
                         location
-                        date_start(formatString: "MMM Do, YYYY")
-                        date_stop(formatString: "MMM Do, YYYY")
+                        date_start(formatString: "MMM YYYY")
+                        date_stop(formatString: "MMM YYYY")
                         image {
                             childImageSharp {
                                 fluid(maxWidth: 700) {
