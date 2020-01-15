@@ -1,5 +1,5 @@
 ---
-draft: false
+draft: true
 
 date: "2020-01-02T00:00:00.000Z"
 title: "Top Games of the Decade (2010 - 2019)"
@@ -12,7 +12,7 @@ Lists of `Top X` or `Best Y` can very widely from person to person, but being th
 ![Mike Iarossi - Nintento PowerFest '94 Champion](mike-iarossi.jpg)
 
 #### 1. Dark Souls (2011) 2000+ hours
-Demon's Souls was in 2009 and started From Software on the Souls series of games but in 2011 Dark Souls came out and it has since made a huge impact on the world of gaming. Countless games have tried to make their own version but few have even come close to this masterpiece. It's one of, if not the best, games of all time.
+In 2009 From Software released Demon's Souls, the first in the Souls series of games. However in 2011, Dark Souls came out and has since made a huge impact on the gaming world. Countless games have tried to replicate the success, but few have come close to the masterpiece. It's one of, if not the best, games of all time.
 
 #### 2. The Last of Us (2013) 100+ hours
 Naughty Dog practiced their narrative skills with the Uncharted series but took it to another level with The Last of Us. The game manages to take you on an incredibly satisfying journey that is very difficult to put down as the stakes are continually raised. This is one of the best written and acted games ever.
