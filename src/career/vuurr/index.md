@@ -31,7 +31,7 @@ Vuurr specializes in digital marketing campaigns and custom application developm
 * Internal end-to-end order tracking application for an eCommerce custom print apparel company 
 * Dynamic internal product catalog for a leading dairy producer
 
-#### Wordpress-as-a-framework Projects:
+#### Wordpress Projects:
 
- *Built United States governor campaign website
+* Built United States governor campaign website
 * Created custom theme, implemented & managed plug-ins, and rebuilt food & crafts brand website with over 1.5 million unique monthly sessions

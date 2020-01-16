@@ -30,6 +30,6 @@ Stitch Labs is a leading inventory management system for rapidly growing eCommer
 * Designed and built an underlying migration framework enabling the transition from a database management provider to an in-house solution.
 * Overhauled customer acquisition funnel, providing new insights into customer journey lifecycle, and identifying opportunities for sales. 
 * Architected and implemented  3rd party fulfillment integration allowing partners to manage orders in real-time at the warehouse level.
-*Built a solution giving the customer support team the ability to create unique customer reports and data visualizations via MySQL queries. 
+* Built a solution giving the customer support team the ability to create unique customer reports and data visualizations via MySQL queries. 
 
 **Primary Stack Stack:** *Linux, NGINX, MySQL, PHP (Laravel)*
