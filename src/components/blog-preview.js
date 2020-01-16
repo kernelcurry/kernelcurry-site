@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import {Link} from "gatsby";
 import styled from "styled-components";
 
-const PostPreview = ({type, node}) => {
+const BlogPreview = ({type, node}) => {
 
     function get_preview_image() {
         if (null !== node.frontmatter.image) {
@@ -68,7 +68,7 @@ const PostPreview = ({type, node}) => {
     );
 };
 
-PostPreview.propTypes = {
+BlogPreview.propTypes = {
     node: PropTypes.shape({
         id: PropTypes.string.isRequired,
         frontmatter: PropTypes.shape({
@@ -91,4 +91,4 @@ PostPreview.propTypes = {
     type: PropTypes.string.isRequired
 };
 
-export default PostPreview;
+export default BlogPreview;

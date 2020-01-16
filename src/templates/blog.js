@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 import Layout from "../components/layout";
 
-class BlogPostTemplate extends React.Component {
+class BlogTemplate extends React.Component {
     render() {
         const BlogContainer = styled.div`
           margin-left: auto;
@@ -98,7 +98,7 @@ class BlogPostTemplate extends React.Component {
     
           h4 {
             margin-top: 24px;
-            font-size: 21px;
+            font-size: 18px;
             line-height: 32px;
             margin-bottom: 16px;
           }
@@ -199,10 +199,10 @@ class BlogPostTemplate extends React.Component {
     }
 }
 
-export default BlogPostTemplate;
+export default BlogTemplate;
 
 export const pageQuery = graphql`
-    query BlogPostBySlug($slug: String!) {
+    query BlogBySlug($slug: String!) {
         site {
             siteMetadata {
                 title

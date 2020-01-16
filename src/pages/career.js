@@ -3,7 +3,7 @@ import {graphql} from "gatsby";
 
 import Layout from "../components/layout";
 import Hero from "../components/hero";
-import PostList from "../components/post-list";
+import CareerList from "../components/career-list";
 
 class CareerIndex extends Component {
     render() {
@@ -11,12 +11,12 @@ class CareerIndex extends Component {
         const posts = data.allMarkdownRemark.edges;
 
         const heroTitle = "Career";
-        const heroText = "In process as of 2019-12-11";
+        const heroText = "Seattle, WA - info@kernelcurry.com";
 
         return (
             <Layout title="Career">
                 <Hero title={heroTitle} text={heroText}/>
-                <PostList posts={posts} type="career"/>
+                <CareerList posts={posts} type="career"/>
             </Layout>
         );
     }
@@ -36,7 +36,7 @@ export const pageQuery = graphql`
                 fileAbsolutePath: { regex: "/career/" }
                 frontmatter: { draft: { eq: false } }
             }
-            sort: { fields: [frontmatter___date], order: DESC }
+            sort: { fields: [frontmatter___date_start], order: DESC }
         ) {
             edges {
                 node {
@@ -49,9 +49,18 @@ export const pageQuery = graphql`
                         }
                     }
                     frontmatter {
-                        date(formatString: "MMMM DD, YYYY")
                         title
                         description
+                        location
+                        date_start(formatString: "MMM YYYY")
+                        date_stop(formatString: "MMM YYYY")
+                        image {
+                            childImageSharp {
+                                fluid(maxWidth: 700) {
+                                    src
+                                }
+                            }
+                        }
                     }
                 }
             }

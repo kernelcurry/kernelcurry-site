@@ -11,36 +11,41 @@ exports.createPages = ({graphql, actions}) => {
     const {createPage} = actions;
 
     return new Promise((resolve, reject) => {
-        const blogPost = path.resolve(`./src/templates/blog-post.js`);
+        const template = {
+            "blog": path.resolve(`./src/templates/blog.js`),
+            "career": path.resolve(`./src/templates/career.js`),
+            "project": path.resolve(`./src/templates/blog.js`)
+        }
+
         resolve(
-            graphql(
-                `
-          {
-            allMarkdownRemark(
-              filter: { frontmatter: { draft: { eq: false } } }
-              sort: { fields: [frontmatter___date], order: DESC }
-            ) {
-              edges {
-                node {
-                  fields {
-                    slug
-                  }
-                  frontmatter {
-                    title
-                  }
-                  parent {
-                    ... on File {
-                      id
-                      name
-                      sourceInstanceName
+            graphql(`
+                {
+                  allMarkdownRemark(
+                    filter: {
+                      frontmatter: {draft: {eq: false}}
+                    },
+                    sort: {fields: [frontmatter___date], order: DESC}
+                  ) {
+                    edges {
+                      node {
+                        fields {
+                          slug
+                        }
+                        frontmatter {
+                          title
+                        }
+                        parent {
+                          ... on File {
+                            id
+                            name
+                            sourceInstanceName
+                          }
+                        }
+                      }
                     }
                   }
                 }
-              }
-            }
-          }
-        `
-            ).then(result => {
+            `).then(result => {
                 if (result.errors) {
                     console.log(result.errors);
                     reject(result.errors);
@@ -57,7 +62,7 @@ exports.createPages = ({graphql, actions}) => {
                     createPage({
                         path:
                             "/" + post.node.parent.sourceInstanceName + post.node.fields.slug,
-                        component: blogPost,
+                        component: template[post.node.parent.sourceInstanceName],
                         context: {
                             slug: post.node.fields.slug,
                             previous,
@@ -69,3 +74,31 @@ exports.createPages = ({graphql, actions}) => {
         );
     });
 };
+
+// exports.createSchemaCustomization = ({ actions }) => {
+//     const { createTypes } = actions
+//     const typeDefs = `
+//     """
+//     Markdown Node
+//     """
+//     type MarkdownRemark implements Node @infer {
+//       frontmatter: Frontmatter!
+//     }
+//
+//     """
+//     Markdown Frontmatter
+//     """
+//     type Frontmatter @infer {
+//       author: AuthorJson! @link
+//     }
+//
+//     """
+//     Link information
+//     """
+//     type AuthorJson implements Node @dontInfer {
+//       title: String!
+//       url: String!
+//     }
+//   `
+//     createTypes(typeDefs)
+// }

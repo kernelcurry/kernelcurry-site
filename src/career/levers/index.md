@@ -1,16 +1,21 @@
 ---
-draft: true
+draft: false
 
 title: "Levers - Lead Engineer"
+description: "Levers creates prioritized tasks using existing analytics to increase revenue and customer acquisition, as well as, forecasting key business metrics and areas for improvements. Advanced tools enable campaign and performance improvements."
 
 date_start: "2013-01-01T00:00:00.000Z"
-date_end: "2014-11-01T00:00:00.000Z"
+date_stop: "2014-11-01T00:00:00.000Z"
 
+image: "levers.png"
 location: "San Francisco, CA"
 
-links: {
-    "LinkedIn": "https://www.linkedin.com/company/levers/"
-}
+links:  [
+            {
+                "title": "LinkedIn",
+                "url": "https://www.linkedin.com/company/levers/"
+            }
+        ]
 ---
 
-Levers uses existing analytics data to create a prioritized list of tasks to increase revenue and customer acquisition. Forecasts of your most important metrics tell you where you'll be at the end of the month, and simple instructions tell you what to improve next. Advanced tools let you simulate changes to any campaign, revealing answers to the hardest performance questions in seconds.
+Levers creates prioritized tasks using existing analytics to increase revenue and customer acquisition, as well as, forecasting key business metrics and areas for improvements. Advanced tools enable campaign and performance improvements.
