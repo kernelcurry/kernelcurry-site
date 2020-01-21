@@ -11,11 +11,17 @@ class CareerIndex extends Component {
         const posts = data.allMarkdownRemark.edges;
 
         const heroTitle = "Career";
-        const heroText = "Seattle, WA - info@kernelcurry.com";
+        const heroText = () => {
+            return (
+                <>
+                    <b>Actively seeking my next role</b> <br/>Seattle, WA - info@kernelcurry.com
+                </>
+            );
+        };
 
         return (
             <Layout title="Career">
-                <Hero title={heroTitle} text={heroText}/>
+                <Hero title={heroTitle} text={heroText()}/>
                 <CareerList posts={posts} type="career"/>
             </Layout>
         );

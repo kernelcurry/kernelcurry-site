@@ -19,6 +19,14 @@ const IndexPage = () => {
         }
     `);
 
+    const heroText = () => {
+        return (
+            <>
+                <b>Actively seeking my next role</b> <br/>Seattle, WA - info@kernelcurry.com
+            </>
+        );
+    };
+
     /**
      * Render
      */
@@ -26,7 +34,7 @@ const IndexPage = () => {
         <Layout title="Home">
             <Hero
                 title={data.site.siteMetadata.title}
-                text="Seattle, WA - info@kernelcurry.com"
+                text={heroText()}
             />
         </Layout>
     );
