@@ -22,7 +22,7 @@ const IndexPage = () => {
     const heroText = () => {
         return (
             <>
-                <b>Actively seeking my next role</b> <br/>Seattle, WA - info@kernelcurry.com
+                <b>Actively seeking new opportunities</b> <br/>Seattle, WA - info@kernelcurry.com
             </>
         );
     };
