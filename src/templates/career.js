@@ -352,8 +352,8 @@ export const pageQuery = graphql`
             frontmatter {
                 title
                 location
-                date_start(formatString: "MMM Do, YYYY")
-                date_stop(formatString: "MMM Do, YYYY")
+                date_start(formatString: "MMM YYYY")
+                date_stop(formatString: "MMM YYYY")
                 links {
                     title
                     url
