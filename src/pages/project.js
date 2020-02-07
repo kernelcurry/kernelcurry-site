@@ -11,7 +11,7 @@ class CareerIndex extends Component {
         const posts = data.allMarkdownRemark.edges;
 
         const heroTitle = "Projects";
-        const heroText = "In process as of 2019-12-11";
+        const heroText = "In process...";
 
         return (
             <Layout title="Projects">
