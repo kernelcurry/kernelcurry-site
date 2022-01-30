@@ -22,7 +22,7 @@ const IndexPage = () => {
     const heroText = () => {
         return (
             <>
-                <b>Actively seeking new opportunities</b> <br/>San Francisco, CA - info@kernelcurry.com
+                San Francisco, CA - info@kernelcurry.com
             </>
         );
     };
