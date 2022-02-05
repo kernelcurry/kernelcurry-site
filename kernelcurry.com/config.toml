@@ -23,7 +23,7 @@ theme = "kernel"
     identifier = "projects"
     name = "Projects"
     title = "Projects"
-    url = "/projects"
+    url = "/project"
     weight = 30
 
   [[menu.social]]
