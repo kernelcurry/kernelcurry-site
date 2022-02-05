@@ -10,7 +10,7 @@ Header {
 BrandContainer {
     margin-right: 52px;
 }
-BrandContainer > a {
+BrandContainer a {
     background: none;
     text-indent: -9999px;
     width: 70px;
@@ -27,7 +27,7 @@ PageNavContainer {
     border-left: 1px solid rgba(0, 0, 0, 0.15);
 }
 
-PageNavContainer  ul {
+PageNavContainer ul {
     display: flex;
     align-items: center;
     margin: 0;

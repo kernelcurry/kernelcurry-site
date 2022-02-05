@@ -14,3 +14,8 @@ body {
 a {
     color: #3794de;
 }
+
+MainContainer {
+    margin: auto;
+    max-width: 1128px;
+}

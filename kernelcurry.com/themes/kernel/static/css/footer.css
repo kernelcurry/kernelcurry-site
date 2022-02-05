@@ -13,18 +13,18 @@ FooterNav {
     margin-left: auto;
 }
 
-FooterNav.ul {
+FooterNav ul {
     display: flex;
     margin: 0;
     text-decoration: none;
 }
 
-FooterNav.li {
+FooterNav li {
     margin-left: 20px;
     list-style: none;
 }
 
-FooterNav.a {
+FooterNav a {
     color: rgba(0, 0, 0, 0.65);
     text-decoration: none;
 }

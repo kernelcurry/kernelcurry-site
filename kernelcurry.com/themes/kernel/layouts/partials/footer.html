@@ -4,6 +4,11 @@
             <li>
                 <span>KernelCurry</span>
             </li>
+            {{ range .Site.Menus.main.ByWeight -}}
+            <li>
+                {{ .Pre }}<a href="{{ .URL }}" title="{{ .Title }}">{{- .Name -}}</a>{{ .Post }}
+            </li>
+            {{- end }}
         </ul>
     </FooterNav>
     <p>
