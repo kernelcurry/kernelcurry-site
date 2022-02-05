@@ -1,0 +1,44 @@
+<Header>
+<BrandContainer>
+    <a href="{{ .Site.BaseURL }}">KernelCurry</a>
+</BrandContainer>
+<PageNavContainer>
+    <ul>
+        {{ range .Site.Menus.main.ByWeight -}}
+        <li>
+            {{ .Pre }}<a href="{{ .URL }}" title="{{ .Title }}">{{- .Name -}}</a>{{ .Post }}
+        </li>
+        {{- end }}
+    </ul>
+</PageNavContainer>
+<SocialNavContainer>
+    <ul>
+        <li>
+            <a
+                    href="https://twitter.com/"
+                    rel="nofollow noopener noreferrer"
+                    target="_blank"
+            >
+                <i className="fa fa-twitter"/>
+            </a>
+        </li>
+        <li>
+            <a
+                    href="https://github.com/"
+                    rel="nofollow noopener noreferrer"
+                    target="_blank"
+            >
+                <i className="fa fa-github"/>
+            </a>
+        </li>
+        <li>
+            <a
+                    href="https://www.linkedin.com/in/"
+                    target="_blank"
+            >
+                <i className="fa fa-linkedin"/>
+            </a>
+        </li>
+    </ul>
+</SocialNavContainer>
+</Header>
