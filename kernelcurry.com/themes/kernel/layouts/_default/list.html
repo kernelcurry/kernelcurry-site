@@ -1,17 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-{{- partial "head.html" . -}}
-<body>
-{{- partial "header.html" . -}}
-<MainContainer>
-    {{- partial "hero.html" . -}}
-    {{- block "main" . }}{{- end }}
-    <ul class="blog-list">
-    {{ range .Data.Pages }}
-        {{ partial "blog-preview.html" . }}
-    {{ end }}
-    </ul>
-</MainContainer>
-{{- partial "footer.html" . -}}
-</body>
+    {{- partial "head.html" . -}}
+    <body>
+        {{- partial "header.html" . -}}
+        <MainContainer>
+            {{- partial "hero.html" . -}}
+
+            {{- block "main" . }}{{- end }}
+
+            {{ if eq .Section "blog" }}
+            <ul class="blog-list">
+            {{ range .Data.Pages }}
+                {{ partial "blog-preview.html" . }}
+            {{ end }}
+            </ul>
+            {{ end }}
+
+            {{ if eq .Section "career" }}
+            <ul class="blog-list">
+                {{ range .Data.Pages }}
+                {{ partial "blog-preview.html" . }}
+                {{ end }}
+            </ul>
+            {{ end }}
+        </MainContainer>
+        {{- partial "footer.html" . -}}
+    </body>
 </html>
