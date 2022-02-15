@@ -6,6 +6,11 @@
 <MainContainer>
     {{- partial "hero.html" . -}}
     {{- block "main" . }}{{- end }}
+    <ul class="blog-list">
+    {{ range .Data.Pages }}
+        {{ partial "blog-preview.html" . }}
+    {{ end }}
+    </ul>
 </MainContainer>
 {{- partial "footer.html" . -}}
 </body>
