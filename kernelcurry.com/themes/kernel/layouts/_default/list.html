@@ -17,9 +17,9 @@
             {{ end }}
 
             {{ if eq .Section "career" }}
-            <ul class="blog-list">
+            <ul class="career-list">
                 {{ range .Data.Pages }}
-                {{ partial "blog-preview.html" . }}
+                {{ partial "career-preview.html" . }}
                 {{ end }}
             </ul>
             {{ end }}

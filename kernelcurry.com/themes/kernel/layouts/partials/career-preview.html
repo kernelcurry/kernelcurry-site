@@ -1,0 +1,22 @@
+<li class="career-preview" itemScope itemType="http://schema.org/CreativeWork">
+    <div>
+        <img class="logo" src="{{ .Permalink }}/{{ .Params.image }}" alt=""/>
+        <h2 class="title">{{ .Title }}</h2>
+    </div>
+    <div class="meta">
+        <span class="container right">
+            <i class="fa fa-location-arrow" aria-hidden="true"></i>
+            {{ .Params.location }}
+        </span>
+        <span class="container">
+            <i class="fa fa-calendar" aria-hidden="true"></i>
+            {{ .Params.date_start }} - {{ .Params.date_stop }}
+        </span>
+    </div>
+    <p itemProp="about">
+        {{ .Params.description }}
+        <a href="{{ .Permalink }}" itemProp="headline">
+            <i class="fa fa-book" aria-hidden="true"></i> Detailed Information
+        </a>
+    </p>
+</li>
