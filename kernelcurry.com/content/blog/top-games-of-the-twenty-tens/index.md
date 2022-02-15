@@ -3,7 +3,7 @@ draft: true
 
 date: "2020-01-02T00:00:00.000Z"
 title: "Top Games of the Decade (2010 - 2019)"
-description: "Nintendo PowerFest 1994 Champion, Mike Iarossi gives his list of the top games of the past decade."
+abstract: "Nintendo PowerFest 1994 Champion, Mike Iarossi gives his list of the top games of the past decade."
 image: "main.jpg"
 ---
 

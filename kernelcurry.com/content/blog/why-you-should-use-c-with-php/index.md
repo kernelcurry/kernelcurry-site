@@ -1,6 +1,6 @@
 ---
 title: 'Why You Should Use C With Php'
-description: 'A few months ago, I calculated the top Magic: The Gathering cards in the games modern format ... It took 30 minutes in PHP.  How long would it take in C?'
+abstract: 'A few months ago, I calculated the top Magic: The Gathering cards in the games modern format ... It took 30 minutes in PHP.  How long would it take in C?'
 date: '2014-01-07T00:00:00.000Z'
 draft: false
 image: "main.jpg"

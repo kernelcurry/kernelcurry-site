@@ -1,6 +1,6 @@
 ---
 title: 'Every Company Should Have a #HackNight'
-description: 'For the past year, every Wednesday night at about 6:00 p.m. work stops!  Stop your real work and work on something fun!'
+abstract: 'For the past year, every Wednesday night at about 6:00 p.m. work stops!  Stop your real work and work on something fun!'
 date: '2014-01-24T00:00:00.000Z'
 draft: false
 image: "main.jpg"

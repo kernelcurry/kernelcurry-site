@@ -1,6 +1,6 @@
 ---
 title: 'Benchmark Analysis Of PHP Array Loops'
-description: 'I decided to take 5 different methods and use xhprof to collect runtime data. Then, I analyzed these results to determine the best method(s).'
+abstract: 'I decided to take 5 different methods and use xhprof to collect runtime data. Then, I analyzed these results to determine the best method(s).'
 date: '2013-12-05T00:00:00.000Z'
 draft: false
 image: "main.jpg"

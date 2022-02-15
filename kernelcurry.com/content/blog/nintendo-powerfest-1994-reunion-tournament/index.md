@@ -1,6 +1,6 @@
 ---
 title: 'Nintendo PowerFest (1994) Reunion Tournament'
-description: 'A few weekends ago, I flew to Arizona to attend the Game On Retro Expo.  I was in the Nintendo PowerFest 1994 Reunion Tournament finals...'
+abstract: 'A few weekends ago, I flew to Arizona to attend the Game On Retro Expo.  I was in the Nintendo PowerFest 1994 Reunion Tournament finals...'
 date: '2015-09-12T00:00:00.000Z'
 draft: false
 image: "main.jpg"

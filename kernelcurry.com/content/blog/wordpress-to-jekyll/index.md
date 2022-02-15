@@ -1,6 +1,6 @@
 ---
 title: 'From WordPress To Jekyll'
-description: "There are lots of pros and cons when it comes to WordPress vs Jekyll.  Just remember that every tool is used for different tasks and neither WordPress nor Jekyll can be declared 'better' as they are both good in different situations."
+abstract: "There are lots of pros and cons when it comes to WordPress vs Jekyll.  Just remember that every tool is used for different tasks and neither WordPress nor Jekyll can be declared 'better' as they are both good in different situations."
 date: '2014-09-08T00:00:00.000Z'
 draft: false
 image: "main.jpg"

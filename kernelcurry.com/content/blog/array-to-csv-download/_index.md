@@ -2,7 +2,7 @@
 draft: false
 
 title: "2 Dimensional Array To CSV Download Using PHP"
-description: "Have you ever needed to convert a 2 dimensional array into a CSV then force a download?  Well, I have, and here is how I did it..."
+abstract: "Have you ever needed to convert a 2 dimensional array into a CSV then force a download?  Well, I have, and here is how I did it..."
 date: 2014-01-28T00:00:00.000Z
 image: "main.jpg"
 ---

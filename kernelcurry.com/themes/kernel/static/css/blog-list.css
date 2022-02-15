@@ -35,7 +35,7 @@ ul.blog-list li.blog-preview a {
     background-size: cover;
 }
 
-ul.blog-list li.blog-preview h2 {
+ul.blog-list li.blog-preview h2.title {
     font-size: 22px;
     font-weight: normal;
     line-height: 28px;
@@ -44,7 +44,7 @@ ul.blog-list li.blog-preview h2 {
     border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 }
 
-ul.blog-list li.blog-preview p {
+ul.blog-list li.blog-preview p.abstract {
     font-size: 16px;
     line-height: 24px;
     padding: 5px 0;
