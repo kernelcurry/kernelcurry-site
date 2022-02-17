@@ -1,4 +1,4 @@
-Header {
+div.header {
     display: flex;
     align-items: center;
     margin-bottom: 24px;
@@ -7,10 +7,10 @@ Header {
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-BrandContainer {
+div.header div.brand-container {
     margin-right: 52px;
 }
-BrandContainer a {
+div.header div.brand-container a {
     background: none;
     text-indent: -9999px;
     width: 70px;
@@ -22,47 +22,47 @@ BrandContainer a {
     font-weight: 100;
 }
 
-PageNavContainer {
+div.header div.page-nav-container {
     padding-left: 52px;
     border-left: 1px solid rgba(0, 0, 0, 0.15);
 }
 
-PageNavContainer ul {
+div.header div.page-nav-container ul {
     display: flex;
     align-items: center;
     margin: 0;
     padding-inline-start: 0;
 }
 
-PageNavContainer li {
+div.header div.page-nav-container li {
     list-style: none;
     font-size: 16px;
     font-weight: 500;
     margin-right: 40px;
 }
 
-PageNavContainer a {
+div.header div.page-nav-container a {
     color: #000;
     text-decoration: none;
     display: inline-block;
 }
 
-SocialNavContainer {
+div.header div.social-nav-container {
     margin-left: auto;
     font-size: 14px;
 }
 
-SocialNavContainer ul {
+div.header div.social-nav-container ul {
     display: flex;
     align-items: center;
     margin: 0;
 }
 
-SocialNavContainer li {
+div.header div.social-nav-container li {
     list-style: none;
 }
 
-SocialNavContainer a {
+div.header div.social-nav-container a {
     color: rgba(0, 0, 0, 0.7);
     display: inline-block;
     text-decoration: none;

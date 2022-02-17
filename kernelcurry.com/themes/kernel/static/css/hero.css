@@ -1,11 +1,11 @@
-HeroContainer {
+div.hero-container {
     padding-top: 48px;
     padding-bottom: 56px;
     text-align: center;
     display: block;
 }
 
-HeroContainer h1 {
+div.hero-container h1 {
     max-width: 880px;
     margin-left: auto;
     margin-right: auto;
@@ -16,7 +16,7 @@ HeroContainer h1 {
     font-weight: 900;
 }
 
-HeroContainer p {
+div.hero-container p {
     max-width: 740px;
     margin: auto;
     font-size: 21px;
@@ -28,7 +28,7 @@ HeroContainer p {
     position: relative;
 }
 
-HeroContainer p::before {
+div.hero-container p::before {
     position: absolute;
     content: "";
     width: 40px;
@@ -39,6 +39,6 @@ HeroContainer p::before {
     background: #ff3366;
 }
 
-HeroContainer a {
+div.hero-container a {
     color: #000;
 }

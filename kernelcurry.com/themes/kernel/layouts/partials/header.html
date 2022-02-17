@@ -1,8 +1,8 @@
-<Header>
-    <BrandContainer>
+<div class="header">
+    <div class="brand-container">
         <a href="{{ .Site.BaseURL }}">KernelCurry</a>
-    </BrandContainer>
-    <PageNavContainer>
+    </div>
+    <div class="page-nav-container">
         <ul>
             {{ range .Site.Menus.main.ByWeight -}}
             <li>
@@ -10,9 +10,9 @@
             </li>
             {{- end }}
         </ul>
-    </PageNavContainer>
+    </div>
 
-    <SocialNavContainer>
+    <div class="social-nav-container">
         <ul>
             {{ range .Site.Menus.social.ByWeight -}}
             <li>
@@ -29,5 +29,5 @@
             </li>
             {{- end }}
         </ul>
-    </SocialNavContainer>
-</Header>
+    </div>
+</div>
