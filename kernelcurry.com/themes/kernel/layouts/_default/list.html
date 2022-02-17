@@ -18,9 +18,9 @@
 
             {{ if eq .Section "career" }}
             <ul class="career-list">
-                {{ range .Data.Pages }}
+            {{ range sort .Data.Pages ".Params.date_start" "desc" }}
                 {{ partial "career-preview.html" . }}
-                {{ end }}
+            {{ end }}
             </ul>
             {{ end }}
         </MainContainer>

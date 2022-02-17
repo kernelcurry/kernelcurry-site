@@ -10,7 +10,7 @@
         </span>
         <span class="container">
             <i class="fa fa-calendar" aria-hidden="true"></i>
-            {{ .Params.date_start }} - {{ .Params.date_stop }}
+            {{ dateFormat "Jan 2006" .Params.date_start }} - {{ dateFormat "Jan 2006" .Params.date_stop }}
         </span>
     </div>
     <p itemProp="about">
