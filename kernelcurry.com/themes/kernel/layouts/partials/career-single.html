@@ -15,7 +15,7 @@
         <h3>Resources</h3>
         <ul>
             {{ range .Params.links }}
-            <li>{{ .title }}: <a href="{{ .url }}" itemProp="headline">{{ .url }}</a></li>
+            <li>{{ .title }}: <a href="{{ .url }}" rel="nofollow noopener noreferrer" target="_blank" itemProp="headline">{{ .url }}</a></li>
             {{ end }}
         </ul>
     </div>

@@ -10,16 +10,11 @@ date_stop: 2017-07-01T00:00:00.000Z
 image: "stitchlabs.png"
 location: "San Francisco, CA"
 
-links:  [
-            {
-                "title": "Homepage",
-                "url": "https://www.stitchlabs.com/"
-            },
-            {
-                "title": "LinkedIn",
-                "url": "https://www.linkedin.com/company/stitchlabs/"
-            }
-        ]
+links:
+  - title: "Homepage"
+    url: "https://www.stitchlabs.com/"
+  - title: "LinkedIn"
+    url: "https://www.linkedin.com/company/stitchlabs/"
 ---
 
 Stitch Labs is a leading inventory management system for rapidly growing eCommerce retailers. Stitch Labs empowers retailers to control their operations through enhanced inventory visibility and accuracy, alongside streamlined workflows to meet the most complex and demanding operational challenges. Stitch Labs works with major eCommerce and fulfillment providers to offer a seamless solution. 

@@ -11,11 +11,9 @@ image: "vuurr.png"
 location: "San Francisco, CA / Chandler, AZ"
 
 links:
-  -
-    title: "Homepage"
+  - title: "Homepage"
     url: "https://vuurr.com/"
-  - 
-    title: "LinkedIn"
+  - title: "LinkedIn"
     url: "https://www.linkedin.com/company/vuurr/"
 ---
 

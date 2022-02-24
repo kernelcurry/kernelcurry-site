@@ -10,20 +10,13 @@ date_stop: 2019-11-04T00:00:00.000Z
 image: "kittyhawk.png"
 location: "San Francisco, CA"
 
-links:  [
-            {
-                "title": "Homepage",
-                "url": "https://kittyhawk.io"
-            },
-            {
-                "title": "B4UFLY",
-                "url": "https://kittyhawk.io/b4ufly/"
-            },
-            {
-                "title": "LinkedIn",
-                "url": "https://www.linkedin.com/company/kittyhawk-io-inc-/"
-            }
-        ]
+links:
+  - title: "Homepage"
+    url: "https://kittyhawk.io"
+  - title: "B4UFLY"
+    url: "https://kittyhawk.io/b4ufly/"
+  - title: "LinkedIn"
+    url: "https://www.linkedin.com/company/kittyhawk-io-inc-/"
 ---
 
 As the first full-time engineering employee, my core functions were to organize, scale, and manage an engineering department, while also serving as a high-functioning IC. In my time at Kittyhawk, I accomplished that and more, including working extensively with the FAA, leading the product vision and roadmap, and redesigning our applications to fit the enterprise sector. 
