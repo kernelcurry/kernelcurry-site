@@ -1,0 +1,22 @@
+<div class="career-single" itemScope itemType="http://schema.org/BlogPosting">
+    <div class="career-hero">
+        <h1 itemProp="headline">{{ .Title }}</h1>
+        <div class="meta">
+            <i class="fa fa-location-arrow" aria-hidden="true"></i>
+            {{ .Params.location }}
+        </div>
+        <div class="meta">
+            <i class="fa fa-calendar" aria-hidden="true"></i>
+            {{ dateFormat "Jan 2006" .Params.date_start }} - {{ dateFormat "Jan 2006" .Params.date_stop }}
+        </div>
+    </div>
+    <div class="career-content">
+        {{ .Content }}
+        <h3>Resources</h3>
+        <ul>
+            {{ range .Params.links }}
+            <li>{{ .title }}: <a href="{{ .url }}" itemProp="headline">{{ .url }}</a></li>
+            {{ end }}
+        </ul>
+    </div>
+</div>
