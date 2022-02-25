@@ -13,7 +13,7 @@ To get Laravel's Lumen running correctly on Google App Engine, there are a few q
 ## How does the application know it is running on Google App Engine?
 One of the easiest ways to figure out if the application is running on Google App Engine is to check if the `.env` file is present.  This is because the deployment "ignore" RegEx  includes any files that start with a `.` (AKA Unix hidden files).  This function will come in handy when answering the next questions.
 
-``` php{numberLines: false}
+{{< highlight php "linenos=table" >}}
 /**
  * Check if we are running on Google App Engine
  *
@@ -31,7 +31,7 @@ One of the easiest ways to figure out if the application is running on Google Ap
 function is_gae() {
     return !file_exists(__DIR__ . '/../.env');
 }
-```
+{{< / highlight >}}
 
 ## How do we make logs work with the Google console?
 After researching how to get logs working with Google, a lot of people recommend editing vendor files.  Do not do this, let me repeat, **do not edit the vendor files**.  Let's take the more stable approach and override the function that is causing the issue.  
@@ -40,7 +40,7 @@ The first thing we need to do is create the class that will override the logging
 
 *file: app/Bootstrap/GoogleApp.php*
 
-``` php{numberLines: false}
+{{< highlight php "linenos=table" >}}
 <?php namespace App\Bootstrap;
 
 /**
@@ -69,7 +69,7 @@ class GoogleApp extends Application
         return new SyslogHandler('intranet', 'user', Logger::DEBUG, false, LOG_PID);
     }
 }
-```
+{{< / highlight >}}
 
 ## How do we setup environment variables?
 Just like normal, the `.env` file will be used for local environment variables. However, the `.env` file is not deployed to Google App Engine, so we need to find a work around.  The good news is `app.yaml` allows for environment variables.  And even better news, Google App Engine plays nice with these environment variables.
@@ -78,7 +78,7 @@ The most important thing to keep in mind is security.  Just as `.env` is ignored
 
 *file: app.yaml*
 
-``` yaml{numberLines: false}
+{{< highlight yaml "linenos=false" >}}
 application: mtgapi-service
 version: 1
 runtime: php55
@@ -107,7 +107,7 @@ env_variables:
   CACHE_DRIVER: file
   SESSION_DRIVER: file
   QUEUE_DRIVER: sync
-```
+{{< / highlight >}}
 
 ## How do we set php.ini settings?
 
@@ -118,10 +118,10 @@ This one is very simple.  We just need to create a file in our application root 
 
 *file: php.ini*
 
-``` ini{numberLines: false}
+{{< highlight ini "linenos=table" >}}
 google_app_engine.enable_curl_lite = "1"
 google_app_engine.enable_functions = "php_sapi_name"
-```
+{{< / highlight >}}
 
 ## How does everything fit together?
 Now that we have a function that lets us know when we are running on Google App Engine; have a new Google Application class; set our php.ini settings correctly; and have our environment variables set, all we need to do is put the puzzle pieces together.
@@ -133,7 +133,7 @@ To do this, we need to edit the file `bootstrap/app.php`.
 
 *file: bootstrap/app.php*
 
-``` php{numberLines: false}
+{{< highlight php "linenos=table" >}}
 <?php
 
 require_once __DIR__.'/../vendor/autoload.php';
@@ -178,7 +178,7 @@ else {
         realpath(__DIR__ . '/../')
     );
 }
-```
+{{< / highlight >}}
 
 **Note:** This is the top of the file `bootstrap/app.php`.  The lines that state `$app->withFacades();` and `$app->withEloquent();` should immediately follow.
 

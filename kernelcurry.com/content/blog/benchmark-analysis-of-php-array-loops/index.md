@@ -26,12 +26,12 @@ I decided to take 5 different methods and use [xhprof](http://pecl.php.net/packa
 
 Each method used simple arithmetic functions to change each element in the array.
 
-``` php{numberLines: false}
+{{< highlight php "linenos=table" >}}
 $element += 1000;
 $element *= 2;
 $element /= 10;
 $element -= 200;
-```
+{{< / highlight >}}
 
 ## Results
 Each array size tested was calculated four separate times to eliminate outliers in the dataset. A trend line was then calculated for each method.
@@ -77,7 +77,7 @@ After analyzing the different methods, it is time for me to get into the Levers 
 ## Code
 #### Array Walk Reference
 
-``` php{numberLines: false}
+{{< highlight php "linenos=table" >}}
 function calculate(&$element)
 {
         $element += 1000;
@@ -87,22 +87,22 @@ function calculate(&$element)
 }
 
 array_walk($subject, 'calculate');
-```
+{{< / highlight >}}
 
 #### Array Walk Closure
 
-``` php{numberLines: false}
+{{< highlight php "linenos=table" >}}
 array_walk($subject, function(&$element){
         $element += 1000;
         $element *= 2;
         $element /= 10;
         $element -= 200;
 });
-```
+{{< / highlight >}}
 
 #### For Outside
 
-``` php{numberLines: false}
+{{< highlight php "linenos=table" >}}
 $len = count($subject);
 for($i = 0; $i < $len; $i++)
 {
@@ -111,11 +111,11 @@ for($i = 0; $i < $len; $i++)
         $subject[$i] /= 10;
         $subject[$i] -= 200;
 }
-```
+{{< / highlight >}}
 
 #### For Inline
 
-``` php{numberLines: false}
+{{< highlight php "linenos=table" >}}
 for($i = 0; $i < count($subject); $i++)
 {
         $subject[$i] += 1000;
@@ -123,11 +123,11 @@ for($i = 0; $i < count($subject); $i++)
         $subject[$i] /= 10;
         $subject[$i] -= 200;
 }
-```
+{{< / highlight >}}
 
 #### Foreach
 
-``` php{numberLines: false}
+{{< highlight php "linenos=table" >}}
 foreach($subject as &$element)
 {
         $element += 1000;
@@ -135,4 +135,4 @@ foreach($subject as &$element)
         $element /= 10;
         $element -= 200;
 }
-```
+{{< / highlight >}}

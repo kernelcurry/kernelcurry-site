@@ -20,7 +20,7 @@ The seemingly simple merging of arrays is something that comes up all the time. 
 
 ##### The Wrong Way
 
-``` php{numberLines: false}
+{{< highlight php "linenos=table" >}}
 // Init Arrays
 $arrayMerged = [];
 $arrayOne = [1, 2, 3];
@@ -40,11 +40,11 @@ foreach ($arrayTwo as $element)
 
 // Print
 var_dump($arrayMerged);
-```
+{{< / highlight>}}
 
 ##### The Correct Way
 
-``` php{numberLines: false}
+{{< highlight php "linenos=table" >}}
 // Init Arrays
 $arrayOne = [1, 2, 3];
 $arrayTwo = [4, 5, 6];
@@ -54,7 +54,7 @@ $arrayMerged = array_merge($arrayOne, $arrayTwo);
 
 // Print
 var_dump($arrayMerged);
-```
+{{< / highlight>}}
 
 By simplifying these lines, the code is not only more readable, it eliminates 10 lines!
 
@@ -64,7 +64,7 @@ No mater how many times you look at code, you will always find foreach statement
 
 ##### The Wrong Way
 
-``` php{numberLines: false}
+{{< highlight php "linenos=table" >}}
 // Init Arrays
 $arrayAfter = [];
 $arrayBefore = ['John Doe', 'Michael Smith', 'Alice Staples'];
@@ -79,11 +79,11 @@ foreach($arrayBefore as $element)
 
 // Print
 var_dump($arrayAfter);
-```
+{{< / highlight>}}
 
 ##### The Correct Way
 
-``` php{numberLines: false}
+{{< highlight php "linenos=table" >}}
 // Init Arrays
 $arraySlugs = ['John Doe', 'Michael Smith', 'Alice Staples'];
 
@@ -95,7 +95,7 @@ array_walk($arraySlugs, function(&amp;$element)
 
 // Print
 var_dump($arraySlugs);
-```
+{{< / highlight>}}
 
 As can be seen, the solution using array_walk manipulates the existing array. This means you do not have to instantiate another array, thus, saving resources. There are many different solutions to this particular problem, but this is one solution that is easy to read.
 
@@ -105,14 +105,14 @@ Although the previous examples are very common and good to know, this example is
 
 #####  Know the Difference
 
-``` php{numberLines: false}
+{{< highlight php "linenos=table" >}}
 // Init Arrays
 $arrayOne = ['one' => 1, 'two' => 2, 'three' => 3];
 $arrayTwo = ['one' => 9, 'two' => 9, 'four' => 4];
 
 var_dump($arrayOne + $arrayTwo);
 var_dump(array_merge($arrayOne, $arrayTwo));
-```
+{{< / highlight>}}
 
 Using the ‘+’ operator with an array will only merge elements for keys that don’t already exist. This means that if arrayOne has keys ’0′ and ’2′ and arrayTwo has keys ’0′, ’1′ and ’2′ the returned array will contain arrayOne’s keys ’0′ and ’2′ with arrayTwo’s key ’1′
 
@@ -120,7 +120,7 @@ The array_merge function merges arrayTwo into arrayOne. In other words, all elem
 
 ##### Output
 
-``` php{numberLines: false}
+{{< highlight php "linenos=false" >}}
 // ($arrayOne + $arrayTwo)
 array(4) {
         ["one"]   => int(1)
@@ -135,6 +135,6 @@ array(4) {
         ["three"] => int(3)
         ["four"]  => int(4)
 }
-```
+{{< / highlight>}}
 
 Array manipulation is something every programmer should know. By understanding the available functions, your life will become easier and your code more elegant. Take the time to rewrite your code the correct way – It’s definitely worth it!

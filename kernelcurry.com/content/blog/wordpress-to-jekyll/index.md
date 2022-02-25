@@ -46,14 +46,14 @@ Luckily there are a few options for exporting from Wordpress:
 
 Now that all of your posts are in markdown, we just need to make sure the Jekyll headers and filenames are correct.  Below is a sample header that must start on line 1 of the post file.
 
-``` ruby{numberLines: false}
+{{< highlight ruby "linenos=false" >}}
 ---
 layout: post
 title:  "From WordPress To Jekyll"
 date:   2014-09-08
 categories: blog
 ---
-```
+{{< / highlight>}}
 
 As you can see, I have this post in category `blog`.  This will make the URL to this post start with `/blog/`. If you put nothing in the category, it will not have a prefix to the URL.
 

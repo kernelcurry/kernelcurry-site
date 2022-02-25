@@ -1,0 +1,17 @@
+<div class="blog-single" itemScope itemType="http://schema.org/BlogPosting">
+    <div class="blog-hero">
+        <h1 itemProp="headline">{{ .Title }}</h1>
+        <span class="block-quote" itemProp="abstract">{{ .Params.abstract }}</span>
+        <div class="meta">
+            <i class="fa fa-clock-o" aria-hidden="true"></i>
+            5 Minutes
+        </div>
+        <div class="meta">
+            <i class="fa fa-pencil" aria-hidden="true"></i>
+            Published: {{ dateFormat "January 2, 2006" .Date }}
+        </div>
+    </div>
+    <div class="blog-content">
+        {{ .Content }}
+    </div>
+</div>

@@ -1,15 +1,15 @@
-div.career-single {
+div.blog-container {
     margin-left: auto;
     margin-right: auto;
 }
 
-div.career-hero {
+div.blog-hero {
     padding-top: 48px;
     padding-bottom: 56px;
     text-align: center;
 }
 
-div.career-hero h1 {
+div.blog-hero h1 {
     max-width: 880px;
     margin-left: auto;
     margin-right: auto;
@@ -20,17 +20,25 @@ div.career-hero h1 {
     font-weight: 900;
 }
 
-div.career-hero div.meta {
+div.blog-hero span.block-quote {
+    padding-left: 1rem;
+    font-style: italic;
+    color: rgba(49, 52, 57, 0.65);
+    margin-bottom: 16px;
+    display: block;
+}
+
+div.blog-hero div.meta {
     font-size: 87.5%;
     display: inline;
 }
 
-div.career-hero div.meta i {
+div.blog-hero div.meta i {
     margin-left: 12px;
     margin-right: 2px;
 }
 
-div.career-content {
+div.blog-content {
     max-width: 740px;
     margin-top: auto;
     margin-right: auto;
@@ -40,11 +48,16 @@ div.career-content {
     line-height: 32px;
 }
 
-div.career-content p {
+div.blog-content p {
     margin-bottom: 16px;
 }
 
-div.career-content h2 {
+div.blog-content img {
+    height: auto;
+    max-width: 100%;
+}
+
+div.blog-content h2 {
     margin-top: 24px;
     color: #222;
     font-size: 36px;
@@ -54,21 +67,21 @@ div.career-content h2 {
     margin-bottom: 16px;
 }
 
-div.career-content h3 {
+div.blog-content h3 {
     margin-top: 24px;
     font-size: 24px;
     line-height: 32px;
     margin-bottom: 16px;
 }
 
-div.career-content h4 {
+div.blog-content h4 {
     margin-top: 24px;
     font-size: 18px;
     line-height: 32px;
     margin-bottom: 16px;
 }
 
-div.career-content ol {
+div.blog-content ol {
     display: block;
     list-style-type: decimal;
     margin-block-start: 1em;
@@ -78,7 +91,7 @@ div.career-content ol {
     padding-inline-start: 26px;
 }
 
-div.career-content ul {
+div.blog-content ul {
     display: block;
     list-style-type: disc;
     margin-block-start: 1em;
@@ -88,34 +101,43 @@ div.career-content ul {
     padding-inline-start: 26px;
 }
 
-div.career-content ol ul {
+div.blog-content ol ul {
     list-style-type: circle;
 }
 
-div.career-content address,
-div.career-content blockquote,
-div.career-content dl,
-div.career-content fieldset,
-div.career-content figure,
-div.career-content form,
-div.career-content hr,
-div.career-content ol,
-div.career-content p,
-div.career-content pre,
-div.career-content table,
-div.career-content ul {
+div.blog-content address,
+div.blog-content blockquote,
+div.blog-content dl,
+div.blog-content fieldset,
+div.blog-content figure,
+div.blog-content form,
+div.blog-content hr,
+div.blog-content ol,
+div.blog-content p,
+div.blog-content pre,
+div.blog-content table,
+div.blog-content ul {
     margin-bottom: 16px;
 }
 
-div.career-content ol ol,
-div.career-content ol ul,
-div.career-content ul ol,
-div.career-content ul ul {
+div.blog-content ol ol,
+div.blog-content ol ul,
+div.blog-content ul ol,
+div.blog-content ul ul {
     margin: 0 0 0 24px;
 }
 
-div.career-content ol p,
-div.career-content ul p,
-div.career-content li p {
+div.blog-content ol p,
+div.blog-content ul p,
+div.blog-content li p {
     margin: 0;
+}
+
+div.blog-content code:not([class]) {
+    font-family: monospace, monospace;
+    font-size: 1em;
+    background: #272822;
+    border-radius: 0.3em;
+    color: #f8f8f2;
+    padding: 0.1em;
 }
