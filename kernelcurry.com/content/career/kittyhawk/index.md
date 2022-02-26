@@ -4,6 +4,8 @@ draft: false
 title: "Kittyhawk.io - Director of Engineering"
 description: "Kittyhawk is an enterprise drone software solution for safety-first organizations. We are an authorized LAANC provided and the power behind the FAA's B4UFLY application. Kittyhawk provides easy to use mobile apps and desktop tools that keep teams flying safe and their data organized."
 
+date: 2022-02-25T00:00:00+00:00
+
 date_start: 2017-07-10T00:00:00.000Z
 date_stop: 2019-11-04T00:00:00.000Z
 

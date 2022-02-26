@@ -4,6 +4,8 @@ draft: false
 title: "Stitch Labs - Senior Software Engineer"
 description: "Stitch Labs is the leading inventory management system for rapidly growing brands. Purpose built for today’s modern multi-channel retailers, Stitch Labs provides scalability through improved efficiencies that enable sustained growth, while expanding into new channels and products. Stitch Labs also empowers retailers to take control of their operations through enhanced inventory visibility and accuracy, alongside streamlined workflows to meet the most complex and demanding operations."
 
+date: 2022-02-25T00:00:00+00:00
+
 date_start: 2014-12-01T00:00:00.000Z
 date_stop: 2017-07-01T00:00:00.000Z
 
