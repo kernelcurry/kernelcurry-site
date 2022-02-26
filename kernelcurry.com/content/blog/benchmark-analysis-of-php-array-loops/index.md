@@ -36,11 +36,11 @@ $element -= 200;
 ## Results
 Each array size tested was calculated four separate times to eliminate outliers in the dataset. A trend line was then calculated for each method.
 
-![Runtime Analysis 10,000](./10000.png)
+{{< figure src="10000.png" title="Runtime Analysis 10,000" >}}
 
 By analyzing the above graph, you will see there are 2 distinct groups: [For Inline, Array_Walk Reference, Array_Walk Closure] and [Foreach, For Outside]. Although visually there is a large difference between the two groups, there is actually only a millisecond difference in runtime. At this small of an array size, all tested methods are perfectly valid. This brings up a new question: What if the array was bigger?
 
-![Runtime Analysis 1,000,000<](./1000000.png)
+{{< figure src="1000000.png" title="Runtime Analysis 1,000,000" >}}
 
 Go figure; the graph looks the same! With this larger dataset, we can determine that all methods are acting in a linear fashion. Another proposition presents itself, making us ask, at what array size is using the faster group worth it?
 
@@ -56,7 +56,7 @@ Go figure; the graph looks the same! With this larger dataset, we can determine 
 
 Just for fun, let’s take a look at a larger dataset.
 
-![Runtime Analysis 10,000,000<](./10000000.png)
+{{< figure src="10000000.png" title="Runtime Analysis 10,000,000" >}}
 
 Again, the graph looks similar. Now we’ll take a look at the time differences!
 

@@ -10,7 +10,7 @@ A few weekends ago, I flew into Arizona to attend the [Game On Retro Expo](https
 
 The main draw for the Game On Retro Expo was the 1994 PowerFest Reunion Tournament.  Everyone at the expo was able to play a reproduction of the 1994 champion cartridge in hopes of qualifying for the Reunion tournament on Sunday.  This cartridge was time capped at about six minutes and consisted of the lost level in Mario, five laps in Mario Kart, and Ken Griffey Jr. Home Run Derby.  The top ten scoring players of the weekend qualified and the winner of the tournament played Mike Iarossi, the 1994 champion, on the real 1994 cartridge.
 
-![1994 Nintendo PowerFest Reunion Tournament Qualification Scores](./scores.jpg)
+{{< figure src="scores.jpg" title="1994 Nintendo PowerFest Reunion Tournament Qualification Scores" >}}
 
 The first day, I was able to pull a score of 1.13 million, locking in my spot for the tournament on Sunday.  More about the tournament later.  For now, let’s talk about the 1994 Reunion Panel.
 
@@ -24,7 +24,7 @@ The first place winner was Patric.  Him and Mike Iarossi duked it out for pride 
 
 All said and done, the weekend was amazing.  Bringing it back to the old times; playing video games, and just having a blast with new and old friends.  What more could anyone ask for?
 
-![Holding 1994 Nintendo PowerFest Trophy](./end.jpg)
+{{< figure src="end.jpg" title="Holding 1994 Nintendo PowerFest Trophy" >}}
 
 Mike Iarossi is still going strong in his quest to play games and show others the advantages of playing them.  Take a look at his [website](https://qik1.com/?utm_source=kernelcurry.com&utm_medium=referral&utm_campaign=nintendo-powerfest-1994-reunion-tournament "qik1.com") or checkout his stream at [twitchTv/qik1](https://www.twitch.tv/qik1?utm_source=kernelcurry.com&utm_medium=referral&utm_campaign=nintendo-powerfest-1994-reunion-tournament "twitch.tv - qik1").  And make sure to give him a hard time for me.  But be prepared, if you egg him on, expect to take a few shots yourself.
 

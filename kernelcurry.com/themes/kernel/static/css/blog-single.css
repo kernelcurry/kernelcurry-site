@@ -57,6 +57,31 @@ div.blog-content img {
     max-width: 100%;
 }
 
+div.blog-content figure{
+    text-align: center;
+}
+
+div.blog-content figure img {
+    height: auto;
+    max-width: 100%;
+}
+
+div.blog-content figure figcaption{
+    position: relative;
+    margin: 0;
+    text-align: center;
+    top: -8px
+}
+
+div.blog-content figure figcaption h4 {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    font-size: 87.5%;
+    opacity: 0.6;
+    font-weight: normal;
+}
+
 div.blog-content h2 {
     margin-top: 24px;
     color: #222;

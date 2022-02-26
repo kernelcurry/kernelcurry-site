@@ -6,8 +6,7 @@ title: "Game Review: SimCity - SNES"
 abstract: "How does a city work?  Why does building a Police Station not reduce crime some times?  Will you get elected as Mayor of your own town next year?  Find out in this addicting game as you build for hours."
 image: "main.jpg"
 ---
-
-![SimCity Cartridge](cart-front.png)
+{{< figure src="cart-front.png" title="SimCity Cartridge" >}}
 
 How does a city work? Why does building a Police Station not reduce crime some times? Will you get elected as Mayor of your own town next year? Find out in this addicting game as you build for hours.
 
@@ -25,7 +24,7 @@ Everything was going swimmingly, with a population of ~100,000 and then it happe
 
 Airplane crash, tornado, flood, fire, disaster after disaster. Right when I thought everything was going fine something would happen and my population would go down, the crime rate would go up, and my approval rating as Mayor was dropping. It turns out planning and running a city was not so easy after all, but I would not give up. The game started taunting me: "No, you can't make it to population 200,000... 300,000... 400,000". And I was every bit determined to get there. With game speed on high and the game running in the other room, I would pop back in to check and see if there was enough money to build another neighborhood or if a disaster had crippled my flourishing city and caused me to load from my last save.
 
-![SimCity PCB](pcb-front.png)
+{{< figure src="pcb-front.png" title="SimCity PCB" >}}
 
 ## Final Thoughts
 
