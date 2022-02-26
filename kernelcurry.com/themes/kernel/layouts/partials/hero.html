@@ -1,4 +1,9 @@
 <div class="hero-container">
+    {{ if eq .Title "404 Page not found" }}
+    <h1>404: Not Found</h1>
+    <p>Looks like you found yourself looking for something that does not exist.</p>
+    {{ else }}
     <h1>{{ .Title }}</h1>
     <p>{{ .Params.short }}</p>
+    {{ end }}
 </div>
