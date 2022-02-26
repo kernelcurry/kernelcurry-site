@@ -2,8 +2,9 @@
 title: 'Array Manipulation in PHP, The Correct Way'
 abstract: 'More often than not, when PHP developers debug others’ code, the majority of each method is taken up by array manipulations. Spending this much time on array manipulations is a huge hassle when trying to understand any given method.'
 date: '2013-10-31T00:00:00.000Z'
-draft: false
+read_time: 4
 image: "main.jpg"
+draft: false
 ---
 
 *UPDATE:* Migrated from a [post](https://web.archive.org/web/20140718092350/http://leve.rs:80/blog/correct-array-manipulation-in-php/) I wrote when working on leve.rs

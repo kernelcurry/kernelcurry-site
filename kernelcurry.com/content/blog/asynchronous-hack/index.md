@@ -2,8 +2,9 @@
 title: 'Asynchronous Functions In Hack'
 abstract: 'The ability for PHP programs to execute asynchronous functions… Yeah, I said it and now it exists. By coding in Facebook’s new Hack Language, using your CPU’s cycles correctly has never been so easy. Let’s delve into this new language head first!'
 date: 2014-04-22
-draft: false
+read_time: 3
 image: "main.jpg"
+draft: false
 ---
 
 The ability for PHP programs to execute asynchronous functions… Yeah, I said it and now it exists. By coding in Facebook’s new Hack Language, using your CPU’s cycles correctly has never been so easy. Let’s delve into this new language head first!

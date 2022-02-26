@@ -1,10 +1,10 @@
 ---
-draft: false
-
-date: "2017-11-18T00:00:00.000Z"
 title: "Game Review: WildSnake - SNES"
 abstract: "If you thought Tetris was fun, get ready for Tetris with snakes! Yeah, actual Snakes; Wild Snakes.  Alexey Pajitnov, the creator of Tetris, thought it would be a good idea to add snakes to the classic game."
+date: "2017-11-18T00:00:00.000Z"
+read_time: 5
 image: "main.jpg"
+draft: false
 ---
 
 {{< figure src="cart-front.png" title="Wildsnake Cartridge" >}}

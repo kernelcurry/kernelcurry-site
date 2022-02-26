@@ -2,8 +2,9 @@
 title: 'From WordPress To Jekyll'
 abstract: "There are lots of pros and cons when it comes to WordPress vs Jekyll.  Just remember that every tool is used for different tasks and neither WordPress nor Jekyll can be declared 'better' as they are both good in different situations."
 date: '2014-09-08T00:00:00.000Z'
-draft: false
+read_time: 4
 image: "main.jpg"
+draft: false
 ---
 
 ## Pros and Cons

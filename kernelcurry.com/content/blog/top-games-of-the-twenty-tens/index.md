@@ -1,15 +1,15 @@
 ---
-draft: true
-
-date: "2020-01-02T00:00:00.000Z"
 title: "Top Games of the Decade (2010 - 2019)"
 abstract: "Nintendo PowerFest 1994 Champion, Mike Iarossi gives his list of the top games of the past decade."
+date: "2020-01-02T00:00:00.000Z"
+read_time: 8
 image: "main.jpg"
+draft: false
 ---
 
 Lists of `Top X` or `Best Y` can very widely from person to person, but being the winner of the 1994 Nintendo Championship (PowerFest 94) in the 18+ category should give some klout right?! Below, Mike Iarossi outlines his top games from the past decade.  
 
-![Mike Iarossi - Nintento PowerFest '94 Champion](mike-iarossi.jpg)
+{{< figure src="mike-iarossi.jpg" title="Mike Iarossi - Nintento PowerFest '94 Champion" >}}
 
 #### 1. Dark Souls (2011) 2000+ hours
 In 2009 From Software released Demon's Souls, the first in the Souls series of games. However in 2011, Dark Souls came out and has since made a huge impact on the gaming world. Countless games have tried to replicate the success, but few have come close to the masterpiece. It's one of, if not the best, games of all time.

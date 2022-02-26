@@ -1,10 +1,10 @@
 ---
-draft: false
-
-date: "2017-07-21T00:00:00.000Z"
 title: "Game Review: SimCity - SNES"
 abstract: "How does a city work?  Why does building a Police Station not reduce crime some times?  Will you get elected as Mayor of your own town next year?  Find out in this addicting game as you build for hours."
+date: "2017-07-21T00:00:00.000Z"
+read_time: 3
 image: "main.jpg"
+draft: false
 ---
 {{< figure src="cart-front.png" title="SimCity Cartridge" >}}
 
