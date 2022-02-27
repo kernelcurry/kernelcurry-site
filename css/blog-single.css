@@ -1,0 +1,177 @@
+div.blog-container {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div.blog-hero {
+    padding-top: 48px;
+    padding-bottom: 56px;
+    text-align: center;
+}
+
+div.blog-hero h1 {
+    max-width: 880px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 12px;
+    margin-top: 0px;
+    font-size: 64px;
+    line-height: 72px;
+    font-weight: 900;
+}
+
+div.blog-hero span.block-quote {
+    padding-left: 1rem;
+    font-style: italic;
+    color: rgba(49, 52, 57, 0.65);
+    margin-bottom: 16px;
+    display: block;
+}
+
+div.blog-hero div.meta {
+    font-size: 87.5%;
+    display: inline;
+}
+
+div.blog-hero div.meta i {
+    margin-left: 12px;
+    margin-right: 2px;
+}
+
+div.blog-content {
+    max-width: 740px;
+    margin-top: auto;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 40px;
+    font-size: 18px;
+    line-height: 32px;
+}
+
+div.blog-content p {
+    margin-bottom: 16px;
+}
+
+div.blog-content img {
+    height: auto;
+    max-width: 100%;
+}
+
+div.blog-content figure{
+    text-align: center;
+}
+
+div.blog-content figure img {
+    height: auto;
+    max-width: 100%;
+}
+
+div.blog-content figure figcaption{
+    position: relative;
+    margin: 0;
+    text-align: center;
+    top: -8px
+}
+
+div.blog-content figure figcaption h4 {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    font-size: 87.5%;
+    opacity: 0.6;
+    font-weight: normal;
+}
+
+div.blog-content h2 {
+    margin-top: 24px;
+    color: #222;
+    font-size: 36px;
+    line-height: 40px;
+    font-weight: 700;
+    text-rendering: optimizeLegibility;
+    margin-bottom: 16px;
+}
+
+div.blog-content h3 {
+    margin-top: 24px;
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 16px;
+}
+
+div.blog-content h4 {
+    margin-top: 24px;
+    font-size: 18px;
+    line-height: 32px;
+    margin-bottom: 16px;
+}
+
+div.blog-content ol {
+    display: block;
+    list-style-type: decimal;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 26px;
+}
+
+div.blog-content ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 26px;
+}
+
+div.blog-content ol ul {
+    list-style-type: circle;
+}
+
+div.blog-content address,
+div.blog-content blockquote,
+div.blog-content dl,
+div.blog-content fieldset,
+div.blog-content figure,
+div.blog-content form,
+div.blog-content hr,
+div.blog-content ol,
+div.blog-content p,
+div.blog-content pre,
+div.blog-content table,
+div.blog-content ul {
+    margin-bottom: 16px;
+}
+
+div.blog-content ol ol,
+div.blog-content ol ul,
+div.blog-content ul ol,
+div.blog-content ul ul {
+    margin: 0 0 0 24px;
+}
+
+div.blog-content ol p,
+div.blog-content ul p,
+div.blog-content li p {
+    margin: 0;
+}
+
+div.blog-content code:not([class]) {
+    font-family: monospace, monospace;
+    font-size: 1em;
+    background: #272822;
+    border-radius: 0.3em;
+    color: #f8f8f2;
+    padding: 0.1em;
+}
+
+div.blog-content div.highlight pre {
+    border-radius: 0.3em;
+    padding: 0.5em;
+}
+
+div.blog-content div.highlight div {
+    border-radius: 0.3em;
+}

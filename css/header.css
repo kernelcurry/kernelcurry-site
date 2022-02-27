@@ -1,0 +1,71 @@
+div.header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+    padding: 0 36px;
+    height: 88px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+div.header div.brand-container {
+    margin-right: 52px;
+}
+div.header div.brand-container a {
+    background: none;
+    text-indent: -9999px;
+    width: 70px;
+    line-height: 11px;
+    background-repeat: no-repeat;
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: 100;
+}
+
+div.header div.page-nav-container {
+    padding-left: 52px;
+    border-left: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+div.header div.page-nav-container ul {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding-inline-start: 0;
+}
+
+div.header div.page-nav-container li {
+    list-style: none;
+    font-size: 16px;
+    font-weight: 500;
+    margin-right: 40px;
+}
+
+div.header div.page-nav-container a {
+    color: #000;
+    text-decoration: none;
+    display: inline-block;
+}
+
+div.header div.social-nav-container {
+    margin-left: auto;
+    font-size: 14px;
+}
+
+div.header div.social-nav-container ul {
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+div.header div.social-nav-container li {
+    list-style: none;
+}
+
+div.header div.social-nav-container a {
+    color: rgba(0, 0, 0, 0.7);
+    display: inline-block;
+    text-decoration: none;
+    line-height: 28px;
+    padding: 0 20px;
+}

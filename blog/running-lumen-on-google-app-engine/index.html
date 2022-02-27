@@ -1,0 +1,394 @@
+<!doctype html><html lang=en><head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<title>Running Laravel's Lumen On Google App Engine</title>
+<link rel=stylesheet type=text/css href=https://kernelcurry.comcss/normalize.css>
+<link rel=stylesheet type=text/css href=https://kernelcurry.comcss/font-fontawesome.css>
+<link rel=stylesheet type=text/css href=https://kernelcurry.comcss/font-lato.css>
+<link rel=stylesheet type=text/css href=https://kernelcurry.comcss/global.css>
+<link rel=stylesheet type=text/css href=https://kernelcurry.comcss/header.css>
+<link rel=stylesheet type=text/css href=https://kernelcurry.comcss/hero.css>
+<link rel=stylesheet type=text/css href=https://kernelcurry.comcss/blog-list.css>
+<link rel=stylesheet type=text/css href=https://kernelcurry.comcss/blog-single.css>
+<link rel=stylesheet type=text/css href=https://kernelcurry.comcss/career-list.css>
+<link rel=stylesheet type=text/css href=https://kernelcurry.comcss/career-single.css>
+<link rel=stylesheet type=text/css href=https://kernelcurry.comcss/footer.css>
+</head><body><div class=header>
+<div class=brand-container>
+<a href=https://kernelcurry.com>KernelCurry</a>
+</div>
+<div class=page-nav-container>
+<ul>
+<li>
+<a href=/blog title=Blog>Blog</a>
+</li><li>
+<a href=/career title=Career>Career</a>
+</li><li>
+<a href=/project title=Projects>Projects</a>
+</li>
+</ul>
+</div>
+<div class=social-nav-container>
+<ul>
+<li>
+<a href=https://twitter.com/kernelcurry title rel="nofollow noopener noreferrer" target=_blank>
+<i class="fa fa-twitter"></i>
+</a>
+</li><li>
+<a href=https://github.com/michaelcurry title rel="nofollow noopener noreferrer" target=_blank>
+<i class="fa fa-github"></i>
+</a>
+</li><li>
+<a href=https://www.linkedin.com/in/michaeliancurry title rel="nofollow noopener noreferrer" target=_blank>
+<i class="fa fa-linkedin"></i>
+</a>
+</li>
+</ul>
+</div>
+</div><div class=main-container>
+<div class=blog-single itemscope itemtype=http://schema.org/BlogPosting>
+<div class=blog-hero>
+<h1 itemprop=headline>Running Laravel's Lumen On Google App Engine</h1>
+<span class=block-quote itemprop=abstract>To get Laravel's Lumen running correctly on Google App Engine, there are a few questions that we need to answer. Lets take these one at a time.</span>
+<div class=meta>
+<i class="fa fa-clock-o" aria-hidden=true></i>
+7 Minutes
+</div>
+<div class=meta>
+<i class="fa fa-pencil" aria-hidden=true></i>
+Published: August 23, 2015
+</div>
+</div>
+<div class=blog-content>
+<p>When looking for a more stable hosting solution for my <a href="https://mtgapi.com?utm_source=kernelcurry.com&utm_medium=referral&utm_campaign=running-lumen-on-google-app-engine">Magic: The Gathering Api</a>, I stumbled across Google&rsquo;s App Engine. If you have not read up on this solution, I would recommend it.</p>
+<p>To get Laravel&rsquo;s Lumen running correctly on Google App Engine, there are a few questions that we need to answer. Lets take these one at a time.</p>
+<h2 id=how-does-the-application-know-it-is-running-on-google-app-engine>How does the application know it is running on Google App Engine?</h2>
+<p>One of the easiest ways to figure out if the application is running on Google App Engine is to check if the <code>.env</code> file is present. This is because the deployment &ldquo;ignore&rdquo; RegEx includes any files that start with a <code>.</code> (AKA Unix hidden files). This function will come in handy when answering the next questions.</p>
+<div class=highlight><div style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4>
+<table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0>
+<pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 2
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 3
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 4
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 5
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 6
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 7
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 8
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 9
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">10
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">11
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">12
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">13
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">14
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">15
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">16
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">17
+</span></code></pre></td>
+<td style=vertical-align:top;padding:0;margin:0;border:0;width:100%>
+<pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-php data-lang=php><span style=color:#e6db74>/**
+</span><span style=color:#e6db74> * Check if we are running on Google App Engine
+</span><span style=color:#e6db74> *
+</span><span style=color:#e6db74> * NOTE: This is determined based on the .env file.  hidden files
+</span><span style=color:#e6db74> * (files starting with a dot) are not sent over to Google App
+</span><span style=color:#e6db74> * Engine on deploy.  This is because these files match the
+</span><span style=color:#e6db74> * Google App Engine ignore regex.
+</span><span style=color:#e6db74> *
+</span><span style=color:#e6db74> * Example Deploy Verbose Output:
+</span><span style=color:#e6db74> * `2015-08-19 15:10:11,380 INFO appcfg.py:2684 Ignoring
+</span><span style=color:#e6db74> * file &#39;.env&#39;: File matches ignore regex.`
+</span><span style=color:#e6db74> *
+</span><span style=color:#e6db74> * @return bool
+</span><span style=color:#e6db74> */</span>
+<span style=color:#66d9ef>function</span> <span style=color:#a6e22e>is_gae</span>() {
+    <span style=color:#66d9ef>return</span> <span style=color:#f92672>!</span><span style=color:#a6e22e>file_exists</span>(<span style=color:#66d9ef>__DIR__</span> <span style=color:#f92672>.</span> <span style=color:#e6db74>&#39;/../.env&#39;</span>);
+}</code></pre></td></tr></table>
+</div>
+</div>
+<h2 id=how-do-we-make-logs-work-with-the-google-console>How do we make logs work with the Google console?</h2>
+<p>After researching how to get logs working with Google, a lot of people recommend editing vendor files. Do not do this, let me repeat, <strong>do not edit the vendor files</strong>. Let&rsquo;s take the more stable approach and override the function that is causing the issue.</p>
+<p>The first thing we need to do is create the class that will override the logging function. We can do this by making a new class that extends <code>Laravel\Lumen\Application</code>. Then we can override the logging function.</p>
+<p><em>file: app/Bootstrap/GoogleApp.php</em></p>
+<div class=highlight><div style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4>
+<table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0>
+<pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 2
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 3
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 4
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 5
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 6
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 7
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 8
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 9
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">10
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">11
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">12
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">13
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">14
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">15
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">16
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">17
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">18
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">19
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">20
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">21
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">22
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">23
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">24
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">25
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">26
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">27
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">28
+</span></code></pre></td>
+<td style=vertical-align:top;padding:0;margin:0;border:0;width:100%>
+<pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-php data-lang=php><span style=color:#f92672>&lt;?</span><span style=color:#a6e22e>php</span> <span style=color:#66d9ef>namespace</span> <span style=color:#a6e22e>App\Bootstrap</span>;
+
+<span style=color:#e6db74>/**
+</span><span style=color:#e6db74> * GoogleApp.php
+</span><span style=color:#e6db74> *
+</span><span style=color:#e6db74> * @author  michaelcurry
+</span><span style=color:#e6db74> */</span>
+<span style=color:#66d9ef>use</span> <span style=color:#a6e22e>Laravel\Lumen\Application</span>;
+<span style=color:#66d9ef>use</span> <span style=color:#a6e22e>Monolog\Handler\SyslogHandler</span>;
+<span style=color:#66d9ef>use</span> <span style=color:#a6e22e>Monolog\Logger</span>;
+
+<span style=color:#e6db74>/**
+</span><span style=color:#e6db74> * Class GoogleApp
+</span><span style=color:#e6db74> *
+</span><span style=color:#e6db74> * @package App
+</span><span style=color:#e6db74> */</span>
+<span style=color:#66d9ef>class</span> <span style=color:#a6e22e>GoogleApp</span> <span style=color:#66d9ef>extends</span> <span style=color:#a6e22e>Application</span>
+{
+    <span style=color:#e6db74>/**
+</span><span style=color:#e6db74>     * Get the Monolog handler for the application.
+</span><span style=color:#e6db74>     *
+</span><span style=color:#e6db74>     * @return \Monolog\Handler\AbstractHandler
+</span><span style=color:#e6db74>     */</span>
+    <span style=color:#66d9ef>protected</span> <span style=color:#66d9ef>function</span> <span style=color:#a6e22e>getMonologHandler</span>()
+    {
+        <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>SyslogHandler</span>(<span style=color:#e6db74>&#39;intranet&#39;</span>, <span style=color:#e6db74>&#39;user&#39;</span>, <span style=color:#a6e22e>Logger</span><span style=color:#f92672>::</span><span style=color:#a6e22e>DEBUG</span>, <span style=color:#66d9ef>false</span>, <span style=color:#a6e22e>LOG_PID</span>);
+    }
+}</code></pre></td></tr></table>
+</div>
+</div>
+<h2 id=how-do-we-setup-environment-variables>How do we setup environment variables?</h2>
+<p>Just like normal, the <code>.env</code> file will be used for local environment variables. However, the <code>.env</code> file is not deployed to Google App Engine, so we need to find a work around. The good news is <code>app.yaml</code> allows for environment variables. And even better news, Google App Engine plays nice with these environment variables.</p>
+<p>The most important thing to keep in mind is security. Just as <code>.env</code> is ignored in our git repo, we want to ignore <code>app.yaml</code> as well. With this file being excluded from version control, we want to make sure there is a template that users can follow. We can make <code>app.yaml.example</code> that contains the structure with no credentials. Then we can make <code>app.yaml</code> which is a copy of <code>app.yaml.example</code> with the correct credentials.</p>
+<p><em>file: app.yaml</em></p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#f92672>application</span>: <span style=color:#ae81ff>mtgapi-service</span>
+<span style=color:#f92672>version</span>: <span style=color:#ae81ff>1</span>
+<span style=color:#f92672>runtime</span>: <span style=color:#ae81ff>php55</span>
+<span style=color:#f92672>api_version</span>: <span style=color:#ae81ff>1</span>
+
+<span style=color:#f92672>handlers</span>:
+- <span style=color:#f92672>url</span>: <span style=color:#ae81ff>/favicon\.ico</span>
+  <span style=color:#f92672>static_files</span>: <span style=color:#ae81ff>public/favicon.ico</span>
+  <span style=color:#f92672>upload</span>: <span style=color:#ae81ff>public/favicon\.ico</span>
+
+- <span style=color:#f92672>url</span>: <span style=color:#ae81ff>/.*</span>
+  <span style=color:#f92672>script</span>: <span style=color:#ae81ff>public/index.php</span>
+
+<span style=color:#f92672>env_variables</span>:
+  <span style=color:#f92672>APP_ENV</span>: <span style=color:#ae81ff>production</span>
+  <span style=color:#f92672>APP_DEBUG</span>: <span style=color:#66d9ef>false</span>
+  <span style=color:#f92672>APP_KEY</span>: <span style=color:#ae81ff>SomeRandomStringHere!!!</span>
+  <span style=color:#f92672>APP_LOCALE</span>: <span style=color:#ae81ff>en</span>
+  <span style=color:#f92672>APP_FALLBACK_LOCALE</span>: <span style=color:#ae81ff>en</span>
+  <span style=color:#f92672>DB_CONNECTION</span>: <span style=color:#ae81ff>mysql</span>
+  <span style=color:#f92672>DB_HOST</span>: <span style=color:#ae81ff>localhost</span>
+  <span style=color:#f92672>DB_PORT</span>: <span style=color:#ae81ff>3306</span>
+  <span style=color:#f92672>DB_DATABASE0</span>: <span style=color:#ae81ff>homestead</span>
+  <span style=color:#f92672>DB_USERNAME</span>: <span style=color:#ae81ff>homestead</span>
+  <span style=color:#f92672>DB_PASSWORD</span>: <span style=color:#ae81ff>secret</span>
+  <span style=color:#f92672>CACHE_DRIVER</span>: <span style=color:#ae81ff>file</span>
+  <span style=color:#f92672>SESSION_DRIVER</span>: <span style=color:#ae81ff>file</span>
+  <span style=color:#f92672>QUEUE_DRIVER</span>: <span style=color:#ae81ff>sync</span></code></pre></div>
+<h2 id=how-do-we-set-phpini-settings>How do we set php.ini settings?</h2>
+<p>This one is very simple. We just need to create a file in our application root called <code>php.ini</code>. Here, you can set php.ini settings that will be used. There are two settings I want to bring to your attention.</p>
+<ol>
+<li><code>google_app_engine.enable_functions</code> needs to be set to <code>php_sapi_name</code> for Lumen to work properly on Google App Engine.</li>
+<li><code>google_app_engine.enable_curl_lite</code> needs to be set to <code>1</code> if you are using curl in any way.</li>
+</ol>
+<p><em>file: php.ini</em></p>
+<div class=highlight><div style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4>
+<table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0>
+<pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">1
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">2
+</span></code></pre></td>
+<td style=vertical-align:top;padding:0;margin:0;border:0;width:100%>
+<pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ini data-lang=ini><span style=color:#a6e22e>google_app_engine.enable_curl_lite</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;1&#34;</span>
+<span style=color:#a6e22e>google_app_engine.enable_functions</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;php_sapi_name&#34;</span></code></pre></td></tr></table>
+</div>
+</div>
+<h2 id=how-does-everything-fit-together>How does everything fit together?</h2>
+<p>Now that we have a function that lets us know when we are running on Google App Engine; have a new Google Application class; set our php.ini settings correctly; and have our environment variables set, all we need to do is put the puzzle pieces together.</p>
+<p>To do this, we need to edit the file <code>bootstrap/app.php</code>.</p>
+<ol>
+<li>Load the new Google application class if we are running on Google App Engine.</li>
+<li>Don&rsquo;t load the default <code>.env</code> file if we are running on Google App Engine.</li>
+</ol>
+<p><em>file: bootstrap/app.php</em></p>
+<div class=highlight><div style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4>
+<table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0>
+<pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 2
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 3
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 4
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 5
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 6
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 7
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 8
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 9
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">10
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">11
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">12
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">13
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">14
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">15
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">16
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">17
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">18
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">19
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">20
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">21
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">22
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">23
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">24
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">25
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">26
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">27
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">28
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">29
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">30
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">31
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">32
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">33
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">34
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">35
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">36
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">37
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">38
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">39
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">40
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">41
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">42
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">43
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">44
+</span></code></pre></td>
+<td style=vertical-align:top;padding:0;margin:0;border:0;width:100%>
+<pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-php data-lang=php><span style=color:#f92672>&lt;?</span><span style=color:#a6e22e>php</span>
+
+<span style=color:#66d9ef>require_once</span> <span style=color:#66d9ef>__DIR__</span><span style=color:#f92672>.</span><span style=color:#e6db74>&#39;/../vendor/autoload.php&#39;</span>;
+
+<span style=color:#e6db74>/**
+</span><span style=color:#e6db74> * Check if we are running on Google App Engine
+</span><span style=color:#e6db74> *
+</span><span style=color:#e6db74> * NOTE: This is determined based on the .env file.  hidden files
+</span><span style=color:#e6db74> * (files starting with a dot) are not sent over to Google App
+</span><span style=color:#e6db74> * Engine on deploy.  This is because these files match the
+</span><span style=color:#e6db74> * Google App Engine ignore regex.
+</span><span style=color:#e6db74> *
+</span><span style=color:#e6db74> * Example Deploy Verbose Output:
+</span><span style=color:#e6db74> * `2015-08-19 15:10:11,380 INFO appcfg.py:2684 Ignoring
+</span><span style=color:#e6db74> * file &#39;.env&#39;: File matches ignore regex.`
+</span><span style=color:#e6db74> *
+</span><span style=color:#e6db74> * @return bool
+</span><span style=color:#e6db74> */</span>
+<span style=color:#66d9ef>function</span> <span style=color:#a6e22e>is_gae</span>() {
+    <span style=color:#66d9ef>return</span> <span style=color:#f92672>!</span><span style=color:#a6e22e>file_exists</span>(<span style=color:#66d9ef>__DIR__</span> <span style=color:#f92672>.</span> <span style=color:#e6db74>&#39;/../.env&#39;</span>);
+}
+
+<span style=color:#75715e>/*
+</span><span style=color:#75715e>|—————————————————————————————————————
+</span><span style=color:#75715e>| Create The Application
+</span><span style=color:#75715e>|—————————————————————————————————————
+</span><span style=color:#75715e>|
+</span><span style=color:#75715e>| Here we will load the environment and create the application instance
+</span><span style=color:#75715e>| that serves as the central piece of this framework. We&#39;ll use this
+</span><span style=color:#75715e>| application as an &#34;IoC&#34; container and router for this framework.
+</span><span style=color:#75715e>|
+</span><span style=color:#75715e>*/</span>
+
+<span style=color:#66d9ef>if</span>(<span style=color:#a6e22e>is_gae</span>()) {
+    $app <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>App\Bootstrap\GoogleApp</span>(
+        <span style=color:#a6e22e>realpath</span>(<span style=color:#66d9ef>__DIR__</span> <span style=color:#f92672>.</span> <span style=color:#e6db74>&#39;/../&#39;</span>)
+    );
+}
+<span style=color:#66d9ef>else</span> {
+    <span style=color:#a6e22e>Dotenv</span><span style=color:#f92672>::</span><span style=color:#a6e22e>load</span>(<span style=color:#66d9ef>__DIR__</span> <span style=color:#f92672>.</span> <span style=color:#e6db74>&#39;/../&#39;</span>);
+    $app <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>Laravel\Lumen\Application</span>(
+        <span style=color:#a6e22e>realpath</span>(<span style=color:#66d9ef>__DIR__</span> <span style=color:#f92672>.</span> <span style=color:#e6db74>&#39;/../&#39;</span>)
+    );
+}</code></pre></td></tr></table>
+</div>
+</div>
+<p><strong>Note:</strong> This is the top of the file <code>bootstrap/app.php</code>. The lines that state <code>$app->withFacades();</code> and <code>$app->withEloquent();</code> should immediately follow.</p>
+<h2 id=how-do-we-deploy>How do we deploy?</h2>
+<p>Awesome! Now that we have everything ready to deploy, lets get this new Lumen project running on Google App Engine. Keep in mind the following steps assume you are running Mac OSX. You may have to do things a little differently if you are running Windows or Linux.</p>
+<ol>
+<li>Download the <a href="https://cloud.google.com/appengine/downloads?utm_source=kernelcurry.com&utm_medium=referral&utm_campaign=running-lumen-on-google-app-engine">Google App Engine Launcher</a></li>
+<li>Open <code>GoogleAppEngineLauncher-*.*.*.dmg</code> and move <code>GoogleAppEngineLauncher.app</code> into your <code>Applications</code> folder</li>
+<li>Open <code>GoogleAppEngineLauncher</code> and accept (click &lsquo;yes&rsquo;/&lsquo;accept&rsquo;) and pop-ups and enter your system password</li>
+</ol>
+<p>From this point, we have to make a decision: do we want to deploy from <code>GoogleAppEngineLauncher</code> or the terminal?</p>
+<h4 id=deploy-from-googleappenginelauncher>Deploy From GoogleAppEngineLauncher</h4>
+<p><strong>Pro(s)</strong></p>
+<ul>
+<li>One click deploy</li>
+<li>Deploy multiple apps from a single application</li>
+</ul>
+<p><strong>Con(s)</strong></p>
+<ul>
+<li>Application root folder must have the same name as the Google App Engine project ID</li>
+<li>Do not have the ability to use the full functionality of <code>appcfg.py</code> (the deployment command)</li>
+</ul>
+<p>If you&rsquo;re going this route, please make sure the name of your application root folder is the same name as your Google App Engine project ID. Now, let&rsquo;s get started:</p>
+<ol>
+<li>Click the <code>+</code> button in the bottom left corner of the app</li>
+<li>Enter your Application Id</li>
+<li>Select the folder where your application root resides</li>
+<li>Select Runtime as <code>PHP</code></li>
+<li>Click &lsquo;Create&rsquo;</li>
+<li>Highlight the newly created application from the list</li>
+<li>Click the deploy button in the top right</li>
+<li>Auth with Google (a webpage will pop up)</li>
+</ol>
+<h4 id=deploy-from-terminal>Deploy From Terminal</h4>
+<p><strong>Pro(s)</strong></p>
+<ul>
+<li>Ability to use full functionality of <code>appcfg.py</code> (the deployment command)</li>
+</ul>
+<p><strong>Con(s)</strong></p>
+<ul>
+<li>You have to remember the command or at least make a bash script to run so you don&rsquo;t have to remember it</li>
+</ul>
+<p>Congratulations! It looks like this isn&rsquo;t your first rodeo. This is by far the most flexible way to deploy your application.</p>
+<ol>
+<li>Open <code>terminal</code></li>
+<li>run <code>appcfg.py -A &lt;application-id> update &lt;application-root-path></code></li>
+<li>Auth with Google (a webpage will pop up)</li>
+</ol>
+<h2 id=conclusion>Conclusion</h2>
+<p>We did it! Everything is running smoothly and you can access your new Lumen project at <code>http://app-id.appspot.com</code></p>
+<p>As we are now using Lumen on Google App Engine, there are a few other things that may need to be done to connect to your CloudSql Instance, use queuing, etc… Stay tuned for more posts on topics like these.</p>
+</div>
+</div>
+</div><div class=footer>
+<div class=footer-nav>
+<ul>
+<li>
+<span>KernelCurry</span>
+</li>
+<li>
+<a href=/blog title=Blog>Blog</a>
+</li><li>
+<a href=/career title=Career>Career</a>
+</li><li>
+<a href=/project title=Projects>Projects</a>
+</li>
+</ul>
+</div>
+<p>
+KernelCurry &copy; <a href=http://curryisms.com/ target=_blank rel="nofollow noopener noreferrer">Copywrite</a> 2015
+</p>
+</div></body>
+</html>
