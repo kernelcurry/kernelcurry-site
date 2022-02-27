@@ -298,6 +298,7 @@ yarn-error.log
 
 # production
 /build
+/public
 
 # local env files
 .env.local
