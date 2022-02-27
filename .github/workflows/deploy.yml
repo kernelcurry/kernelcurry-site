@@ -10,36 +10,25 @@ jobs:
     name: Deploy
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2-beta
+      - uses: actions/checkout@v2
         with:
-          ref: 'master'
-          path: './master'
-      - uses: actions/checkout@v2-beta
+          submodules: true  # Fetch Hugo themes (true OR recursive)
+          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
         with:
-          ref: 'gh-pages'
-          path: './gh-pages'
-          token: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-      - uses: actions/setup-node@v1
+          hugo-version: 'latest'
+          # extended: true
+
+      - name: Build
+        run: |
+          cd kernelcurry.com
+          hugo --minify
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        if: github.ref == 'refs/heads/main'
         with:
-          node-version: '12.x'
-      - name: Install gatsby-cli
-        run: npm install -g gatsby-cli
-      - name: Build Static Site
-        run: |
-          cd ./master || exit 1
-          npm install
-          gatsby clean
-          gatsby build
-          cp CNAME ./public/CNAME
-      - name: Clean & Update gh-pages
-        run: |
-          rm -rf ./gh-pages/*
-          cp -R ./master/public/* ./gh-pages/
-      - name: Deploy gh-pages
-        run: |
-          cd ./gh-pages || exit 1
-          git config --global user.name "${GITHUB_ACTOR}"
-          git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
-          git add --all
-          git commit -m ":rocket: GH Actions - $(date -u)"
-          git push
+          github_token: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          publish_dir: ./public
