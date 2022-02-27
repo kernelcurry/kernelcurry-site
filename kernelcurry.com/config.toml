@@ -1,4 +1,4 @@
-baseURL = 'https://kernelcurry.com'
+baseURL = 'https://kernelcurry.com/'
 languageCode = 'en-us'
 title = 'KernelCurry'
 theme = "kernel"
