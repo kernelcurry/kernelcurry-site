@@ -1,0 +1,33 @@
+<div class="header">
+    <div class="brand-container">
+        <a href="{{ .Site.BaseURL }}">KernelCurry</a>
+    </div>
+    <div class="page-nav-container">
+        <ul>
+            {{ range .Site.Menus.main.ByWeight -}}
+            <li>
+                {{ .Pre }}<a href="{{ .URL }}" title="{{ .Title }}">{{- .Name -}}</a>{{ .Post }}
+            </li>
+            {{- end }}
+        </ul>
+    </div>
+
+    <div class="social-nav-container">
+        <ul>
+            {{ range .Site.Menus.social.ByWeight -}}
+            <li>
+                {{ .Pre }}
+                <a
+                        href="{{ .URL }}"
+                        title="{{ .Title }}"
+                        rel="nofollow noopener noreferrer"
+                        target="_blank"
+                >
+                    <i class="fa fa-{{ .Identifier }}"></i>
+                </a>
+                {{ .Post }}
+            </li>
+            {{- end }}
+        </ul>
+    </div>
+</div>

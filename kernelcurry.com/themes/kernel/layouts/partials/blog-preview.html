@@ -1,0 +1,8 @@
+<li class="blog-preview" itemScope itemType="http://schema.org/CreativeWork">
+    <a href="{{ .Permalink }}" style="background-image:url('{{ .Permalink }}/{{ .Params.image }}')">
+        <div class="container">
+            <h2 class="title" itemProp="headline">{{ .Title }}</h2>
+            <p class="abstract" itemProp="abstract">{{ .Params.abstract }}</p>
+        </div>
+    </a>
+</li>

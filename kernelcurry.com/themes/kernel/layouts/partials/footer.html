@@ -1,0 +1,17 @@
+<div class="footer">
+    <div class="footer-nav">
+        <ul>
+            <li>
+                <span>KernelCurry</span>
+            </li>
+            {{ range .Site.Menus.main.ByWeight -}}
+            <li>
+                {{ .Pre }}<a href="{{ .URL }}" title="{{ .Title }}">{{- .Name -}}</a>{{ .Post }}
+            </li>
+            {{- end }}
+        </ul>
+    </div>
+    <p>
+        KernelCurry &copy; <a href="http://curryisms.com/"  target="_blank"  rel="nofollow noopener noreferrer">Copywrite</a> {{ .Date.Format "2006" }}
+    </p>
+</div>

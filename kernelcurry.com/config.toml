@@ -1,0 +1,60 @@
+baseURL = 'https://kernelcurry.com'
+languageCode = 'en-us'
+title = 'KernelCurry'
+theme = "kernel"
+
+disableKinds = ['taxonomy', 'term']
+
+[markup]
+  [markup.highlight]
+    anchorLineNos = false
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ''
+    lineAnchors = ''
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = true
+    noClasses = true
+    style = 'monokai'
+    tabWidth = 4
+
+[menu]
+  [[menu.main]]
+    identifier = "blog"
+    name = "Blog"
+    title = "Blog"
+    url = "/blog"
+    weight = 10
+
+  [[menu.main]]
+    identifier = "career"
+    name = "Career"
+    title = "Career"
+    url = "/career"
+    weight = 20
+
+  [[menu.main]]
+    identifier = "projects"
+    name = "Projects"
+    title = "Projects"
+    url = "/project"
+    weight = 30
+
+  [[menu.social]]
+    identifier = "twitter"
+    name = "Twitter"
+    url = "https://twitter.com/kernelcurry"
+    weight = 10
+
+  [[menu.social]]
+    identifier = "github"
+    name = "Github"
+    url = "https://github.com/michaelcurry"
+    weight = 20
+
+  [[menu.social]]
+    identifier = "linkedin"
+    name = "LinkedIn"
+    url = "https://www.linkedin.com/in/michaeliancurry"
+    weight = 30

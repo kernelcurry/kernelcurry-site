@@ -13,15 +13,18 @@ jobs:
     runs-on: ubuntu-latest
     # Job Steps
     steps:
-      - uses: actions/checkout@v1
-      - uses: actions/setup-node@v1
+      - uses: actions/checkout@v2
         with:
-          node-version: '12.x'
-      - name: Install gatsby-cli
-        run: npm install -g gatsby-cli
-      - name: npm Install
-        run: npm install
-      - name: gatsby clean
-        run: gatsby clean
-      - name: gatsby build
-        run: gatsby build
+          submodules: true  # Fetch Hugo themes (true OR recursive)
+          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: 'latest'
+          # extended: true
+
+      - name: Build
+        run: |
+          cd kernelcurry.com
+          hugo --minify
