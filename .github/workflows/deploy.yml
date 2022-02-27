@@ -31,4 +31,4 @@ jobs:
         if: github.ref == 'refs/heads/master'
         with:
           deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-          publish_dir: ./public
+          publish_dir: ./kernelcurry.com/public
