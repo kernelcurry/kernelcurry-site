@@ -33,3 +33,4 @@ As the first full-time engineering employee, my core functions were to organize,
 * Rebuilt iOS and Android applications from the ground up to provide a more stable service to our safety-centric core customers (Insurance, Energy, Transportation, Government, Law Enforcement).
 * Built and executed company-wide quarterly OKRs, aligning the entire company on major strategic initiatives.
 * Worked cross-functionally on all product updates and releases.
+* Led company-wide SOC 2 Type 1 audit and certification process.
