@@ -10,7 +10,7 @@ jobs:
     # Job name is Greeting
     name: Build
     # This job runs on Linux
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-24.04
     # Job Steps
     steps:
       - uses: actions/checkout@v2

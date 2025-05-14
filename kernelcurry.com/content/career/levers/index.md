@@ -2,7 +2,7 @@
 draft: false
 
 title: "Levers - Lead Engineer"
-description: "Levers creates prioritized tasks using existing analytics to increase revenue and customer acquisition, as well as, forecasting key business metrics and areas for improvements. Advanced tools enable campaign and performance improvements."
+description: "Levers takes your aggregated digital marketing data and delivers a complete reporting and forecasting solution in a beautiful, easy to use interface."
 
 date: 2022-02-25T00:00:00+00:00
 
@@ -17,4 +17,4 @@ links:
     url: "https://web.archive.org/web/20150801204819/https://leve.rs/"
 ---
 
-Levers creates prioritized tasks using existing analytics to increase revenue and customer acquisition, as well as, forecasting key business metrics and areas for improvements. Advanced tools enable campaign and performance improvements.
+Levers takes your aggregated digital marketing data and delivers a complete reporting and forecasting solution in a beautiful, easy to use interface. Built for the digital marketer, the Levers data explorer is your solution for high-level analysis and forecasting. Borrowing the best features from the analytics products you use every day with nearly unlimited scalability, Levers makes it easy to build reports accessible by anyone from technical analysts to executives.
