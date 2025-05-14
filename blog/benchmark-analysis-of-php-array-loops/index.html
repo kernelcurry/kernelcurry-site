@@ -1,258 +1,80 @@
-<!doctype html><html lang=en><head>
-<meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1">
-<title>Benchmark Analysis Of PHP Array Loops</title>
-<link rel=stylesheet type=text/css href=https://kernelcurry.com/css/normalize.css>
-<link rel=stylesheet type=text/css href=https://kernelcurry.com/css/font-fontawesome.css>
-<link rel=stylesheet type=text/css href=https://kernelcurry.com/css/font-lato.css>
-<link rel=stylesheet type=text/css href=https://kernelcurry.com/css/global.css>
-<link rel=stylesheet type=text/css href=https://kernelcurry.com/css/header.css>
-<link rel=stylesheet type=text/css href=https://kernelcurry.com/css/hero.css>
-<link rel=stylesheet type=text/css href=https://kernelcurry.com/css/blog-list.css>
-<link rel=stylesheet type=text/css href=https://kernelcurry.com/css/blog-single.css>
-<link rel=stylesheet type=text/css href=https://kernelcurry.com/css/career-list.css>
-<link rel=stylesheet type=text/css href=https://kernelcurry.com/css/career-single.css>
-<link rel=stylesheet type=text/css href=https://kernelcurry.com/css/footer.css>
-</head><body><div class=header>
-<div class=brand-container>
-<a href=https://kernelcurry.com/>KernelCurry</a>
-</div>
-<div class=page-nav-container>
-<ul>
-<li>
-<a href=/blog title=Blog>Blog</a>
-</li><li>
-<a href=/career title=Career>Career</a>
-</li><li>
-<a href=/project title=Projects>Projects</a>
-</li>
-</ul>
-</div>
-<div class=social-nav-container>
-<ul>
-<li>
-<a href=https://twitter.com/kernelcurry title rel="nofollow noopener noreferrer" target=_blank>
-<i class="fa fa-twitter"></i>
-</a>
-</li><li>
-<a href=https://github.com/michaelcurry title rel="nofollow noopener noreferrer" target=_blank>
-<i class="fa fa-github"></i>
-</a>
-</li><li>
-<a href=https://www.linkedin.com/in/michaeliancurry title rel="nofollow noopener noreferrer" target=_blank>
-<i class="fa fa-linkedin"></i>
-</a>
-</li>
-</ul>
-</div>
-</div><div class=main-container>
-<div class=blog-single itemscope itemtype=http://schema.org/BlogPosting>
-<div class=blog-hero>
-<h1 itemprop=headline>Benchmark Analysis Of PHP Array Loops</h1>
-<span class=block-quote itemprop=abstract>I decided to take 5 different methods and use xhprof to collect runtime data. Then, I analyzed these results to determine the best method(s).</span>
-<div class=meta>
-<i class="fa fa-clock-o" aria-hidden=true></i>
-4 Minutes
-</div>
-<div class=meta>
-<i class="fa fa-pencil" aria-hidden=true></i>
-Published: December 5, 2013
-</div>
-</div>
-<div class=blog-content>
-<p><em>UPDATE:</em> Migrated from a <a href=https://web.archive.org/web/20140730180731/http://leve.rs:80/blog/benchmark-analysis-of-php-array-loops>post</a> I wrote when working on leve.rs</p>
-<hr>
-<p>The last post I wrote provided examples of different ways to use array manipulation in PHP <a href=https://kernelcurry.com/blog/correct-array-manipulation-in-php/>Link</a>. An amazing number of people replied with a compelling argument, saying it’s better to use a foreach statement instead of the array_walk function.</p>
-<p>As all comments I receive from my articles, I thought hard on the idea. What is the fastest way achieve the end result?</p>
-<p>I decided to take 5 different methods and use <a href=http://pecl.php.net/package/xhprof>xhprof</a> to collect runtime data. Then, I analyzed these results to determine the best method(s). All tests were executed using PHP 5.5.6 on a Macbook Air.</p>
-<h5 id=methods>Methods</h5>
-<ul>
-<li>Array_walk pass by reference</li>
-<li>Array_Walk closure function</li>
-<li>Foreach</li>
-<li>For with length set before loop</li>
-<li>For with length set inline</li>
-</ul>
-<p>Each method used simple arithmetic functions to change each element in the array.</p>
-<div class=highlight><div style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4>
-<table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0>
-<pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">1
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">2
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">3
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">4
-</span></code></pre></td>
-<td style=vertical-align:top;padding:0;margin:0;border:0;width:100%>
-<pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-php data-lang=php>$element <span style=color:#f92672>+=</span> <span style=color:#ae81ff>1000</span>;
-$element <span style=color:#f92672>*=</span> <span style=color:#ae81ff>2</span>;
-$element <span style=color:#f92672>/=</span> <span style=color:#ae81ff>10</span>;
-$element <span style=color:#f92672>-=</span> <span style=color:#ae81ff>200</span>;</code></pre></td></tr></table>
-</div>
-</div>
-<h2 id=results>Results</h2>
-<p>Each array size tested was calculated four separate times to eliminate outliers in the dataset. A trend line was then calculated for each method.</p>
-<figure><img src=10000.png><figcaption>
-<h4>Runtime Analysis 10,000</h4>
-</figcaption>
-</figure>
-<p>By analyzing the above graph, you will see there are 2 distinct groups: [For Inline, Array_Walk Reference, Array_Walk Closure] and [Foreach, For Outside]. Although visually there is a large difference between the two groups, there is actually only a millisecond difference in runtime. At this small of an array size, all tested methods are perfectly valid. This brings up a new question: What if the array was bigger?</p>
-<figure><img src=1000000.png><figcaption>
-<h4>Runtime Analysis 1,000,000</h4>
-</figcaption>
-</figure>
-<p>Go figure; the graph looks the same! With this larger dataset, we can determine that all methods are acting in a linear fashion. Another proposition presents itself, making us ask, at what array size is using the faster group worth it?</p>
-<h5 id=runtime-differences>Runtime Differences</h5>
-<p><em>Group1:</em> [For Inline, Array_Walk Reference, Array_Walk Closure]</p>
-<p><em>Group2:</em> [Foreach, For Outside]</p>
-<ul>
-<li>Size 10,000: 161,000 µs</li>
-<li>Size 500,000: 849,000 µs</li>
-<li>Size 1,000,000: 1,679,000 µs</li>
-</ul>
-<p>Just for fun, let’s take a look at a larger dataset.</p>
-<figure><img src=10000000.png><figcaption>
-<h4>Runtime Analysis 10,000,000</h4>
-</figcaption>
-</figure>
-<p>Again, the graph looks similar. Now we’ll take a look at the time differences!</p>
-<h5 id=runtime-differences-1>Runtime Differences</h5>
-<p><em>Group1:</em> [For Inline, Array_Walk Reference, Array_Walk Closure]</p>
-<p><em>Group2:</em> [Foreach, For Outside]</p>
-<ul>
-<li>Size 5,000,000: 8,380,000 µs</li>
-<li>Size 10,000,000: 18,580,000 µs</li>
-</ul>
-<h2 id=conclusion>Conclusion</h2>
-<p>With small array sizes, any method can be used with no real consequences. That being said, a decision must be made for the point at which runtime difference matters. That point – for me – would be array size of 12,000. You will have to determine what your threshold is.</p>
-<p>After analyzing the different methods, it is time for me to get into the Levers code base and clean up some things. I hope to see you on the other side, and with blazing speed!</p>
-<h2 id=code>Code</h2>
-<h4 id=array-walk-reference>Array Walk Reference</h4>
-<div class=highlight><div style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4>
-<table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0>
-<pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">1
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">2
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">3
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">4
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">5
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">6
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">7
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">8
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">9
-</span></code></pre></td>
-<td style=vertical-align:top;padding:0;margin:0;border:0;width:100%>
-<pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-php data-lang=php><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>calculate</span>(<span style=color:#f92672>&amp;</span>$element)
-{
-        $element <span style=color:#f92672>+=</span> <span style=color:#ae81ff>1000</span>;
-        $element <span style=color:#f92672>*=</span> <span style=color:#ae81ff>2</span>;
-        $element <span style=color:#f92672>/=</span> <span style=color:#ae81ff>10</span>;
-        $element <span style=color:#f92672>-=</span> <span style=color:#ae81ff>200</span>;
-}
-
-<span style=color:#a6e22e>array_walk</span>($subject, <span style=color:#e6db74>&#39;calculate&#39;</span>);</code></pre></td></tr></table>
-</div>
-</div>
-<h4 id=array-walk-closure>Array Walk Closure</h4>
-<div class=highlight><div style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4>
-<table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0>
-<pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">1
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">2
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">3
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">4
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">5
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">6
-</span></code></pre></td>
-<td style=vertical-align:top;padding:0;margin:0;border:0;width:100%>
-<pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-php data-lang=php><span style=color:#a6e22e>array_walk</span>($subject, <span style=color:#66d9ef>function</span>(<span style=color:#f92672>&amp;</span>$element){
-        $element <span style=color:#f92672>+=</span> <span style=color:#ae81ff>1000</span>;
-        $element <span style=color:#f92672>*=</span> <span style=color:#ae81ff>2</span>;
-        $element <span style=color:#f92672>/=</span> <span style=color:#ae81ff>10</span>;
-        $element <span style=color:#f92672>-=</span> <span style=color:#ae81ff>200</span>;
-});</code></pre></td></tr></table>
-</div>
-</div>
-<h4 id=for-outside>For Outside</h4>
-<div class=highlight><div style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4>
-<table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0>
-<pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">1
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">2
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">3
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">4
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">5
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">6
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">7
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">8
-</span></code></pre></td>
-<td style=vertical-align:top;padding:0;margin:0;border:0;width:100%>
-<pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-php data-lang=php>$len <span style=color:#f92672>=</span> <span style=color:#a6e22e>count</span>($subject);
-<span style=color:#66d9ef>for</span>($i <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>; $i <span style=color:#f92672>&lt;</span> $len; $i<span style=color:#f92672>++</span>)
-{
-        $subject[$i] <span style=color:#f92672>+=</span> <span style=color:#ae81ff>1000</span>;
-        $subject[$i] <span style=color:#f92672>*=</span> <span style=color:#ae81ff>2</span>;
-        $subject[$i] <span style=color:#f92672>/=</span> <span style=color:#ae81ff>10</span>;
-        $subject[$i] <span style=color:#f92672>-=</span> <span style=color:#ae81ff>200</span>;
-}</code></pre></td></tr></table>
-</div>
-</div>
-<h4 id=for-inline>For Inline</h4>
-<div class=highlight><div style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4>
-<table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0>
-<pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">1
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">2
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">3
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">4
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">5
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">6
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">7
-</span></code></pre></td>
-<td style=vertical-align:top;padding:0;margin:0;border:0;width:100%>
-<pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-php data-lang=php><span style=color:#66d9ef>for</span>($i <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>; $i <span style=color:#f92672>&lt;</span> <span style=color:#a6e22e>count</span>($subject); $i<span style=color:#f92672>++</span>)
-{
-        $subject[$i] <span style=color:#f92672>+=</span> <span style=color:#ae81ff>1000</span>;
-        $subject[$i] <span style=color:#f92672>*=</span> <span style=color:#ae81ff>2</span>;
-        $subject[$i] <span style=color:#f92672>/=</span> <span style=color:#ae81ff>10</span>;
-        $subject[$i] <span style=color:#f92672>-=</span> <span style=color:#ae81ff>200</span>;
-}</code></pre></td></tr></table>
-</div>
-</div>
-<h4 id=foreach>Foreach</h4>
-<div class=highlight><div style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4>
-<table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0>
-<pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">1
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">2
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">3
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">4
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">5
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">6
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">7
-</span></code></pre></td>
-<td style=vertical-align:top;padding:0;margin:0;border:0;width:100%>
-<pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-php data-lang=php><span style=color:#66d9ef>foreach</span>($subject <span style=color:#66d9ef>as</span> <span style=color:#f92672>&amp;</span>$element)
-{
-        $element <span style=color:#f92672>+=</span> <span style=color:#ae81ff>1000</span>;
-        $element <span style=color:#f92672>*=</span> <span style=color:#ae81ff>2</span>;
-        $element <span style=color:#f92672>/=</span> <span style=color:#ae81ff>10</span>;
-        $element <span style=color:#f92672>-=</span> <span style=color:#ae81ff>200</span>;
-}</code></pre></td></tr></table>
-</div>
-</div>
-</div>
-</div>
-</div><div class=footer>
-<div class=footer-nav>
-<ul>
-<li>
-<span>KernelCurry</span>
-</li>
-<li>
-<a href=/blog title=Blog>Blog</a>
-</li><li>
-<a href=/career title=Career>Career</a>
-</li><li>
-<a href=/project title=Projects>Projects</a>
-</li>
-</ul>
-</div>
-<p>
-KernelCurry &copy; <a href=http://curryisms.com/ target=_blank rel="nofollow noopener noreferrer">Copywrite</a> 2013
-</p>
-</div></body>
-</html>
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Benchmark Analysis Of PHP Array Loops</title>
+<link rel=stylesheet type=text/css href=https://kernelcurry.com/css/normalize.css><link rel=stylesheet type=text/css href=https://kernelcurry.com/css/font-fontawesome.css><link rel=stylesheet type=text/css href=https://kernelcurry.com/css/font-lato.css><link rel=stylesheet type=text/css href=https://kernelcurry.com/css/global.css><link rel=stylesheet type=text/css href=https://kernelcurry.com/css/header.css><link rel=stylesheet type=text/css href=https://kernelcurry.com/css/hero.css><link rel=stylesheet type=text/css href=https://kernelcurry.com/css/blog-list.css><link rel=stylesheet type=text/css href=https://kernelcurry.com/css/blog-single.css><link rel=stylesheet type=text/css href=https://kernelcurry.com/css/career-list.css><link rel=stylesheet type=text/css href=https://kernelcurry.com/css/career-single.css><link rel=stylesheet type=text/css href=https://kernelcurry.com/css/footer.css></head><body><div class=header><div class=brand-container><a href=https://kernelcurry.com/>KernelCurry</a></div><div class=page-nav-container><ul><li><a href=/blog title=Blog>Blog</a></li><li><a href=/career title=Career>Career</a></li><li><a href=/project title=Projects>Projects</a></li></ul></div><div class=social-nav-container><ul><li><a href=https://twitter.com/kernelcurry title rel="nofollow noopener noreferrer" target=_blank><i class="fa fa-twitter"></i></a></li><li><a href=https://github.com/michaelcurry title rel="nofollow noopener noreferrer" target=_blank><i class="fa fa-github"></i></a></li><li><a href=https://www.linkedin.com/in/michaeliancurry title rel="nofollow noopener noreferrer" target=_blank><i class="fa fa-linkedin"></i></a></li></ul></div></div><div class=main-container><div class=blog-single itemscope itemtype=http://schema.org/BlogPosting><div class=blog-hero><h1 itemprop=headline>Benchmark Analysis Of PHP Array Loops</h1><span class=block-quote itemprop=abstract>I decided to take 5 different methods and use xhprof to collect runtime data. Then, I analyzed these results to determine the best method(s).</span><div class=meta><i class="fa fa-clock-o" aria-hidden=true></i>
+4 Minutes</div><div class=meta><i class="fa fa-pencil" aria-hidden=true></i>
+Published: December 5, 2013</div></div><div class=blog-content><p><em>UPDATE:</em> Migrated from a <a href=https://web.archive.org/web/20140730180731/http://leve.rs:80/blog/benchmark-analysis-of-php-array-loops>post</a> I wrote when working on leve.rs</p><hr><p>The last post I wrote provided examples of different ways to use array manipulation in PHP <a href=https://kernelcurry.com/blog/correct-array-manipulation-in-php/>Link</a>. An amazing number of people replied with a compelling argument, saying it’s better to use a foreach statement instead of the array_walk function.</p><p>As all comments I receive from my articles, I thought hard on the idea. What is the fastest way achieve the end result?</p><p>I decided to take 5 different methods and use <a href=http://pecl.php.net/package/xhprof>xhprof</a> to collect runtime data. Then, I analyzed these results to determine the best method(s). All tests were executed using PHP 5.5.6 on a Macbook Air.</p><h5 id=methods>Methods</h5><ul><li>Array_walk pass by reference</li><li>Array_Walk closure function</li><li>Foreach</li><li>For with length set before loop</li><li>For with length set inline</li></ul><p>Each method used simple arithmetic functions to change each element in the array.</p><div class=highlight><div style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">4
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-php data-lang=php><span style=display:flex><span>$element <span style=color:#f92672>+=</span> <span style=color:#ae81ff>1000</span>;
+</span></span><span style=display:flex><span>$element <span style=color:#f92672>*=</span> <span style=color:#ae81ff>2</span>;
+</span></span><span style=display:flex><span>$element <span style=color:#f92672>/=</span> <span style=color:#ae81ff>10</span>;
+</span></span><span style=display:flex><span>$element <span style=color:#f92672>-=</span> <span style=color:#ae81ff>200</span>;</span></span></code></pre></td></tr></table></div></div><h2 id=results>Results</h2><p>Each array size tested was calculated four separate times to eliminate outliers in the dataset. A trend line was then calculated for each method.</p><figure><img src=/blog/benchmark-analysis-of-php-array-loops/10000.png><figcaption><h4>Runtime Analysis 10,000</h4></figcaption></figure><p>By analyzing the above graph, you will see there are 2 distinct groups: [For Inline, Array_Walk Reference, Array_Walk Closure] and [Foreach, For Outside]. Although visually there is a large difference between the two groups, there is actually only a millisecond difference in runtime. At this small of an array size, all tested methods are perfectly valid. This brings up a new question: What if the array was bigger?</p><figure><img src=/blog/benchmark-analysis-of-php-array-loops/1000000.png><figcaption><h4>Runtime Analysis 1,000,000</h4></figcaption></figure><p>Go figure; the graph looks the same! With this larger dataset, we can determine that all methods are acting in a linear fashion. Another proposition presents itself, making us ask, at what array size is using the faster group worth it?</p><h5 id=runtime-differences>Runtime Differences</h5><p><em>Group1:</em> [For Inline, Array_Walk Reference, Array_Walk Closure]</p><p><em>Group2:</em> [Foreach, For Outside]</p><ul><li>Size 10,000: 161,000 µs</li><li>Size 500,000: 849,000 µs</li><li>Size 1,000,000: 1,679,000 µs</li></ul><p>Just for fun, let’s take a look at a larger dataset.</p><figure><img src=/blog/benchmark-analysis-of-php-array-loops/10000000.png><figcaption><h4>Runtime Analysis 10,000,000</h4></figcaption></figure><p>Again, the graph looks similar. Now we’ll take a look at the time differences!</p><h5 id=runtime-differences-1>Runtime Differences</h5><p><em>Group1:</em> [For Inline, Array_Walk Reference, Array_Walk Closure]</p><p><em>Group2:</em> [Foreach, For Outside]</p><ul><li>Size 5,000,000: 8,380,000 µs</li><li>Size 10,000,000: 18,580,000 µs</li></ul><h2 id=conclusion>Conclusion</h2><p>With small array sizes, any method can be used with no real consequences. That being said, a decision must be made for the point at which runtime difference matters. That point – for me – would be array size of 12,000. You will have to determine what your threshold is.</p><p>After analyzing the different methods, it is time for me to get into the Levers code base and clean up some things. I hope to see you on the other side, and with blazing speed!</p><h2 id=code>Code</h2><h4 id=array-walk-reference>Array Walk Reference</h4><div class=highlight><div style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">9
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-php data-lang=php><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>calculate</span>(<span style=color:#f92672>&amp;</span>$element)
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span>        $element <span style=color:#f92672>+=</span> <span style=color:#ae81ff>1000</span>;
+</span></span><span style=display:flex><span>        $element <span style=color:#f92672>*=</span> <span style=color:#ae81ff>2</span>;
+</span></span><span style=display:flex><span>        $element <span style=color:#f92672>/=</span> <span style=color:#ae81ff>10</span>;
+</span></span><span style=display:flex><span>        $element <span style=color:#f92672>-=</span> <span style=color:#ae81ff>200</span>;
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>array_walk</span>($subject, <span style=color:#e6db74>&#39;calculate&#39;</span>);</span></span></code></pre></td></tr></table></div></div><h4 id=array-walk-closure>Array Walk Closure</h4><div class=highlight><div style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">6
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-php data-lang=php><span style=display:flex><span><span style=color:#a6e22e>array_walk</span>($subject, <span style=color:#66d9ef>function</span>(<span style=color:#f92672>&amp;</span>$element){
+</span></span><span style=display:flex><span>        $element <span style=color:#f92672>+=</span> <span style=color:#ae81ff>1000</span>;
+</span></span><span style=display:flex><span>        $element <span style=color:#f92672>*=</span> <span style=color:#ae81ff>2</span>;
+</span></span><span style=display:flex><span>        $element <span style=color:#f92672>/=</span> <span style=color:#ae81ff>10</span>;
+</span></span><span style=display:flex><span>        $element <span style=color:#f92672>-=</span> <span style=color:#ae81ff>200</span>;
+</span></span><span style=display:flex><span>});</span></span></code></pre></td></tr></table></div></div><h4 id=for-outside>For Outside</h4><div class=highlight><div style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">8
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-php data-lang=php><span style=display:flex><span>$len <span style=color:#f92672>=</span> <span style=color:#a6e22e>count</span>($subject);
+</span></span><span style=display:flex><span><span style=color:#66d9ef>for</span>($i <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>; $i <span style=color:#f92672>&lt;</span> $len; $i<span style=color:#f92672>++</span>)
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span>        $subject[$i] <span style=color:#f92672>+=</span> <span style=color:#ae81ff>1000</span>;
+</span></span><span style=display:flex><span>        $subject[$i] <span style=color:#f92672>*=</span> <span style=color:#ae81ff>2</span>;
+</span></span><span style=display:flex><span>        $subject[$i] <span style=color:#f92672>/=</span> <span style=color:#ae81ff>10</span>;
+</span></span><span style=display:flex><span>        $subject[$i] <span style=color:#f92672>-=</span> <span style=color:#ae81ff>200</span>;
+</span></span><span style=display:flex><span>}</span></span></code></pre></td></tr></table></div></div><h4 id=for-inline>For Inline</h4><div class=highlight><div style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">7
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-php data-lang=php><span style=display:flex><span><span style=color:#66d9ef>for</span>($i <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>; $i <span style=color:#f92672>&lt;</span> <span style=color:#a6e22e>count</span>($subject); $i<span style=color:#f92672>++</span>)
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span>        $subject[$i] <span style=color:#f92672>+=</span> <span style=color:#ae81ff>1000</span>;
+</span></span><span style=display:flex><span>        $subject[$i] <span style=color:#f92672>*=</span> <span style=color:#ae81ff>2</span>;
+</span></span><span style=display:flex><span>        $subject[$i] <span style=color:#f92672>/=</span> <span style=color:#ae81ff>10</span>;
+</span></span><span style=display:flex><span>        $subject[$i] <span style=color:#f92672>-=</span> <span style=color:#ae81ff>200</span>;
+</span></span><span style=display:flex><span>}</span></span></code></pre></td></tr></table></div></div><h4 id=foreach>Foreach</h4><div class=highlight><div style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">7
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-php data-lang=php><span style=display:flex><span><span style=color:#66d9ef>foreach</span>($subject <span style=color:#66d9ef>as</span> <span style=color:#f92672>&amp;</span>$element)
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span>        $element <span style=color:#f92672>+=</span> <span style=color:#ae81ff>1000</span>;
+</span></span><span style=display:flex><span>        $element <span style=color:#f92672>*=</span> <span style=color:#ae81ff>2</span>;
+</span></span><span style=display:flex><span>        $element <span style=color:#f92672>/=</span> <span style=color:#ae81ff>10</span>;
+</span></span><span style=display:flex><span>        $element <span style=color:#f92672>-=</span> <span style=color:#ae81ff>200</span>;
+</span></span><span style=display:flex><span>}</span></span></code></pre></td></tr></table></div></div></div></div></div><div class=footer><div class=footer-nav><ul><li><span>KernelCurry</span></li><li><a href=/blog title=Blog>Blog</a></li><li><a href=/career title=Career>Career</a></li><li><a href=/project title=Projects>Projects</a></li></ul></div><p>KernelCurry &copy; <a href=http://curryisms.com/ target=_blank rel="nofollow noopener noreferrer">Copywrite</a> 2013</p></div></body></html>
