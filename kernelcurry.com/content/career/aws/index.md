@@ -14,8 +14,7 @@ location: "Sunnyvale, CA"
 
 links:
   - title: "Homepage"
-    url: "https://aws.amazon.com""
-
+    url: "https://aws.amazon.com"
 ---
 
 TODO: Write content for this page
