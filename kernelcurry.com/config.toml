@@ -42,19 +42,13 @@ disableKinds = ['taxonomy', 'term']
     weight = 30
 
   [[menu.social]]
-    identifier = "twitter"
-    name = "Twitter"
-    url = "https://twitter.com/kernelcurry"
-    weight = 10
-
-  [[menu.social]]
     identifier = "github"
     name = "Github"
     url = "https://github.com/michaelcurry"
-    weight = 20
+    weight = 10
 
   [[menu.social]]
     identifier = "linkedin"
     name = "LinkedIn"
     url = "https://www.linkedin.com/in/michaeliancurry"
-    weight = 30
+    weight = 20
