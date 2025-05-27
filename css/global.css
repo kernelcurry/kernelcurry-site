@@ -2,6 +2,8 @@ body {
     font-family: Lato, Arial, sans-serif;
     min-width: 900px;
     line-height: 24px;
+    background-color: var(--color-background);
+    color: var(--color-text-primary);
 }
 
 * {
@@ -12,7 +14,7 @@ body {
 }
 
 a {
-    color: #3794de;
+    color: var(--color-link);
 }
 
 div.main-container {
