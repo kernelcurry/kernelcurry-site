@@ -22,6 +22,7 @@ ul.career-list li.career-preview a {
     font-size: 87.5%;
     margin-top: 10px;
     float: right;
+    color: var(--color-link);
 }
 
 ul.career-list li.career-preview img.logo {
@@ -36,7 +37,8 @@ ul.career-list li.career-preview h2 {
     padding: 0;
     margin: 0;
     margin-bottom: 6px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    border-bottom: 1px solid var(--color-text-muted);
+    color: var(--color-text-primary);
 }
 
 ul.career-list li.career-preview p {
@@ -44,10 +46,12 @@ ul.career-list li.career-preview p {
     line-height: 24px;
     padding: 5px 0;
     margin: 0;
+    color: var(--color-text-primary);
 }
 
 ul.career-list li.career-preview div.meta {
     font-size: 87.5%;
+    color: var(--color-text-muted);
 }
 
 ul.career-list li.career-preview div.meta span.container {
@@ -57,6 +61,7 @@ ul.career-list li.career-preview div.meta span.container {
 ul.career-list li.career-preview div.meta span.right {
     float: right;
 }
+
 ul.career-list li.career-preview div.meta i {
     margin-left: 0;
     margin-right: 6px;

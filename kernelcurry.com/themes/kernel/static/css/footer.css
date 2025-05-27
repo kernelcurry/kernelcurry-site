@@ -1,13 +1,13 @@
 div.footer {
     display: flex;
-    border-top: 1px solid #eee;
+    border-top: 1px solid var(--color-border-light);
     margin: 104px 0;
     padding-top: 24px;
     padding-right: 28px;
     padding-left: 28px;
     padding-bottom: 0;
     font-size: 13px;
-    color: rgba(0, 0, 0, 0.5);
+    color: var(--color-text-muted);
 }
 
 div.footer div.footer-nav {
@@ -27,6 +27,6 @@ div.footer div.footer-nav li {
 }
 
 div.footer div.footer-nav a {
-    color: rgba(0, 0, 0, 0.65);
+    color: var(--color-text-secondary);
     text-decoration: none;
 }
