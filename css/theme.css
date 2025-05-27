@@ -1,57 +1,60 @@
-:root {
-    /* Light theme colors (default) */
-    /* Base colors */
-    --color-background: rgba(255, 255, 255, 1);
-    --color-foreground: rgba(0, 0, 0, 1);
-
-    /* Text colors */
-    --color-text-primary: rgba(0, 0, 0, 1);
-    --color-text-secondary: rgba(0, 0, 0, 0.7);
-    --color-text-muted: rgba(0, 0, 0, 0.5);
-
-    /* UI elements */
-    --color-border-light: rgba(0, 0, 0, 0.05);
-    --color-border-medium: rgba(0, 0, 0, 0.15);
-    --color-shadow: rgba(0, 0, 0, 0.5);
-
-    /* Interactive elements */
-    --color-link: #3794de;
-    --color-accent: #ff3366;
-
-    /* Code blocks */
-    --color-code-background: #272822;
-    --color-code-text: #f8f8f2;
-
-    /* Headings */
-    --color-heading: #222222;
-}
-
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
     :root {
-        /* Dark theme colors */
+        /* Light theme colors (default) */
         /* Base colors */
-        --color-background: rgba(26, 26, 26, 1);
-        --color-foreground: rgba(255, 255, 255, 1);
+        --color-background: rgba(255, 255, 255, 1);
+        --color-foreground: rgba(0, 0, 0, 1);
 
         /* Text colors */
-        --color-text-primary: rgba(255, 255, 255, 1);
-        --color-text-secondary: rgba(255, 255, 255, 0.7);
-        --color-text-muted: rgba(255, 255, 255, 0.5);
+        --color-text-primary: rgba(0, 0, 0, 1);
+        --color-text-secondary: rgba(0, 0, 0, 0.7);
+        --color-text-muted: rgba(0, 0, 0, 0.5);
 
         /* UI elements */
-        --color-border-light: rgba(255, 255, 255, 0.05);
-        --color-border-medium: rgba(255, 255, 255, 0.15);
-        --color-shadow: rgba(255, 255, 255, 0.5);
+        --color-border-light: rgba(0, 0, 0, 0.05);
+        --color-border-medium: rgba(0, 0, 0, 0.15);
+        --color-shadow: rgba(0, 0, 0, 0.5);
 
         /* Interactive elements */
-        --color-link: #5ca9e6;
-        --color-accent: #ff4d7d;
+        --color-link: #3794de;
+        --color-accent: #ff3366;
 
         /* Code blocks */
-        --color-code-background: #2d2d2d;
+        --color-code-background: #272822;
         --color-code-text: #f8f8f2;
 
         /* Headings */
-        --color-heading: rgba(255, 255, 255, 1);
+        --color-heading: #222222;
     }
-} 
+}
+
+    @media (prefers-color-scheme: dark) {
+        :root {
+            /* Dark theme colors */
+            /* Base colors */
+            --color-background: rgba(26, 26, 26, 1);
+            --color-foreground: rgba(255, 255, 255, 1);
+
+            /* Text colors */
+            --color-text-primary: rgba(255, 255, 255, 1);
+            --color-text-secondary: rgba(255, 255, 255, 0.7);
+            --color-text-muted: rgba(255, 255, 255, 0.5);
+
+            /* UI elements */
+            --color-border-light: rgba(255, 255, 255, 0.05);
+            --color-border-medium: rgba(255, 255, 255, 0.15);
+            --color-shadow: rgba(255, 255, 255, 0.5);
+
+            /* Interactive elements */
+            --color-link: #5ca9e6;
+            --color-accent: #ff4d7d;
+
+            /* Code blocks */
+            --color-code-background: #2d2d2d;
+            --color-code-text: #f8f8f2;
+
+            /* Headings */
+            --color-heading: rgba(255, 255, 255, 1);
+        }
+    }
+}
