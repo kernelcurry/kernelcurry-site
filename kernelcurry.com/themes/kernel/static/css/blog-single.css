@@ -18,12 +18,13 @@ div.blog-hero h1 {
     font-size: 64px;
     line-height: 72px;
     font-weight: 900;
+    color: var(--color-text-primary);
 }
 
 div.blog-hero span.block-quote {
     padding-left: 1rem;
     font-style: italic;
-    color: rgba(49, 52, 57, 0.65);
+    color: var(--color-text-muted);
     margin-bottom: 16px;
     display: block;
 }
@@ -31,6 +32,7 @@ div.blog-hero span.block-quote {
 div.blog-hero div.meta {
     font-size: 87.5%;
     display: inline;
+    color: var(--color-text-muted);
 }
 
 div.blog-hero div.meta i {
@@ -46,6 +48,7 @@ div.blog-content {
     margin-bottom: 40px;
     font-size: 18px;
     line-height: 32px;
+    color: var(--color-text-primary);
 }
 
 div.blog-content p {
@@ -57,7 +60,7 @@ div.blog-content img {
     max-width: 100%;
 }
 
-div.blog-content figure{
+div.blog-content figure {
     text-align: center;
 }
 
@@ -66,11 +69,11 @@ div.blog-content figure img {
     max-width: 100%;
 }
 
-div.blog-content figure figcaption{
+div.blog-content figure figcaption {
     position: relative;
     margin: 0;
     text-align: center;
-    top: -8px
+    top: -8px;
 }
 
 div.blog-content figure figcaption h4 {
@@ -80,11 +83,12 @@ div.blog-content figure figcaption h4 {
     font-size: 87.5%;
     opacity: 0.6;
     font-weight: normal;
+    color: var(--color-text-muted);
 }
 
 div.blog-content h2 {
     margin-top: 24px;
-    color: #222;
+    color: var(--color-heading);
     font-size: 36px;
     line-height: 40px;
     font-weight: 700;
@@ -97,6 +101,7 @@ div.blog-content h3 {
     font-size: 24px;
     line-height: 32px;
     margin-bottom: 16px;
+    color: var(--color-heading);
 }
 
 div.blog-content h4 {
@@ -104,6 +109,7 @@ div.blog-content h4 {
     font-size: 18px;
     line-height: 32px;
     margin-bottom: 16px;
+    color: var(--color-heading);
 }
 
 div.blog-content ol {
@@ -161,15 +167,17 @@ div.blog-content li p {
 div.blog-content code:not([class]) {
     font-family: monospace, monospace;
     font-size: 1em;
-    background: #272822;
+    background: var(--color-code-background);
     border-radius: 0.3em;
-    color: #f8f8f2;
+    color: var(--color-code-text);
     padding: 0.1em;
 }
 
 div.blog-content div.highlight pre {
     border-radius: 0.3em;
     padding: 0.5em;
+    background: var(--color-code-background);
+    color: var(--color-code-text);
 }
 
 div.blog-content div.highlight div {
