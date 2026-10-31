@@ -1,0 +1,86 @@
+# Builds the Hugo site on every push / PR and deploys it to GitHub Pages
+# from master using GitHub-owned actions only.
+#
+# Supply-chain notes:
+#   - Every `uses:` is pinned to a full commit SHA; the tag is in the comment.
+#     Dependabot (.github/dependabot.yml) opens PRs to bump both together.
+#   - Hugo is downloaded from the official release and verified against a
+#     pinned SHA256. To upgrade, update HUGO_VERSION and HUGO_SHA256 together
+#     from https://github.com/gohugoio/hugo/releases (hugo_<ver>_checksums.txt).
+#   - The job token is read-only except for the deploy job, which gets only
+#     the Pages + OIDC permissions it needs. No deploy keys or secrets.
+
+name: Pages
+
+on:
+  push:
+    branches-ignore:
+      - gh-pages
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: false
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-24.04
+    env:
+      HUGO_VERSION: 0.169.0
+      HUGO_SHA256: 1bdd08d3e2e6a093261360eacbd70f7bbd88eb0c53c578eff1531400555d4a94
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Install Hugo (checksum verified)
+        run: |
+          set -euo pipefail
+          deb="${RUNNER_TEMP}/hugo.deb"
+          curl -fsSL --retry 3 -o "$deb" \
+            "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_linux-amd64.deb"
+          echo "${HUGO_SHA256}  ${deb}" | sha256sum --check --strict
+          sudo dpkg -i "$deb"
+          hugo version
+
+      - name: Setup Pages
+        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+        uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6.0.0
+
+      - name: Build
+        env:
+          HUGO_ENVIRONMENT: production
+          HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
+        run: hugo --source kernelcurry.com --gc --minify
+
+      - name: Upload Pages artifact
+        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+        uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
+        with:
+          path: kernelcurry.com/public
+
+  deploy:
+    name: Deploy
+    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+    needs: build
+    runs-on: ubuntu-24.04
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5.0.1
