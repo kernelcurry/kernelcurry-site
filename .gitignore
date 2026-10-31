@@ -299,6 +299,9 @@ yarn-error.log
 # production
 /build
 /public
+kernelcurry.com/public/
+kernelcurry.com/resources/
+kernelcurry.com/.hugo_build.lock
 
 # local env files
 .env.local

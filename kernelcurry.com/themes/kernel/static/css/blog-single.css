@@ -183,3 +183,19 @@ div.blog-content div.highlight pre {
 div.blog-content div.highlight div {
     border-radius: 0.3em;
 }
+/* Code blocks: tighter leading, slightly smaller mono, scroll instead of wrap */
+div.blog-content div.highlight pre {
+    font-size: 15px;
+    line-height: 1.4;
+    overflow-x: auto;
+}
+
+/* Definition lists: bold term, indented description */
+div.blog-content dl dt {
+    font-weight: 700;
+    margin-top: 12px;
+}
+
+div.blog-content dl dd {
+    margin: 0 0 0 24px;
+}

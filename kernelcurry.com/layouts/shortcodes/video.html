@@ -1,0 +1,13 @@
+{{- /* Local video from the page bundle: {{< video src="clip.mp4" poster="main.jpg" title="..." >}} */ -}}
+{{- $src := .Page.Resources.GetMatch (.Get "src") -}}
+{{- $poster := "" -}}
+{{- with .Get "poster" -}}
+  {{- with $.Page.Resources.GetMatch . -}}{{- $poster = .RelPermalink -}}{{- end -}}
+{{- end -}}
+<figure class="video">
+  <video controls playsinline preload="metadata"{{ with $poster }} poster="{{ . }}"{{ end }} style="max-width:100%;height:auto;">
+    <source src="{{ with $src }}{{ .RelPermalink }}{{ else }}{{ $.Get "src" }}{{ end }}" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  {{ with .Get "title" }}<figcaption>{{ . }}</figcaption>{{ end }}
+</figure>
