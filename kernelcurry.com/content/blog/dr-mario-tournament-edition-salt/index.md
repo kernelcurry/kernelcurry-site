@@ -1,7 +1,7 @@
 ---
 title: "Pass the SALT, NES Dr. Mario Players"
 abstract: "DrMC wanted a way to measure how punishing garbage sent to a Dr. Mario player is.  So I added a SALT (Stun And Lock Time) counter and speed indicator to the NES game.  Here's what it looks like and how to play it."
-date: "2026-10-30T00:00:00.000Z"
+date: "2026-10-31T08:25:54.000Z"
 read_time: 4
 image: "main.jpg"
 draft: false
